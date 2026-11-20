@@ -10,11 +10,23 @@ ZOOM LEVELS: z0-z5 (native detail through z5)
 TILES PER LAYER: 1365
 TOTAL: 21840 tiles
 
+ALIGNED BASE IMAGE SIZES:
+Chernarus 7616 x 7616; Livonia 7616 x 7616; Nasdara 8064 x 8064; Sakhal 7616 x 7616.
+The standalone white road PNGs are rendered at these exact native base dimensions.
+Use the matching PNG one-to-one with its satellite base. For the tiled map, use
+the roads tile layer; every tiled layer is normalized to 8192 x 8192 first.
+
+FULL-SIZE ALIGNED WHITE ROAD PNGS:
+roads_aligned_png/Chernarus_Roads_White_Aligned_7616.png
+roads_aligned_png/Livonia_Roads_White_Aligned_7616.png
+roads_aligned_png/Nasdara_Roads_White_Aligned_8064.png
+roads_aligned_png/Sakhal_Roads_White_Aligned_7616.png
+
 FOLDER PATTERNS:
-tiles/<map>/sat/{z}/{x}/{y}.jpg
-tiles/<map>/paper/{z}/{x}/{y}.jpg
-tiles/<map>/roads/{z}/{x}/{y}.png
-tiles/<map>/buildings/{z}/{x}/{y}.png
+tiles/{map}/sat/{z}/{x}/{y}.jpg
+tiles/{map}/paper/{z}/{x}/{y}.jpg
+tiles/{map}/roads/{z}/{x}/{y}.png
+tiles/{map}/buildings/{z}/{x}/{y}.png
 
 The paper maps use terrain height data, contour lines, roads and English place
 labels. Nasdara uses the aged high-resolution paper map made for this project.
@@ -75,5 +87,7 @@ See tile_manifest.json for map sizes, URL templates, formats and zoom ranges.
 
 REPOSITORY PACKAGE NOTES
 ========================
-This repository copy contains the deployable 21,840-tile pyramids, tile manifest, setup guide, and previews. The source-maps folder and ZIP archive remain in the original local output folder and are not included here. The ZIP duplicates the tile files and is larger than GitHub's per-file limit; three source paper PNGs also exceed that limit. The original local files are unchanged.
+This package contains the deployable 21,840-tile pyramids, the tile manifest, the setup guide and previews, plus four native-size white road PNGs in roads_aligned_png/. Use a raw road PNG only with its matching full-size satellite image at identical dimensions. For a tiled website, use the roads tile layer with the other map tiles; do not overlay the raw PNG over the tiled map.
+
+The original source-maps folder and ZIP archive remain in the local output folder and are omitted from this repository package. The ZIP duplicates the tile files and exceeds GitHub's individual-file limit; three source paper PNGs exceed that limit. The original local files are unchanged.
 
