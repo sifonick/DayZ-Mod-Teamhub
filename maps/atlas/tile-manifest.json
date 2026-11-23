@@ -1,0 +1,307 @@
+{
+  "schema": "DayZStaticMapTiles/1",
+  "tileScheme": "XYZ",
+  "tileOrigin": "top-left; y increases southward",
+  "tileSize": 256,
+  "minZoom": 0,
+  "maxNativeZoom": 5,
+  "normalizedMapExtent": {
+    "minX": 0,
+    "minY": 0,
+    "maxX": 256,
+    "maxY": 256
+  },
+  "coordinateSystem": "Local DayZ world X/Z metres; not latitude/longitude.",
+  "coordinateTransform": "For Leaflet CRS.Simple, pass [Z / worldSize * 256, X / worldSize * 256] as [lat, lng].",
+  "sourceResampling": "Each full-world layer is resampled to 8192 by 8192 pixels before cutting tiles, preserving shared map bounds.",
+  "maps": {
+    "chernarus": {
+      "name": "Chernarus",
+      "worldSizeMetres": 15360,
+      "alignedBaseImageSize": 7616,
+      "normalizedSourceSize": 8192.0,
+      "tileMatrixWidthAtMaxZoom": 32.0,
+      "layers": {
+        "sat": {
+          "tileTemplate": "tiles/chernarus/sat/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "paper": {
+          "tileTemplate": "tiles/chernarus/paper/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "roads": {
+          "tileTemplate": "tiles/chernarus/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "buildings": {
+          "tileTemplate": "tiles/chernarus/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_major": {
+          "tileTemplate": "tiles/chernarus/labels_major/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_minor": {
+          "tileTemplate": "tiles/chernarus/labels_minor/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_village": {
+          "tileTemplate": "tiles/chernarus/labels_village/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        }
+      }
+    },
+    "livonia": {
+      "name": "Livonia",
+      "worldSizeMetres": 12800,
+      "alignedBaseImageSize": 7616,
+      "normalizedSourceSize": 8192.0,
+      "tileMatrixWidthAtMaxZoom": 32.0,
+      "layers": {
+        "sat": {
+          "tileTemplate": "tiles/livonia/sat/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "paper": {
+          "tileTemplate": "tiles/livonia/paper/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "roads": {
+          "tileTemplate": "tiles/livonia/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "buildings": {
+          "tileTemplate": "tiles/livonia/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_major": {
+          "tileTemplate": "tiles/livonia/labels_major/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_minor": {
+          "tileTemplate": "tiles/livonia/labels_minor/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_village": {
+          "tileTemplate": "tiles/livonia/labels_village/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        }
+      }
+    },
+    "nasdara": {
+      "name": "Nasdara",
+      "worldSizeMetres": 16384,
+      "alignedBaseImageSize": 8064,
+      "normalizedSourceSize": 8192.0,
+      "tileMatrixWidthAtMaxZoom": 32.0,
+      "layers": {
+        "sat": {
+          "tileTemplate": "tiles/nasdara/sat/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "paper": {
+          "tileTemplate": "tiles/nasdara/paper/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "roads": {
+          "tileTemplate": "tiles/nasdara/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "buildings": {
+          "tileTemplate": "tiles/nasdara/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_major": {
+          "tileTemplate": "tiles/nasdara/labels_major/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_minor": {
+          "tileTemplate": "tiles/nasdara/labels_minor/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_village": {
+          "tileTemplate": "tiles/nasdara/labels_village/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        }
+      }
+    },
+    "sakhal": {
+      "name": "Sakhal",
+      "worldSizeMetres": 15360,
+      "alignedBaseImageSize": 7616,
+      "normalizedSourceSize": 8192.0,
+      "tileMatrixWidthAtMaxZoom": 32.0,
+      "layers": {
+        "sat": {
+          "tileTemplate": "tiles/sakhal/sat/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "paper": {
+          "tileTemplate": "tiles/sakhal/paper/{z}/{x}/{y}.jpg",
+          "format": "image/jpeg",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "roads": {
+          "tileTemplate": "tiles/sakhal/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "buildings": {
+          "tileTemplate": "tiles/sakhal/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_major": {
+          "tileTemplate": "tiles/sakhal/labels_major/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_minor": {
+          "tileTemplate": "tiles/sakhal/labels_minor/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        },
+        "labels_village": {
+          "tileTemplate": "tiles/sakhal/labels_village/{z}/{x}/{y}.webp",
+          "format": "image/webp",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 5,
+          "maxZoom": 5,
+          "tilesPerPyramid": 1365
+        }
+      }
+    }
+  }
+}
