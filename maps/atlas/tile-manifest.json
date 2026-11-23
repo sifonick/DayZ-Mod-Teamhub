@@ -19,8 +19,8 @@
       "name": "Chernarus",
       "worldSizeMetres": 15360,
       "alignedBaseImageSize": 7616,
-      "normalizedSourceSize": 8192.0,
-      "tileMatrixWidthAtMaxZoom": 32.0,
+      "normalizedSourceSize": 8192,
+      "tileMatrixWidthAtMaxZoom": 32,
       "layers": {
         "sat": {
           "tileTemplate": "tiles/chernarus/sat/{z}/{x}/{y}.jpg",
@@ -91,8 +91,8 @@
       "name": "Livonia",
       "worldSizeMetres": 12800,
       "alignedBaseImageSize": 7616,
-      "normalizedSourceSize": 8192.0,
-      "tileMatrixWidthAtMaxZoom": 32.0,
+      "normalizedSourceSize": 8192,
+      "tileMatrixWidthAtMaxZoom": 32,
       "layers": {
         "sat": {
           "tileTemplate": "tiles/livonia/sat/{z}/{x}/{y}.jpg",
@@ -163,8 +163,8 @@
       "name": "Nasdara",
       "worldSizeMetres": 16384,
       "alignedBaseImageSize": 8064,
-      "normalizedSourceSize": 8192.0,
-      "tileMatrixWidthAtMaxZoom": 32.0,
+      "normalizedSourceSize": 8192,
+      "tileMatrixWidthAtMaxZoom": 32,
       "layers": {
         "sat": {
           "tileTemplate": "tiles/nasdara/sat/{z}/{x}/{y}.jpg",
@@ -185,13 +185,13 @@
           "tilesPerPyramid": 1365
         },
         "roads": {
-          "tileTemplate": "tiles/nasdara/roads/{z}/{x}/{y}.webp",
-          "format": "image/webp",
+          "tileTemplate": "tiles/nasdara/roads/{z}/{x}/{y}.png",
+          "format": "image/png",
           "tileSize": 256,
           "minZoom": 0,
-          "maxNativeZoom": 5,
-          "maxZoom": 5,
-          "tilesPerPyramid": 1365
+          "maxNativeZoom": 6,
+          "maxZoom": 6,
+          "tilesPerPyramid": 5461
         },
         "buildings": {
           "tileTemplate": "tiles/nasdara/buildings/{z}/{x}/{y}.webp",
@@ -235,8 +235,8 @@
       "name": "Sakhal",
       "worldSizeMetres": 15360,
       "alignedBaseImageSize": 7616,
-      "normalizedSourceSize": 8192.0,
-      "tileMatrixWidthAtMaxZoom": 32.0,
+      "normalizedSourceSize": 8192,
+      "tileMatrixWidthAtMaxZoom": 32,
       "layers": {
         "sat": {
           "tileTemplate": "tiles/sakhal/sat/{z}/{x}/{y}.jpg",
