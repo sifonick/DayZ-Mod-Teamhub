@@ -228,6 +228,15 @@
           "maxNativeZoom": 5,
           "maxZoom": 5,
           "tilesPerPyramid": 1365
+        },
+        "trees": {
+          "tileTemplate": "tiles/nasdara/trees/{z}/{x}/{y}.png",
+          "format": "image/png",
+          "tileSize": 256,
+          "minZoom": 0,
+          "maxNativeZoom": 6,
+          "maxZoom": 6,
+          "tilesPerPyramid": 5461
         }
       }
     },
