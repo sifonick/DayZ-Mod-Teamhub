@@ -1,0 +1,23 @@
+{
+  "layout": "square",
+  "scheme": "xyz",
+  "encoding": "terrarium",
+  "tileSize": 256,
+  "minzoom": 0,
+  "maxzoom": 4,
+  "referenceZoom": 0,
+  "pixelEdges": [
+    0,
+    0,
+    256,
+    256
+  ],
+  "dayzBoundsMetres": [
+    0,
+    0,
+    15360,
+    15360
+  ],
+  "minHeight": -231.797,
+  "maxHeight": 550.334
+}
