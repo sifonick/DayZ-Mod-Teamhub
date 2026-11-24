@@ -1,0 +1,61 @@
+param([string]$ServerFolder, [string]$OutputFolder = (Join-Path $PSScriptRoot 'HeightMaps'), [int]$Port = 2452)
+$ErrorActionPreference = 'Stop'
+if (!$ServerFolder) {
+    $ServerFolder = Join-Path ${env:ProgramFiles(x86)} 'Steam\steamapps\common\DayZServer'
+    if (!(Test-Path (Join-Path $ServerFolder 'DayZServer_x64.exe'))) {
+        $ServerFolder = (Read-Host 'Enter the folder containing DayZServer_x64.exe').Trim('"')
+    }
+}
+$server = (Resolve-Path -LiteralPath $ServerFolder).Path
+$exe = Join-Path $server 'DayZServer_x64.exe'
+if (!(Test-Path -LiteralPath $exe)) { throw "DayZ Server missing from $server" }
+$template = Get-Content (Join-Path $PSScriptRoot 'mission-template.c') -Raw
+$dest = [IO.Directory]::CreateDirectory($OutputFolder).FullName
+foreach ($map in @(@('chernarusplus','Chernarus',3840), @('enoch','Livonia',3200), @('sakhal','Sakhal',3840))) {
+    $world,$label,$width = $map
+    $stem = "PatchAtlas_${label}_4m"
+    $profile = [IO.Directory]::CreateDirectory((Join-Path $dest "profiles\$world")).FullName
+    $grid = Join-Path $profile "$stem.asc"
+    $marker = Join-Path $profile "$stem.done.txt"
+    $final = Join-Path $dest "$stem.asc"
+    if (!(Test-Path $marker) -or !(Test-Path $grid)) {
+        if (Test-Path $marker) { throw "Completion marker without grid in $profile. Move the marker aside and rerun." }
+        $name = "AtlasHeight4m_$([Guid]::NewGuid().ToString('N')).$world"
+        $mission = Join-Path $server "mpmissions\$name"
+        $null = New-Item -ItemType Directory -Path $mission
+        $init = Join-Path $mission 'init.c'
+        $cfg = Join-Path $profile 'height-export.cfg'
+        $proc = $null
+        try {
+            $template.Replace('__WORLD__',$world).Replace('__LABEL__',$label) | Set-Content -LiteralPath $init -Encoding ASCII
+            $password = [Guid]::NewGuid().ToString('N')
+            @(
+                'hostname="Local terrain sampler";', "password=`"$password`";", 'maxPlayers=1;', 'verifySignatures=2;',
+                'instanceId=971;', "steamQueryPort=$($Port+3);", "class Missions { class Export { template=`"$name`"; }; };"
+            ) | Set-Content -LiteralPath $cfg -Encoding ASCII
+            Write-Host "Sampling $label on a 4 m grid. Output and logs: $profile"
+            $proc = Start-Process -FilePath $exe -WorkingDirectory $server -WindowStyle Hidden -ArgumentList @("-config=`"$cfg`"","-profiles=`"$profile`"","-port=$Port",'-dologs') -PassThru
+            $progressAt = Get-Date
+            $length = -1
+            while (!(Test-Path $marker)) {
+                Start-Sleep -Seconds 5
+                if ($proc.HasExited) { throw "$label server exited. See $profile for the server logs." }
+                if (Test-Path $grid) {
+                    $newLength = (Get-Item $grid).Length
+                    if ($newLength -ne $length) { $length=$newLength; $progressAt=Get-Date; Write-Progress -Activity "Sampling $label" -Status "$([math]::Round($length/1MB,1)) MiB written" }
+                }
+                if (((Get-Date)-$progressAt).TotalMinutes -gt 10) { throw "No export progress for 10 minutes. Check $profile and that port $Port is available." }
+            }
+        } finally {
+            if ($proc -and !$proc.HasExited) { $proc.Kill(); $proc.WaitForExit() }
+            if (Test-Path $init) { Remove-Item -LiteralPath $init }
+            if (!(Get-ChildItem -LiteralPath $mission -Force)) { [IO.Directory]::Delete($mission) }
+            Write-Progress -Activity "Sampling $label" -Completed
+        }
+    }
+    $header = @(Get-Content -LiteralPath $grid -TotalCount 6)
+    if ($header[0] -notmatch "^ncols $width$" -or $header[1] -notmatch "^nrows $width$" -or $header[4] -notmatch '^cellsize 4(\.0+)?$' -or (Get-Content $marker -Raw).Trim() -ne "Finished rows: $width") { throw "Unexpected $label grid dimensions or completion marker in $profile" }
+    Copy-Item -LiteralPath $grid -Destination "$final.partial" -Force
+    Move-Item -LiteralPath "$final.partial" -Destination $final -Force
+    Write-Host "Ready: $final"
+}

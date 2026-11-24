@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DayZ terrain tile converter</title>
+<style>
+:root{color-scheme:dark;font-family:"Segoe UI",system-ui,sans-serif;color:#f2f3ed;background:#202924}body{max-width:690px;margin:4vh auto;padding:20px}h1{font-size:clamp(28px,5vw,43px);letter-spacing:-.04em;line-height:1.05}form{background:#2c3830;border:1px solid #566459;border-radius:14px;padding:22px}label{display:block;font-weight:650;margin:15px 0 6px}input,select,button,a.download{box-sizing:border-box;width:100%;font:inherit;color:inherit;border:1px solid #78887b;border-radius:6px;padding:10px;background:#202a23}button,a.download{display:block;background:#f3c777;color:#262519;font-weight:bold;cursor:pointer;text-align:center;margin-top:20px;text-decoration:none}button:disabled{opacity:.55}p{line-height:1.5}small{color:#d0dacd}.bounds{display:grid;grid-template-columns:1fr 1fr;gap:8px}progress{width:100%;accent-color:#f3c777}#preview{width:min(100%,320px);height:auto;border-radius:5px}#message{white-space:pre-line}a:focus,button:focus,input:focus,select:focus{outline:2px solid #ffdc90}[hidden]{display:none!important}
+</style></head><body>
+<h1>DayZ terrain tiles</h1>
+<p>Turn a DayZ elevation grid into tiles for your website. The conversion runs on this computer.</p>
+<form id="form">
+<label for="file">DayZ heightmap (.asc)</label><input id="file" type="file" accept=".asc,.txt" required>
+<label for="layout">Satellite tile layout</label><select id="layout">
+<option value="square">Whole map fills tile 0/0/0 (local XYZ)</option>
+<option value="custom">Match my existing XYZ pixel bounds</option>
+<option value="metric">New MapLibre map at game scale</option>
+</select><p id="hint"><small></small></p>
+<div id="custom" hidden>
+<label for="refz">Reference zoom</label><input id="refz" type="number" min="0" max="24" value="6">
+<p><small>Enter the map edges in pixels at this zoom, measured right and down from tile 0/0’s top-left corner. Exclude any image padding.</small></p>
+<div class="bounds">
+<div><label for="left">Left</label><input id="left" type="number" step="any" value="0"></div>
+<div><label for="top">Top</label><input id="top" type="number" step="any" value="0"></div>
+<div><label for="right">Right</label><input id="right" type="number" step="any" placeholder="East edge"></div>
+<div><label for="bottom">Bottom</label><input id="bottom" type="number" step="any" placeholder="South edge"></div>
+</div>
+<label for="firstz">Lowest website zoom to generate</label><input id="firstz" type="number" min="0" max="24" value="0">
+</div>
+<label for="size">Tile size on your site</label><select id="size"><option value="256">256 × 256 pixels</option><option value="512">512 × 512 pixels</option></select>
+<button type="submit">Generate tile ZIP</button></form>
+<p id="message" role="status" aria-live="polite"></p><progress hidden id="progress"></progress>
+<canvas hidden id="preview" aria-label="Shaded terrain preview"></canvas><a id="download" class="download" hidden download="terrain-tiles.zip">Download terrain-tiles.zip</a>
+<script>
+"use strict";
+const el = id => document.getElementById(id);
+function updateLayout(){
+    const hints = {
+        square:"Use this for a quick preview, or when your imagery fills one square zoom-zero tile all the way to the edges.",
+        custom:"Use your satellite tiles’ real zoom and pixel bounds. This converter uses north-up XYZ numbering.",
+        metric:"Creates a Web Mercator footprint centred at 0°, 0°, with the terrain width measured in game metres. Your satellite imagery must use these same bounds."
+    };
+    el("hint").firstElementChild.textContent=hints[el("layout").value];
+    el("custom").hidden=el("layout").value!=="custom";
+}
+el("layout").addEventListener("change",updateLayout);updateLayout();
+function readGrid(text){
+    const lines=text.trim().split(/\r?\n/), h={};let line=0;
+    while(line<lines.length){
+        const m=lines[line].trim().match(/^(ncols|nrows|cellsize|xllcorner|yllcorner|nodata_value)\s+(\S+)$/i);
+        if(!m)break;
+        h[m[1].toLowerCase()]=Number(m[2]);line++;
+    }
+    const w=h.ncols, n=h.nrows, cell=h.cellsize;
+    if(!Number.isInteger(w)||!Number.isInteger(n)||w<2||n<2||w*n>3e7||!(cell>0)||!Number.isFinite(cell)||!Number.isFinite(h.xllcorner)||!Number.isFinite(h.yllcorner))
+        throw Error("Expected a DayZ ASCII grid with dimensions, cell size and lower-left corner.");
+    if(lines.length-line!==n)throw Error("Row count differs from nrows. Use the completed export.");
+    const a=new Float32Array(w*n);let lowest=Infinity,highest=-Infinity;
+    for(let y=0;y<n;y++){
+        const row=lines[line+y].trim().split(/\s+/);
+        if(row.length!==w)throw Error("Incorrect column count in terrain row "+(y+1));
+        for(let x=0;x<w;x++){
+            const v=Number(row[x]);
+            if(!Number.isFinite(v)||v===h.nodata_value||v< -32768||v>32767.99609375)throw Error("Missing or out-of-range elevation in row "+(y+1));
+            a[y*w+x]=v;lowest=Math.min(lowest,v);highest=Math.max(highest,v);
+        }
+    }
+    return {a,w,n,cell,lowest,highest,x0:h.xllcorner,z0:h.yllcorner};
+}
+function num(id){if(!el(id).value.trim())throw Error("Fill in the "+id+" field.");return Number(el(id).value);}
+function gridLayout(g){
+    const size=Number(el("size").value),kind=el("layout").value;
+    let left=0,top=0,right=size,bottom=size,ref=0,first=0;
+    if(kind==="custom"){
+        [left,top,right,bottom,ref,first]=["left","top","right","bottom","refz","firstz"].map(num);
+    }else if(kind==="metric"){
+        const scale=size/40075016.68557849;
+        const dx=g.w*g.cell*scale/2,dy=g.n*g.cell*scale/2;
+        left=size/2-dx;right=size/2+dx;top=size/2-dy;bottom=size/2+dy;
+        first=Math.max(0,Math.floor(Math.log2(size/Math.max(2*dx,2*dy))));
+    }
+    if(![left,top,right,bottom].every(Number.isFinite)||right<=left||bottom<=top)throw Error("Pixel bounds must have positive width and height.");
+    const last=Math.max(first,Math.ceil(ref+Math.log2(Math.max(g.w/(right-left),g.n/(bottom-top)))-1e-10));
+    if(last>24)throw Error("Check your reference zoom and pixel bounds.");
+    return {size,kind,left,top,right,bottom,ref,first,last};
+}
+function sample(g,x,y){
+    x=Math.min(g.w-1,Math.max(0,x));y=Math.min(g.n-1,Math.max(0,y));
+    const i=Math.floor(x),j=Math.floor(y),fx=x-i,fy=y-j;
+    const i2=Math.min(i+1,g.w-1),j2=Math.min(j+1,g.n-1);
+    const a=g.a[j*g.w+i],b=g.a[j*g.w+i2],c=g.a[j2*g.w+i],d=g.a[j2*g.w+i2];
+    return (a+(b-a)*fx)*(1-fy)+(c+(d-c)*fx)*fy;
+}
+function light(g,x,y){
+    const dx=(sample(g,x+1,y)-sample(g,x-1,y))/(2*g.cell);
+    const north=(sample(g,x,y-1)-sample(g,x,y+1))/(2*g.cell);
+    return Math.min(1,Math.max(0,(.5*dx-.5*north+Math.SQRT1_2)/Math.hypot(1,dx,north)));
+}
+function preview(g){
+    const c=el("preview");c.width=300;c.height=Math.max(1,Math.round(300*g.n/g.w));
+    const ctx=c.getContext("2d"),im=ctx.createImageData(c.width,c.height);
+    for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){
+        const v=65+175*light(g,(x+.5)*g.w/c.width-.5,(y+.5)*g.n/c.height-.5);
+        im.data.set([v*.95,v,v*.91,255],4*(y*c.width+x));
+    }
+    ctx.putImageData(im,0,0);c.hidden=false;
+}
+const crcTable=Uint32Array.from({length:256},(_,i)=>{
+    for(let k=0;k<8;k++)i=(i&1)?0xedb88320^(i>>>1):i>>>1;
+    return i>>>0;
+});
+function crc32(data){let crc=0xffffffff;for(const b of data)crc=crcTable[(crc^b)&255]^(crc>>>8);return (crc^0xffffffff)>>>0;}
+function header(bytes,fields){const a=new Uint8Array(bytes),v=new DataView(a.buffer);for(const [pos,width,num] of fields)v[width===2?"setUint16":"setUint32"](pos,num,true);return a;}
+function zip(files){
+    const body=[],directory=[];let offset=0,dirSize=0;
+    for(const [name,data] of files){
+        const n=new TextEncoder().encode(name),crc=crc32(data),s=data.length;
+        const local=header(30,[[0,4,0x04034b50],[4,2,20],[12,2,33],[14,4,crc],[18,4,s],[22,4,s],[26,2,n.length]]);
+        const entry=header(46,[[0,4,0x02014b50],[4,2,20],[6,2,20],[14,2,33],[16,4,crc],[20,4,s],[24,4,s],[28,2,n.length],[42,4,offset]]);
+        body.push(local,n,data);directory.push(entry,n);offset+=30+n.length+s;dirSize+=46+n.length;
+    }
+    return new Blob([...body,...directory,header(22,[[0,4,0x06054b50],[8,2,files.length],[10,2,files.length],[12,4,dirSize],[16,4,offset]])],{type:"application/zip"});
+}
+function raster(size){
+    const canvas=document.createElement("canvas");canvas.width=canvas.height=size;
+    const ctx=canvas.getContext("2d"),im=ctx.createImageData(size,size);
+    return {pixels:im.data,png:async()=>{
+        ctx.putImageData(im,0,0);
+        const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+        if(!blob)throw Error("Could not create PNG.");
+        return new Uint8Array(await blob.arrayBuffer());
+    }};
+}
+function levels(l){
+    const out=[];
+    for(let z=l.first;z<=l.last;z++){
+        const s=2**(z-l.ref),west=l.left*s,north=l.top*s,east=l.right*s,south=l.bottom*s;
+        out.push({z,west,north,east,south,x0:Math.floor(west/l.size),x1:Math.ceil(east/l.size)-1,y0:Math.floor(north/l.size),y1:Math.ceil(south/l.size)-1});
+    }
+    return out;
+}
+async function build(g,l){
+    const dem=raster(l.size),shade=raster(l.size),files=[],ranges=levels(l);
+    const total=ranges.reduce((n,t)=>n+(t.x1-t.x0+1)*(t.y1-t.y0+1),0);
+    if(total>1300)throw Error("These bounds request too many tiles for a single browser run. Check tile size, zoom and pixel bounds.");
+    let done=0;el("progress").max=total;el("progress").value=0;el("progress").hidden=false;
+    for(const t of ranges)for(let ty=t.y0;ty<=t.y1;ty++)for(let tx=t.x0;tx<=t.x1;tx++){
+        for(let y=0;y<l.size;y++){
+            const py=(ty*l.size+y+.5-t.north)*g.n/(t.south-t.north)-.5;
+            for(let x=0;x<l.size;x++){
+                const px=(tx*l.size+x+.5-t.west)*g.w/(t.east-t.west)-.5,i=4*(y*l.size+x);
+                const v=Math.round((sample(g,px,py)+32768)*256);
+                dem.pixels[i]=v>>>16;dem.pixels[i+1]=(v>>>8)&255;dem.pixels[i+2]=v&255;dem.pixels[i+3]=255;
+                const inside=px>=-.5&&px<g.w-.5&&py>=-.5&&py<g.n-.5;
+                const d=light(g,px,py)-Math.SQRT1_2,tone=d>=0?255:0;
+                shade.pixels[i]=shade.pixels[i+1]=shade.pixels[i+2]=tone;
+                shade.pixels[i+3]=inside?Math.min(210,Math.abs(d)*310):0;
+            }
+        }
+        const path=t.z+"/"+tx+"/"+ty+".png";
+        files.push(["terrain/"+path,await dem.png()],["hillshade/"+path,await shade.png()]);
+        el("progress").value=++done;el("message").textContent="Generating tile "+done+" of "+total+" at zoom "+t.z+"…";
+    }
+    const meta={layout:l.kind,scheme:"xyz",encoding:"terrarium",tileSize:l.size,minzoom:l.first,maxzoom:l.last,referenceZoom:l.ref,pixelEdges:[l.left,l.top,l.right,l.bottom],dayzBoundsMetres:[g.x0,g.z0,g.x0+g.w*g.cell,g.z0+g.n*g.cell],minHeight:g.lowest,maxHeight:g.highest};
+    if(l.kind==="metric"){
+        const lon=p=>p/l.size*360-180,lat=p=>Math.atan(Math.sinh(Math.PI*(1-2*p/l.size)))*180/Math.PI;
+        meta.bounds=[lon(l.left),lat(l.bottom),lon(l.right),lat(l.top)];
+    }
+    files.push(["tile-settings.json",new TextEncoder().encode(JSON.stringify(meta,null,2))]);
+    return zip(files);
+}
+el("form").addEventListener("submit",async event=>{
+    event.preventDefault();const button=el("form").querySelector("button"),link=el("download");
+    if(link.href)URL.revokeObjectURL(link.href);link.hidden=true;button.disabled=true;
+    el("preview").hidden=el("progress").hidden=true;
+    try{
+        el("message").textContent="Reading elevation grid…";
+        const g=readGrid(await el("file").files[0].text()),l=gridLayout(g);
+        preview(g);
+        const archive=await build(g,l);link.download=el("file").files[0].name.replace(/\.asc$/i,"")+"-tiles.zip";link.textContent="Download "+link.download;link.href=URL.createObjectURL(archive);link.hidden=false;
+        el("message").textContent="Ready. Zoom levels "+l.first+"–"+l.last+" · "+g.w+" × "+g.n+" elevation samples. The ZIP includes terrain, hillshade and tile settings.";
+    }catch(e){el("message").textContent=e.message;}
+    finally{button.disabled=false;el("progress").hidden=true;}
+});
+</script></body></html>
+
+
