@@ -29,6 +29,7 @@ void PatchAtlasWriteRow()
         return;
     }
 
+    for (int batch = 0; batch < 12 && g_PatchAtlasRow < g_PatchAtlasWidth; batch++) {
     float z = (g_PatchAtlasWidth - g_PatchAtlasRow - 0.5) * g_PatchAtlasCell;
     string chunk = "";
     for (int col = 0; col < g_PatchAtlasWidth; col++)
@@ -51,8 +52,9 @@ void PatchAtlasWriteRow()
         }
     }
 
-    CloseFile(grid);
     g_PatchAtlasRow++;
+    }
+    CloseFile(grid);
     if (g_PatchAtlasRow < g_PatchAtlasWidth)
     {
         if (g_PatchAtlasRow % 100 == 0)
@@ -126,6 +128,8 @@ void PatchAtlasStartExport()
     Print("[Patch Atlas] Writing " + gridPath);
     PatchAtlasWriteRow();
 }
+
+
 
 
 
