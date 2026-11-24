@@ -5,14 +5,14 @@
       "mapId": "chernarusplus",
       "mapName": "Chernarus",
       "worldSizeMetres": 15360,
-      "count": 9144,
+      "count": 9292,
       "file": "chernarusplus_buildings.json"
     },
     {
       "mapId": "enoch",
       "mapName": "Livonia",
       "worldSizeMetres": 12800,
-      "count": 4498,
+      "count": 4556,
       "file": "enoch_buildings.json"
     },
     {
@@ -26,7 +26,7 @@
       "mapId": "sakhal",
       "mapName": "Sakhal",
       "worldSizeMetres": 15360,
-      "count": 5649,
+      "count": 5753,
       "file": "sakhal_buildings.json"
     }
   ]
