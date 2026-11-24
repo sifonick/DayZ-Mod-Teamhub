@@ -128,3 +128,10 @@ The original full-size source maps, ZIP archive, and source label PNGs remain in
 the local output folders and are omitted from this GitHub package. The ZIP
 duplicates the tile files and exceeds GitHub's individual-file limit; three
 source paper PNGs exceed that limit. The original local source files are unchanged.
+
+BLANK TILE LIST:
+empty-tiles.json lists every fully transparent roads, buildings, trees and label tile,
+so the map page answers those from memory instead of downloading them. After adding or
+regenerating overlay tiles, rebuild it and commit it together with the tiles:
+
+  python tools/make-empty-tiles.py
