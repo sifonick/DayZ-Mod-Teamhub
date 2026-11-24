@@ -41,8 +41,8 @@
           "tilesPerPyramid": 1365
         },
         "roads": {
-          "tileTemplate": "tiles/chernarus/roads/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/chernarus/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -50,8 +50,8 @@
           "tilesPerPyramid": 5461
         },
         "buildings": {
-          "tileTemplate": "tiles/chernarus/buildings/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/chernarus/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -86,8 +86,8 @@
           "tilesPerPyramid": 1365
         },
         "trees": {
-          "tileTemplate": "tiles/chernarus/trees/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/chernarus/trees/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -130,8 +130,8 @@
           "tilesPerPyramid": 1365
         },
         "roads": {
-          "tileTemplate": "tiles/livonia/roads/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/livonia/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -139,8 +139,8 @@
           "tilesPerPyramid": 5461
         },
         "buildings": {
-          "tileTemplate": "tiles/livonia/buildings/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/livonia/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -175,8 +175,8 @@
           "tilesPerPyramid": 1365
         },
         "trees": {
-          "tileTemplate": "tiles/livonia/trees/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/livonia/trees/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -219,8 +219,8 @@
           "tilesPerPyramid": 1365
         },
         "roads": {
-          "tileTemplate": "tiles/nasdara/roads/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/nasdara/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -264,8 +264,8 @@
           "tilesPerPyramid": 1365
         },
         "trees": {
-          "tileTemplate": "tiles/nasdara/trees/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/nasdara/trees/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -300,8 +300,8 @@
           "tilesPerPyramid": 1365
         },
         "roads": {
-          "tileTemplate": "tiles/sakhal/roads/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/sakhal/roads/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -309,8 +309,8 @@
           "tilesPerPyramid": 5461
         },
         "buildings": {
-          "tileTemplate": "tiles/sakhal/buildings/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/sakhal/buildings/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
@@ -345,8 +345,8 @@
           "tilesPerPyramid": 1365
         },
         "trees": {
-          "tileTemplate": "tiles/sakhal/trees/{z}/{x}/{y}.png",
-          "format": "image/png",
+          "tileTemplate": "tiles/sakhal/trees/{z}/{x}/{y}.webp",
+          "format": "image/webp",
           "tileSize": 256,
           "minZoom": 0,
           "maxNativeZoom": 6,
