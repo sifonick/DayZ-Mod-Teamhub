@@ -21,6 +21,8 @@ foreach ($map in @(@('chernarusplus','Chernarus',3840), @('enoch','Livonia',3200
     $world,$label,$width = $map
     $stem = "PatchAtlas_${label}_4m"
     $profile = [IO.Directory]::CreateDirectory((Join-Path $dest "profiles\$world")).FullName
+    # DayZ sees a short, unquoted relative profile path, including when Documents contains spaces.
+    $profileAlias = "Atlas4mProfile_" + [Guid]::NewGuid().ToString('N')
     $grid = Join-Path $profile "$stem.asc"
     $marker = Join-Path $profile "$stem.done.txt"
     $final = Join-Path $dest "$stem.asc"
@@ -30,9 +32,10 @@ foreach ($map in @(@('chernarusplus','Chernarus',3840), @('enoch','Livonia',3200
         $mission = Join-Path $server "mpmissions\$name"
         $null = New-Item -ItemType Directory -Path $mission
         $init = Join-Path $mission 'init.c'
-        $cfg = Join-Path $mission 'height-export.cfg'
-        $proc = $null
+        $cfg = Join-Path $server "$name.cfg"
+        $junction = $null; $proc = $null
         try {
+            $junction = New-Item -ItemType Junction -Path (Join-Path $server $profileAlias) -Target $profile
             $template.Replace('__WORLD__',$world).Replace('__LABEL__',$label) | Set-Content -LiteralPath $init -Encoding ASCII
             $password = [Guid]::NewGuid().ToString('N')
             @(
@@ -40,7 +43,7 @@ foreach ($map in @(@('chernarusplus','Chernarus',3840), @('enoch','Livonia',3200
                 'disableVoN=1;', 'vonCodecQuality=0;', 'disable3rdPerson=0;', 'disableCrosshair=0;', 'instanceId=971;', "steamQueryPort=$($Port+3);", "class Missions { class DayZ { template=`"$name`"; }; };"
             ) | Set-Content -LiteralPath $cfg -Encoding ASCII
             Write-Host "Sampling $label on a 4 m grid. Output and logs: $profile"
-            $proc = Start-Process -FilePath $exe -WorkingDirectory $server -NoNewWindow -ArgumentList @("-config=mpmissions\$name\height-export.cfg","-profiles=`"$profile`"","-port=$Port",'-dologs','-noPause','-noSplash') -PassThru
+            $proc = Start-Process -FilePath $exe -WorkingDirectory $server -NoNewWindow -ArgumentList @("-config=$name.cfg","-profiles=$profileAlias","-port=$Port",'-dologs','-noPause','-noSplash') -PassThru
             Write-Host "Server started. Waiting for the terrain to load..."; $progressAt = Get-Date
             $length = -1
             while (!(Test-Path $marker)) {
@@ -61,7 +64,7 @@ foreach ($map in @(@('chernarusplus','Chernarus',3840), @('enoch','Livonia',3200
             }
         } finally {
             if ($proc -and !$proc.HasExited) { $proc.Kill(); $proc.WaitForExit() }
-            if (Test-Path $cfg) { Remove-Item -LiteralPath $cfg }; if (Test-Path $init) { Remove-Item -LiteralPath $init }
+            if ($junction -and $junction.Attributes -band [IO.FileAttributes]::ReparsePoint) { [IO.Directory]::Delete($junction.FullName) }; if (Test-Path $cfg) { Remove-Item -LiteralPath $cfg }; if (Test-Path $init) { Remove-Item -LiteralPath $init }
             if (!(Get-ChildItem -LiteralPath $mission -Force)) { [IO.Directory]::Delete($mission) }
             Write-Progress -Activity "Sampling $label" -Completed
         }
@@ -76,3 +79,4 @@ foreach ($map in @(@('chernarusplus','Chernarus',3840), @('enoch','Livonia',3200
 
 
 } finally { $lock.Dispose() }
+
