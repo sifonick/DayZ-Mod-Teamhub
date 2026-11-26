@@ -1,0 +1,5 @@
+# No longer used: side 1 is now the default picture for every object.
+# To show side 2 first for an object, list it in use_side2.txt instead.
+# Entries that were here:
+# staticobj_pier_concrete2_end
+# pier_concrete2_end.p3d

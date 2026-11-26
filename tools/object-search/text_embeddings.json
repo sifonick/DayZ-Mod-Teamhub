@@ -1,0 +1,8 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "browserModel": "Xenova/all-MiniLM-L6-v2",
+  "dim": 384,
+  "count": 11199,
+  "dtype": "float16",
+  "catalogueHash": "a9703e1c25505f1c"
+}

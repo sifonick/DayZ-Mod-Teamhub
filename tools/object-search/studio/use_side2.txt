@@ -1,0 +1,4 @@
+# Objects whose Object Finder picture should be side 2 (back-right) instead of side 1.
+# One per line: class name, model file name or picture name. Text after # is ignored.
+# Example:
+# PA_sign_20a

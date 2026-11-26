@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patch Atlas Object Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a working field tool for map makers; terse, practical, quick to scan.
+   IDEA: a quartermaster's supply catalogue, each object a tagged stock card.
+   PICTURE: the image grid itself, large thumbnails filling the screen under the search.
+   COLOUR and TYPE: field-olive ground, bone paper cards, blood-red accent; Barlow Condensed titles, Barlow body.
+   LAYOUT: search band full width, filter row, responsive card grid, slide-in detail sheet. */
+:root{color-scheme:light dark;
+  --bg:light-dark(#e9e6db,#151811);--band:light-dark(#3d4a2f,#232a1b);--bandink:#f1eee4;
+  --card:light-dark(#faf8f2,#1f241a);--ink:light-dark(#1c2016,#e7e4d8);--muted:light-dark(#5d6152,#a3a593);
+  --line:light-dark(#d3cfc0,#343b2b);--accent:#b3261e;--accent-ink:#fff;--thumb:light-dark(#e3e0d4,#2a3022);
+  --ok:light-dark(#3f6b2a,#8dbb6a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif;overflow-x:clip}
+h1,h2{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;line-height:1.05;margin:0;text-wrap:balance}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.band{background:var(--band);color:var(--bandink);padding:clamp(22px,3.5vw,44px) max(5vw,16px) 22px}
+.wrap{max-width:1240px;margin:0 auto}
+.top{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+h1{font-size:clamp(32px,4.4vw,48px)}
+.status{font-size:14px;display:flex;align-items:center;gap:8px;opacity:.92}
+.dot{width:10px;height:10px;border-radius:50%;background:#c9a227;flex:none}
+.dot.ok{background:#8dbb6a}.dot.off{background:#9a9a8a}
+.searchrow{display:flex;gap:8px;margin-top:18px}
+.searchrow input{flex:1;height:56px;border-radius:10px;border:0;padding:0 18px;font-size:18px;background:#faf8f2;color:#1c2016}
+.searchrow button{height:56px;padding:0 24px;border:0;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-weight:600;cursor:pointer}
+.examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:14px}
+.examples span{opacity:.8;padding:6px 0;flex:none}
+.chip{border:1px solid rgba(241,238,228,.35);background:transparent;border-radius:999px;padding:6px 12px;cursor:pointer;min-height:36px}
+.chip:hover{background:rgba(241,238,228,.12)}
+.filters{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:16px max(5vw,16px);border-bottom:1px solid var(--line)}
+.filters label{font-size:14px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.filters select{height:44px;border-radius:8px;border:1px solid var(--line);background:var(--card);padding:0 10px;font-size:16px}
+.cats{display:flex;flex-wrap:wrap;gap:6px}
+.cat{min-height:40px;padding:0 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:15px}
+.cat[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.facets{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+.card .desc{font-size:13px;color:var(--muted);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.why{font-size:13px;color:var(--muted);margin:0}
+.reset{min-height:44px;padding:0 12px;border-radius:8px;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:15px}
+.count{margin-inline-start:auto;font-size:14px;color:var(--muted)}
+main{padding:20px max(5vw,16px) 48px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;text-align:left;padding:0}
+.card:hover{border-color:var(--muted)}
+.card img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--thumb);display:block}
+.card .meta{padding:9px 11px 11px;display:grid;gap:4px}
+.card .nm{font-weight:600;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 6px}
+.tag.map{color:var(--ok);border-color:currentColor}
+.more{display:block;margin:28px auto 0;min-height:48px;padding:0 28px;border-radius:10px;border:1px solid var(--ink);background:transparent;cursor:pointer;font-weight:600}
+.empty{padding:48px 0;text-align:center;color:var(--muted)}
+.notice{max-width:1240px;margin:0 auto 16px;padding:12px 16px;border-radius:8px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.notice:empty{display:none}
+.sheet{position:fixed;inset:0;display:none;z-index:10}
+.sheet.open{display:block}
+.shade{position:absolute;inset:0;background:rgba(10,12,8,.55)}
+.panel{position:absolute;top:0;right:0;bottom:0;width:min(520px,100%);background:var(--card);overflow-y:auto;padding:20px;display:grid;gap:14px;align-content:start;box-shadow:-10px 0 40px rgba(0,0,0,.3)}
+@media (prefers-reduced-motion:no-preference){.sheet.open .panel{animation:slide .18s ease-out}@keyframes slide{from{transform:translateX(30px);opacity:.4}}}
+.panel img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--thumb);border-radius:8px}
+.panel h2{font-size:30px;overflow-wrap:anywhere}
+.close{justify-self:end;min-height:44px;min-width:44px;border:1px solid var(--line);border-radius:8px;background:transparent;cursor:pointer}
+dl{margin:0;display:grid;grid-template-columns:7em 1fr;gap:6px 12px;font-size:15px}
+dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.btn{min-height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;font-weight:600}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.foot{border-top:1px solid var(--line);padding:20px max(5vw,16px) 32px;font-size:13px;color:var(--muted)}
+.foot p{max-width:1240px;margin:0 auto}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.toast.show{opacity:1}
+@media(max-width:600px){.facets{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}.facets label{display:grid;gap:2px;font-size:13px}.facets select,.reset{width:100%}.cats{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}.cat{flex:none}.examples{flex-wrap:nowrap;overflow-x:auto}.chip{flex:none}.searchrow input,.searchrow button{height:50px}.searchrow button{padding:0 16px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.count{width:100%;margin:0}dl{grid-template-columns:6em 1fr}}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <div class="top">
+      <h1>Object Finder</h1>
+      <div class="status" role="status"><span class="dot" id="dot"></span><span id="statusText">Loading the object list…</span></div>
+    </div>
+    <form class="searchrow" id="form" role="search">
+      <input id="q" type="search" placeholder="Describe it: metal object, wooden shed, snowy pine…" aria-label="Search objects" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+    <div class="examples" id="examples"><span>Try:</span></div>
+  </div>
+</header>
+<div class="filters">
+  <div class="cats" id="cats" aria-label="Category"></div>
+  <div class="facets">
+    <label>Map <select id="map">
+      <option value="">All maps</option><option>Chernarus</option><option>Livonia</option><option>Sakhal</option><option>Nasdara</option>
+    </select></label>
+    <label>Made of <select id="material"><option value="">Any material</option></select></label>
+    <label>Size <select id="size">
+      <option value="">Any size</option><option value="tiny">Tiny (under 1 m)</option><option value="small">Small (1–3 m)</option>
+      <option value="medium">Medium (3–10 m)</option><option value="large">Large (10–30 m)</option><option value="huge">Huge (30 m+)</option>
+    </select></label>
+    <label>Condition <select id="condition"><option value="">Any condition</option></select></label>
+    <button class="reset" id="reset" type="button">Clear filters</button>
+  </div>
+  <span class="count" id="count"></span>
+</div>
+<main>
+  <div class="notice" id="notice"></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden></div>
+  <button class="more" id="more" hidden>Show more</button>
+</main>
+<footer class="foot">
+  <p>This website is not affiliated or authorized by Bohemia Interactive a.s. Bohemia Interactive, ARMA, DAYZ and all associated logos and designs are trademarks or registered trademarks of Bohemia Interactive a.s. Object images are screenshots of the game, shown for non-commercial use.</p>
+</footer>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="shade" id="shade"></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <button class="close" id="close" aria-label="Close">✕</button>
+    <img id="dImg" alt="">
+    <h2 id="dTitle"></h2>
+    <dl id="dList"></dl>
+    <div class="actions" id="dActions"></div>
+    <div class="tags" id="dTags"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script type="module">
+{
+// Where the data and images live. Served from inside the repo (tools/object-search/)
+// it uses relative paths; anywhere else (e.g. a Patch Atlas page) it reads from GitHub.
+const RAW = 'https://raw.githubusercontent.com/sifonick/DayZ-Mod-Teamhub/main/';
+const inRepo = /\/tools\/object-search\/(index\.html)?$/.test(location.pathname);
+const DATA_BASE = window.OBJECT_FINDER_DATA || (inRepo ? './' : RAW + 'tools/object-search/');
+const IMG_BASE = window.OBJECT_FINDER_IMAGES || (inRepo ? '../../' : RAW);
+const TRANSFORMERS = 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1';
+const PAGE = 120;
+const DEV = inRepo || /[?&]debug\b/.test(location.search);  // setup notes only for you, not visitors
+const CATS = ['All','Structures','Plants','Rocks','Water','Vehicles','Weapons','Gear','Characters','Animals','Compositions','Effects & data'];
+const EXAMPLES = ['metal object','wooden shed','snowy pine tree','rusty car wreck','desert ruin','military tent','red brick house','fuel tank'];
+const ANY_MAP = ['Weapons','Gear','Characters','Animals','Effects & data','Vehicles'];
+const MATERIAL_WORDS = ['metal','corrugated metal','wood','concrete','brick','mud brick','stone','plaster','glass','plastic','rubber','fabric','leather','asphalt','earth','foliage','roof tiles','sand','ceramic','hay','ice'];
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const imgUrl = p => IMG_BASE + p.split('/').map(encodeURIComponent).join('/');
+
+let items = [];
+// Two kinds of AI data: picture vectors (CLIP) and description vectors (MiniLM).
+const ai = {
+  image: { file: 'embeddings', vecs: null, dim: 0, meta: null, model: null, tok: null, state: 'off' },
+  text:  { file: 'text_embeddings', vecs: null, dim: 0, meta: null, pipe: null, state: 'off' },
+};
+let T = null;
+let results = [], shown = 0, cat = 'All', lastQuery = '', similarTo = null, runId = 0;
+
+function setStatus(state, text){
+  $('dot').className = 'dot' + (state === 'ok' ? ' ok' : state === 'off' ? ' off' : '');
+  $('statusText').textContent = text;
+}
+function toast(t){ const el = $('toast'); el.textContent = t; el.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('show'), 1600); }
+function note(t){ if (DEV) $('notice').textContent += ($('notice').textContent ? ' ' : '') + t; }
+
+// ---------- data ----------
+function f16ToF32(buf, n){
+  const h = new Uint16Array(buf), out = new Float32Array(n);
+  for (let i = 0; i < n; i++){
+    const x = h[i], s = x & 0x8000 ? -1 : 1, e = (x >> 10) & 0x1f, m = x & 0x3ff;
+    out[i] = e === 0 ? s * m * 2 ** -24 : e === 31 ? (m ? NaN : s * Infinity) : s * (1 + m / 1024) * 2 ** (e - 15);
+  }
+  return out;
+}
+async function sha1Short(text){
+  const d = await crypto.subtle.digest('SHA-1', new TextEncoder().encode(text));
+  return [...new Uint8Array(d)].map(b => b.toString(16).padStart(2,'0')).join('').slice(0,16);
+}
+async function loadVectors(kind, hash){
+  const a = ai[kind];
+  try {
+    const r = await fetch(DATA_BASE + a.file + '.json');
+    if (!r.ok) throw new Error('missing');
+    a.meta = await r.json();
+    const bin = await (await fetch(DATA_BASE + a.file + '.bin')).arrayBuffer();
+    if (a.meta.count !== items.length || bin.byteLength !== a.meta.count * a.meta.dim * 2) throw new Error('size');
+    if (a.meta.catalogueHash !== hash) note(`${a.file} was built from an older object list: re-run its build script.`);
+    a.vecs = f16ToF32(bin, a.meta.count * a.meta.dim); a.dim = a.meta.dim;
+  } catch (e) {
+    a.vecs = null;
+    note(kind === 'image' ? 'Picture search data (embeddings.bin) not found: run build_embeddings.py.' : 'Description search data (text_embeddings.bin) not found: run build_text_index.py.');
+  }
+}
+async function loadData(){
+  const catData = await (await fetch(DATA_BASE + 'catalogue.json')).json();
+  items = catData.items;
+  for (const it of items){
+    it._text = (it.name + ' ' + (it.class || '') + ' ' + it.tags.join(' ') + ' ' + (it.description || '')).toLowerCase();
+    it.materials = it.materials || [];
+  }
+  const hash = await sha1Short(items.map(i => i.img).join('\n'));
+  await Promise.all([loadVectors('image', hash), loadVectors('text', hash)]);
+  // Fill the filter menus with what the data actually has.
+  const mats = new Set(items.flatMap(i => i.materials));
+  $('material').insertAdjacentHTML('beforeend', MATERIAL_WORDS.filter(m => mats.has(m)).map(m => `<option>${esc(m)}</option>`).join(''));
+  const conds = [...new Set(items.map(i => i.condition).filter(c => c && c !== 'not applicable'))].sort();
+  if (conds.length) $('condition').insertAdjacentHTML('beforeend', conds.map(c => `<option>${esc(c)}</option>`).join(''));
+  else $('condition').closest('label').hidden = true;
+}
+async function loadModels(){
+  if (!ai.image.vecs && !ai.text.vecs) return;
+  if (ai.text.state !== 'off' || ai.image.state !== 'off') return;
+  setStatus('wait', 'Loading the AI search models (first visit only)…');
+  try {
+    T = await import(TRANSFORMERS);
+    T.env.allowLocalModels = false;
+  } catch (e) { console.error(e); ai.text.state = ai.image.state = 'failed'; return status(); }
+  const jobs = [];
+  if (ai.text.vecs){
+    ai.text.state = 'loading';
+    jobs.push(T.pipeline('feature-extraction', ai.text.meta.browserModel, { dtype: 'q8' })
+      .then(p => { ai.text.pipe = p; ai.text.state = 'ready'; status(); if (lastQuery) run(); })
+      .catch(e => { console.error(e); ai.text.state = 'failed'; status(); }));
+  }
+  if (ai.image.vecs){
+    ai.image.state = 'loading';
+    jobs.push(Promise.all([
+      T.AutoTokenizer.from_pretrained(ai.image.meta.browserModel),
+      T.CLIPTextModelWithProjection.from_pretrained(ai.image.meta.browserModel, { dtype: 'q8' }),
+    ]).then(([tok, model]) => { ai.image.tok = tok; ai.image.model = model; ai.image.state = 'ready'; status(); if (lastQuery) run(); })
+      .catch(e => { console.error(e); ai.image.state = 'failed'; status(); }));
+  }
+  await Promise.all(jobs);
+}
+function status(){
+  const n = items.length.toLocaleString();
+  const ready = [ai.text.state === 'ready' && 'descriptions', ai.image.state === 'ready' && 'pictures'].filter(Boolean);
+  const loading = ai.text.state === 'loading' || ai.image.state === 'loading';
+  if (ready.length) setStatus(loading ? 'wait' : 'ok', `AI search ready (${ready.join(' + ')}) · ${n} objects${loading ? ' · still loading…' : ''}`);
+  else if (loading) setStatus('wait', 'Loading the AI search models (first visit only)…');
+  else if (ai.text.vecs || ai.image.vecs) setStatus(ai.text.state === 'failed' ? 'off' : 'wait', ai.text.state === 'failed' ? `Word search only · ${n} objects (AI models failed to load)` : `${n} objects · AI models load on first search`);
+  else setStatus('off', `Word search only · ${n} objects`);
+}
+function norm(v){ let n = 0; for (const x of v) n += x * x; n = Math.sqrt(n) || 1; return v.map(x => x / n); }
+async function embedImageQuery(q){
+  const inputs = ai.image.tok(['a 3d render of ' + q], { padding: true, truncation: true });
+  const { text_embeds } = await ai.image.model(inputs);
+  return norm(Float32Array.from(text_embeds.data));
+}
+async function embedTextQuery(q){
+  const out = await ai.text.pipe(q, { pooling: 'mean', normalize: true });
+  return Float32Array.from(out.data);
+}
+
+// ---------- search ----------
+const STOP = new Set(['a','an','the','of','with','and','or','object','objects','thing','things','item','items','some','any','made','from','that','is','for','in']);
+// Everyday words -> the material words used in the data.
+const ALIAS = { wooden: 'wood', timber: 'wood', metallic: 'metal', steel: 'metal', iron: 'metal', tin: 'metal', bricks: 'brick',
+  rock: 'stone', rocks: 'stone', stones: 'stone', cement: 'concrete', glazed: 'glass', fabrics: 'fabric', cloth: 'fabric', canvas: 'fabric',
+  tiled: 'roof tiles', dirt: 'earth', leaves: 'foliage', rusted: 'rusty' };
+function words(q){ return q.toLowerCase().split(/[^a-z0-9]+/).filter(w => w && !STOP.has(w)).map(w => ALIAS[w] || w); }
+function keywordScore(it, ws){
+  let s = 0;
+  for (const w of ws){
+    const mi = it.materials.findIndex(m => m === w || m.split(' ').includes(w));
+    if (mi === 0) s += 1.5;            // main material, straight from the game files
+    else if (mi > 0) s += 0.8;
+    else if (w === 'rusty' && it.rusty) s += 1;
+    else if (it.tags.includes(w)) s += 1;
+    else if (it._text.includes(w)) s += 0.6;
+    else if (w.length > 3 && w.endsWith('s') && it._text.includes(w.slice(0, -1))) s += 0.5;
+  }
+  return ws.length ? s / ws.length : 0;
+}
+function passes(it){
+  if (cat !== 'All' && it.category !== cat) return false;
+  const m = $('map').value;
+  if (m && !ANY_MAP.includes(it.category) && !it.maps.includes(m) && !(it.maps.length === 0 && (it.set === m || (m === 'Chernarus' && it.set === 'Base')))) return false;
+  const mat = $('material').value;
+  if (mat && !it.materials.includes(mat)) return false;
+  const sz = $('size').value;
+  if (sz && it.sizeClass !== sz) return false;
+  const c = $('condition').value;
+  if (c && it.condition !== c) return false;
+  return true;
+}
+function dotv(a, i, q){ const v = a.vecs, d = a.dim, o = i * d; let s = 0; for (let k = 0; k < d; k++) s += v[o + k] * q[k]; return s; }
+// Combine several rankings: an object near the top of any list rises, near the top of all lists rises most.
+function fuse(pool, lists){
+  const score = new Map();
+  for (const { ranked, weight } of lists){
+    ranked.forEach((it, r) => score.set(it, (score.get(it) || 0) + weight / (40 + r)));
+  }
+  return pool.filter(it => score.has(it)).sort((a, b) => score.get(b) - score.get(a));
+}
+function rankBy(pool, fn, limit = 800){
+  return pool.map(it => [it, fn(it)]).sort((a, b) => b[1] - a[1]).slice(0, limit).map(r => r[0]);
+}
+
+async function run(){
+  const id = ++runId;
+  const q = $('q').value.trim();
+  lastQuery = q;
+  const pool = items.filter(passes);
+  let ranked, how = '';
+  if (similarTo !== null){
+    const src = items[similarTo], lists = [];
+    if (ai.image.vecs){ const o = similarTo * ai.image.dim, v = ai.image.vecs.subarray(o, o + ai.image.dim); lists.push({ ranked: rankBy(pool, it => dotv(ai.image, it.id, v)), weight: 1 }); }
+    if (ai.text.vecs){ const o = similarTo * ai.text.dim, v = ai.text.vecs.subarray(o, o + ai.text.dim); lists.push({ ranked: rankBy(pool, it => dotv(ai.text, it.id, v)), weight: 1 }); }
+    ranked = fuse(pool, lists).slice(0, 600);
+    how = `Objects like ${src.name}`;
+  } else if (!q){
+    ranked = pool;
+  } else {
+    const ws = words(q), lists = [];
+    const kw = pool.map(it => [it, keywordScore(it, ws)]).filter(r => r[1] > 0).sort((a, b) => b[1] - a[1]).map(r => r[0]);
+    if (ai.text.state === 'ready'){
+      const v = await embedTextQuery(q); if (id !== runId) return;
+      lists.push({ ranked: rankBy(pool, it => dotv(ai.text, it.id, v)), weight: 1.2 });
+    }
+    if (ai.image.state === 'ready'){
+      const v = await embedImageQuery(q); if (id !== runId) return;
+      lists.push({ ranked: rankBy(pool, it => dotv(ai.image, it.id, v)), weight: 0.7 });
+    }
+    if (lists.length){
+      lists.push({ ranked: kw, weight: 0.9 });
+      ranked = fuse(pool, lists).slice(0, 600);
+      how = `Best ${ranked.length} matches`;
+    } else {
+      ranked = kw;
+      how = `${ranked.length.toLocaleString()} matches`;
+    }
+  }
+  results = ranked; shown = 0;
+  $('grid').innerHTML = '';
+  $('count').textContent = how || `${ranked.length.toLocaleString()} objects`;
+  $('empty').hidden = ranked.length > 0;
+  $('empty').textContent = q ? 'Nothing matched. Try fewer or different words, or clear the filters.' : 'No objects match these filters.';
+  more();
+}
+function chips(it){
+  const out = [`<span class="tag">${esc(it.category)}</span>`];
+  if (it.materials[0]) out.push(`<span class="tag">${esc(it.materials[0])}</span>`);
+  if (it.sizeClass) out.push(`<span class="tag">${esc(it.sizeClass)}</span>`);
+  out.push(...it.maps.map(m => `<span class="tag map">${esc(m)}</span>`));
+  if (!it.maps.length && it.set !== 'Base') out.push(`<span class="tag">${esc(it.set)} set</span>`);
+  return out.join('');
+}
+function more(){
+  const slice = results.slice(shown, shown + PAGE);
+  $('grid').insertAdjacentHTML('beforeend', slice.map(it => `
+    <button class="card" data-id="${it.id}">
+      <img loading="lazy" src="${esc(imgUrl(it.studioImg || it.img))}" alt="${esc(it.description || it.name)}">
+      <span class="meta"><span class="nm">${esc(it.name)}</span>${it.description ? `<span class="desc">${esc(it.description)}</span>` : ''}<span class="tags">${chips(it)}</span></span>
+    </button>`).join(''));
+  shown += slice.length;
+  $('more').hidden = shown >= results.length;
+}
+
+// ---------- detail ----------
+function copy(text, what){
+  navigator.clipboard.writeText(text).then(() => toast(`Copied ${what}`), () => toast('Copy failed: select the text instead'));
+}
+function openItem(id){
+  const it = items[id];
+  $('dImg').src = imgUrl(it.studioImg || it.img); $('dImg').alt = it.description || it.name;
+  $('dImg').dataset.id = id;
+  $('dTitle').textContent = it.name;
+  const src = { 'patch-atlas': ' (needs the PatchAtlas_Objects mod)', 'vanilla': ' (vanilla)' }[it.classSource] || '';
+  const rows = [];
+  if (it.description) rows.push(['About', it.description]);
+  rows.push(['Class', it.class ? it.class + src : 'Not known'], ['Model', it.model || 'Not known']);
+  if (it.objectType) rows.push(['Type', it.objectType]);
+  if (it.materials.length) rows.push(['Made of', it.materials.join(', ') + (it.rusty ? ' (rusty)' : '')]);
+  if (it.size){ const [w, h, d] = it.size; rows.push(['Size', `${w} × ${d} m, ${h} m tall (${it.sizeClass})`]); }
+  if (it.colours?.length) rows.push(['Colours', it.colours.join(', ')]);
+  if (it.condition && it.condition !== 'not applicable') rows.push(['Condition', it.condition]);
+  if (it.mapType) rows.push(['Map legend', it.mapType]);
+  rows.push(['Category', it.category], ['Placed on', it.maps.length ? it.maps.join(', ') : 'Not in the map data'], ['Asset set', it.set]);
+  if (it.studioImg) rows.push(['In-game view', it.img]);
+  $('dList').innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
+  const acts = [];
+  if (it.class) acts.push(`<button class="btn primary" data-copy="class">Copy class name</button>`);
+  if (it.model) acts.push(`<button class="btn${it.class ? '' : ' primary'}" data-copy="model">Copy model path</button>`);
+  acts.push(`<button class="btn" data-copy="img">Copy image link</button>`);
+  if (it.studioImgs?.length > 1) it.studioImgs.forEach((src, n) => {
+    const label = /_2\.(webp|jpg)$/.test(src) ? 'Side 2' : 'Side 1';
+    acts.push(`<button class="btn" data-side="${n}" aria-pressed="${n === 0}">${label}</button>`);
+  });
+  if (it.studioImg) acts.push(`<a class="btn" href="${esc(imgUrl(it.img))}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none;color:inherit">In-game view</a>`);
+  const canSimilar = ai.image.vecs || ai.text.vecs;
+  acts.push(`<button class="btn" data-similar ${canSimilar ? '' : 'disabled title="Needs the AI search data"'}>Find similar</button>`);
+  $('dActions').innerHTML = acts.join('');
+  $('dActions').dataset.id = id;
+  $('dTags').innerHTML = it.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('');
+  $('sheet').classList.add('open'); $('sheet').setAttribute('aria-hidden', 'false');
+  $('close').focus();
+}
+function closeSheet(){ $('sheet').classList.remove('open'); $('sheet').setAttribute('aria-hidden', 'true'); }
+
+// ---------- wiring ----------
+$('cats').innerHTML = CATS.map(c => `<button class="cat" aria-pressed="${c === 'All'}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+$('examples').insertAdjacentHTML('beforeend', EXAMPLES.map(e => `<button class="chip" data-ex="${esc(e)}">${esc(e)}</button>`).join(''));
+$('cats').addEventListener('click', e => {
+  const b = e.target.closest('[data-cat]'); if (!b) return;
+  cat = b.dataset.cat;
+  for (const x of $('cats').children) x.setAttribute('aria-pressed', x === b);
+  run();
+});
+$('examples').addEventListener('click', e => { const b = e.target.closest('[data-ex]'); if (b){ $('q').value = b.dataset.ex; similarTo = null; loadModels(); run(); } });
+$('form').addEventListener('submit', e => { e.preventDefault(); similarTo = null; run(); });
+$('q').addEventListener('input', () => { clearTimeout(run.t); run.t = setTimeout(() => { similarTo = null; run(); }, ai.text.state === 'ready' || ai.image.state === 'ready' ? 350 : 200); });
+for (const id of ['map', 'material', 'size', 'condition']) $(id).addEventListener('change', run);
+$('reset').addEventListener('click', () => {
+  for (const id of ['map', 'material', 'size', 'condition']) $(id).value = '';
+  cat = 'All'; for (const x of $('cats').children) x.setAttribute('aria-pressed', x.dataset.cat === 'All');
+  similarTo = null;
+  run();
+});
+$('more').addEventListener('click', more);
+$('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) openItem(+c.dataset.id); });
+$('shade').addEventListener('click', closeSheet);
+$('close').addEventListener('click', closeSheet);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+$('dActions').addEventListener('click', e => {
+  const it = items[+$('dActions').dataset.id], b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.copy === 'class') copy(it.class, 'class name');
+  else if (b.dataset.copy === 'model') copy(it.model, 'model path');
+  else if (b.dataset.copy === 'img') copy(imgUrl(it.studioImg || it.img), 'image link');
+  else if ('side' in b.dataset){
+    $('dImg').src = imgUrl(it.studioImgs[+b.dataset.side]);
+    for (const x of $('dActions').querySelectorAll('[data-side]')) x.setAttribute('aria-pressed', x === b);
+  }
+  else if ('similar' in b.dataset){ similarTo = it.id; $('q').value = ''; closeSheet(); run(); window.scrollTo({ top: 0 }); }
+});
+
+loadData().then(() => {
+  status();
+  run();
+  if (ai.text.vecs || ai.image.vecs){
+    // Load the models when the visitor starts typing, or after a short idle.
+    $('q').addEventListener('focus', loadModels, { once: true });
+    setTimeout(loadModels, 2500);
+  }
+}).catch(e => { console.error(e); setStatus('off', 'Could not load the object list'); $('notice').textContent = 'The object list (catalogue.json) could not be loaded from ' + DATA_BASE; });
+}
+</script>
+</body>
+</html>

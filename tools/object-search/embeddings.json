@@ -1,0 +1,8 @@
+{
+  "model": "openai/clip-vit-base-patch32",
+  "browserModel": "Xenova/clip-vit-base-patch32",
+  "dim": 512,
+  "count": 11199,
+  "dtype": "float16",
+  "catalogueHash": "a9703e1c25505f1c"
+}

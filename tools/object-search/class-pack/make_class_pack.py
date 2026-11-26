@@ -1,0 +1,158 @@
+"""Give every map object a class name you can use in the DayZ Editor.
+
+Run from the root of the DayZ-Mod-Teamhub repo:
+
+    python tools/object-search/class-pack/make_class_pack.py [path/to/pa_model_classes.txt]
+
+1. If you pass the pa_model_classes.txt made by PA_ModelClassScan.c, any object
+   that already has a vanilla class (Land_..., StaticObj_..., Wreck_...) keeps that class.
+2. Every other object gets a new class, PA_<model name>, defined in a small
+   config-only mod written to tools/object-search/class-pack/PatchAtlas_Objects/.
+3. tools/object-search/classes.json is written so build_catalogue.py can show the
+   class names on the Object Finder.
+
+Then pack PatchAtlas_Objects with DayZ Tools > Addon Builder (see README.md).
+"""
+import json
+import os
+import re
+import sys
+from collections import defaultdict
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SEARCH = os.path.dirname(HERE)
+MOD_DIR = os.path.join(HERE, "PatchAtlas_Objects")
+PREFIX = "PA_"
+VANILLA_PREFIXES = ("land_", "staticobj_", "wreck_", "static_", "treehard_", "treesoft_", "bushhard_", "bushsoft_")
+PLACEABLE = {"Structures", "Rocks", "Water", "Plants"}
+SET_SUFFIX = {"bliss": "enoch", "sakhal": "sakhal", "takistan": "tk"}
+
+
+def norm_model(m):
+    m = m.strip().replace("\\", "/").lstrip("/").lower()
+    if not m.endswith(".p3d"):
+        m += ".p3d"
+    return m
+
+
+def read_scan(path):
+    """(model -> best existing class, lower-case class name -> (Class, model)) from the in-game scan.
+    Only CfgVehicles: CfgNonAIVehicles entries (TreeHard_ etc.) are terrain types that can't be spawned."""
+    found = defaultdict(list)
+    names = {}
+    with open(path, encoding="utf-8", errors="replace") as fh:
+        for line in fh:
+            parts = line.rstrip("\n").split("\t")
+            if len(parts) < 3:
+                continue
+            root, cls, model = parts[:3]
+            scope = int(parts[3]) if len(parts) > 3 and parts[3].lstrip("-").isdigit() else 0
+            if cls.startswith(PREFIX) or root != "CfgVehicles":  # skip our own pack and non-spawnable types
+                continue
+            found[norm_model(model)].append((root, cls, scope))
+            names.setdefault(cls.lower(), (cls, norm_model(model)))
+
+    def rank(c):
+        root, cls, scope = c
+        low = cls.lower()
+        return (root != "CfgVehicles", low.startswith("proxy"), not low.startswith(VANILLA_PREFIXES), -scope, len(cls))
+
+    return {m: sorted(cs, key=rank)[0][1] for m, cs in found.items()}, names
+
+
+def class_name(model, taken):
+    parts = model.split("/")
+    stem = parts[-1][:-4]
+    base = PREFIX + re.sub(r"[^A-Za-z0-9_]", "_", stem)
+    if base.lower() in taken:
+        top = parts[1] if parts[0] == "dz" else parts[0]
+        suffix = SET_SUFFIX.get(top.split("_")[-1], top)
+        base = f"{base}_{suffix}"
+    name, n = base, 2
+    while name.lower() in taken:
+        name, n = f"{base}_{n}", n + 1
+    taken.add(name.lower())
+    return name
+
+
+def main():
+    cat_path = os.path.join(SEARCH, "catalogue.json")
+    items = json.load(open(cat_path, encoding="utf-8"))["items"]
+    scan, names = read_scan(sys.argv[1]) if len(sys.argv) > 1 else ({}, {})
+    if not scan:
+        print("No scan file given: every object without a known class gets a PA_ class.")
+
+    classes, new, taken = {}, [], set()
+    for it in items:
+        if it["category"] not in PLACEABLE or not (it["model"] or it["class"]):
+            continue
+        raw_model = it.get("guessModel") or it["model"]
+        model = norm_model(raw_model) if raw_model else None
+        if it["class"] and it.get("classSource") == "map data":
+            entry = {"class": it["class"], "source": "map data"}
+            if it["class"].lower() in names:  # the game's own spelling and model path
+                proper, real_model = names[it["class"].lower()]
+                entry["class"] = proper
+                entry["model"] = "dz/" + real_model.removeprefix("dz/")
+            classes[it["img"]] = entry
+        elif it["name"] in names:
+            # image named after the class itself, e.g. staticobj_stone1_sand
+            cls, real_model = names[it["name"]]
+            classes[it["img"]] = {"class": cls, "source": "vanilla", "model": "dz/" + real_model.removeprefix("dz/")}
+        elif "staticobj_" + it["name"] in names and os.path.basename(names["staticobj_" + it["name"]][1]) == os.path.basename(model):
+            cls, real_model = names["staticobj_" + it["name"]]
+            classes[it["img"]] = {"class": cls, "source": "vanilla", "model": "dz/" + real_model.removeprefix("dz/")}
+        elif model in scan:
+            classes[it["img"]] = {"class": scan[model], "source": "vanilla"}
+        else:
+            new.append((model, it))
+    for model, it in sorted(new):
+        cls = class_name(model, taken)
+        classes[it["img"]] = {"class": cls, "source": "patch-atlas"}
+
+    os.makedirs(MOD_DIR, exist_ok=True)
+    lines = [
+        "// Generated by make_class_pack.py. Gives vanilla map models a class name so",
+        "// they can be placed in the DayZ Editor and spawned from init.c / JSON.",
+        "class CfgPatches",
+        "{",
+        "\tclass PatchAtlas_Objects",
+        "\t{",
+        "\t\tunits[] = {};",
+        "\t\tweapons[] = {};",
+        "\t\trequiredVersion = 0.1;",
+        '\t\trequiredAddons[] = {"DZ_Data"};',
+        "\t};",
+        "};",
+        "class CfgVehicles",
+        "{",
+        "\tclass HouseNoDestruct;",
+    ]
+    for model, it in sorted(new):
+        cls = classes[it["img"]]["class"]
+        path = "\\" + model.replace("/", "\\")
+        lines += [
+            f"\tclass {cls}: HouseNoDestruct",
+            "\t{",
+            "\t\tscope = 2;",
+            f'\t\tdisplayName = "{it["name"]}";',
+            f'\t\tmodel = "{path}";',
+            "\t};",
+        ]
+    lines.append("};")
+    with open(os.path.join(MOD_DIR, "config.cpp"), "w", encoding="utf-8", newline="\r\n") as fh:
+        fh.write("\n".join(lines) + "\n")
+
+    with open(os.path.join(SEARCH, "classes.json"), "w", encoding="utf-8") as fh:
+        json.dump(classes, fh, indent=0, sort_keys=True)
+
+    counts = defaultdict(int)
+    for v in classes.values():
+        counts[v["source"]] += 1
+    print(f"Map data classes: {counts['map data']}, vanilla classes from scan: {counts['vanilla']}, "
+          f"new PA_ classes: {counts['patch-atlas']}")
+    print(f"Wrote {os.path.join(MOD_DIR, 'config.cpp')} and {os.path.join(SEARCH, 'classes.json')}")
+
+
+if __name__ == "__main__":
+    main()
