@@ -4,9 +4,11 @@
     python tools/object-search/studio/cutout.py --redo   # all of them again
 
 Reads assets/model-images-studio/<category>/<name>.jpg (and <name>_2.jpg) and writes
-assets/model-images-cutout/<category>/<name>.webp: the studio's plain background colour and
-the black bottom of the sky are made transparent, and the picture is cropped to the object.
-WebP keeps the transparency at a fraction of a PNG's size.
+- assets/model-images-cutout/<category>/<name>.webp: the studio's plain background colour and
+  the black bottom of the sky are made transparent, and the picture is cropped to the object.
+  WebP keeps the transparency at a fraction of a PNG's size. Used by the Patch Atlas map.
+- assets/model-images-photo/<category>/<name>.webp: the whole studio picture with its grey
+  background, 768 px, small enough to upload. Used by the Object Finder.
 Needs Pillow, numpy and scipy.
 """
 import argparse
@@ -19,6 +21,7 @@ from scipy import ndimage
 
 SRC = "assets/model-images-studio"
 DST = "assets/model-images-cutout"
+PHOTO = "assets/model-images-photo"
 SIZE = 768
 
 
@@ -26,6 +29,16 @@ def cut_name(studio_path):
     """assets/model-images-studio/x/y.jpg -> assets/model-images-cutout/x/y.webp"""
     rel = os.path.relpath(studio_path, SRC)
     return os.path.join(DST, os.path.splitext(rel)[0] + ".webp").replace("\\", "/")
+
+
+def photo_name(studio_path):
+    """assets/model-images-studio/x/y.jpg -> assets/model-images-photo/x/y.webp"""
+    rel = os.path.relpath(studio_path, SRC)
+    return os.path.join(PHOTO, os.path.splitext(rel)[0] + ".webp").replace("\\", "/")
+
+
+def stale(dst, src, redo):
+    return redo or not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src)
 
 
 def cutout(img, bg_tol=14, black_max=18, pad=0.06):
@@ -91,21 +104,30 @@ def run(redo=False, quiet=False):
         for f in files:
             if f.lower().endswith(".jpg"):
                 src = os.path.join(root, f).replace("\\", "/")
-                dst = cut_name(src)
-                if redo or not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
-                    todo.append((src, dst))
-    done = empty = 0
-    for i, (src, dst) in enumerate(todo, 1):
-        img = cutout(Image.open(src))
-        if img is None:
-            empty += 1
-            continue
-        os.makedirs(os.path.dirname(dst), exist_ok=True)
-        img.resize((SIZE, SIZE), Image.LANCZOS).save(dst, "WEBP", quality=88, method=4)
-        done += 1
+                dst, pho = cut_name(src), photo_name(src)
+                if stale(dst, src, redo) or stale(pho, src, redo):
+                    todo.append((src, dst, pho))
+    done = empty = photos = 0
+    for i, (src, dst, pho) in enumerate(todo, 1):
+        im = Image.open(src).convert("RGB")
+        if stale(pho, src, redo):
+            os.makedirs(os.path.dirname(pho), exist_ok=True)
+            p = im.copy()
+            p.thumbnail((SIZE, SIZE), Image.LANCZOS)
+            p.save(pho, "WEBP", quality=82, method=4)
+            photos += 1
+        if stale(dst, src, redo):
+            img = cutout(im)
+            if img is None:
+                empty += 1
+            else:
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+                img.resize((SIZE, SIZE), Image.LANCZOS).save(dst, "WEBP", quality=88, method=4)
+                done += 1
         if not quiet and i % 50 == 0:
             print(f"  {i}/{len(todo)}")
-    print(f"Cut-outs: {done} made, {empty} with nothing left after removing the background.")
+    print(f"Cut-outs: {done} made, {empty} with nothing left after removing the background. "
+          f"Finder pictures: {photos} made.")
     return done
 
 

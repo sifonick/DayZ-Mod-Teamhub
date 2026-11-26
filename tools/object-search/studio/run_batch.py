@@ -61,7 +61,8 @@ def start_studio(studio):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("count", type=int, help="how many objects to photograph (each gets two pictures)")
+    ap.add_argument("count", type=int, nargs="?", default=0, help="how many objects to photograph (each gets two pictures)")
+    ap.add_argument("--no-photos", action="store_true", help="don't start the game: only remake the pictures, catalogue and map files")
     ap.add_argument("--studio", default=DEFAULT_STUDIO, help="the @PatchAtlas_Studio folder")
     ap.add_argument("--only", default=None, help="categories, e.g. Structures,Vehicles")
     ap.add_argument("--restarts", type=int, default=5, help="how often to restart the studio after a crash")
@@ -72,7 +73,7 @@ def main():
 
     list_args = ["--limit", str(args.count)] + (["--only", args.only] if args.only else [])
     attempt = 0
-    while True:
+    while not args.no_photos:
         step("Listing the next objects" if attempt == 0 else f"Restarting after a crash ({attempt}/{args.restarts})")
         py("make_capture_list.py", *list_args)
         plan = os.path.join(HERE, "capture_plan.json")
@@ -105,14 +106,16 @@ def main():
 
     if args.push:
         step("Uploading to GitHub")
-        paths = ["assets/model-images-cutout", "assets/model-images-pa", "tools/object-search/catalogue.json", "tools/object-search/map_images.json",
+        paths = ["assets/model-images-cutout", "assets/model-images-photo", "assets/model-images-pa", "tools/object-search/catalogue.json", "tools/object-search/map_images.json",
                  "tools/object-search/studio/studio_captures.jsonl"]
-        subprocess.run(["git", "add", *paths])
+        subprocess.run(["git", "add", "-A", "--", *[p for p in paths if os.path.exists(p)]])
         if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode:
             subprocess.run(["git", "commit", "-m", f"Object Finder: studio pictures, batch of {args.count}"])
-            subprocess.run(["git", "push"])
         else:
-            print("Nothing new to upload.")
+            print("No new changes to commit.")
+        # push even when nothing new was committed, so earlier commits that never got uploaded go too
+        subprocess.run(["git", "pull", "--rebase", "--autostash"])
+        subprocess.run(["git", "push"])
     print("\nDone. Refresh the Object Finder to see the new pictures.")
 
 

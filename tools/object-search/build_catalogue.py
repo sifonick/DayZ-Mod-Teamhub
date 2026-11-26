@@ -270,7 +270,8 @@ def attach_studio(items, folder):
     Side 1 (the front-left view) is the default. List an object in studio/use_side2.txt (its
     class, model file name or picture name, one per line) to show side 2 first instead, e.g.
     for objects with no back texture that look the wrong way round from side 1.
-    Cut-outs (assets/model-images-cutout/..., made by studio/cutout.py) are used when they exist.
+    The Finder uses the whole studio pictures (assets/model-images-photo/..., made by studio/cutout.py);
+    the map uses the transparent cut-outs (see write_map_images).
     """
     path = os.path.join(folder, "studio", "studio_captures.jsonl")
     if not os.path.exists(path):
@@ -284,8 +285,10 @@ def attach_studio(items, folder):
                 side2.add(re.sub(r"\.(p3d|jpg|webp|png)$", "", line.replace("\\", "/").rsplit("/", 1)[-1]))
 
     def best(file):
-        cut = "assets/model-images-cutout/" + os.path.splitext(os.path.relpath(file, "assets/model-images-studio"))[0].replace("\\", "/") + ".webp"
-        return cut if os.path.exists(cut) else file
+        # the Object Finder shows the whole studio picture (grey background): the small WebP copy
+        # made by studio/cutout.py when it exists, else the studio JPG. The map uses the cut-outs.
+        pho = "assets/model-images-photo/" + os.path.splitext(os.path.relpath(file, "assets/model-images-studio"))[0].replace("\\", "/") + ".webp"
+        return pho if os.path.exists(pho) else file.replace("\\", "/")
 
     views = {}   # catalogue img -> {view: file}
     spawn_of = {}
@@ -413,19 +416,58 @@ def main():
     write_map_images(items, os.path.dirname(OUT))
 
 
-def write_map_images(items, folder):
-    """Write map_images.json: old picture path -> studio picture, for the Patch Atlas map.
+def cutout_of(path):
+    """A Finder picture path -> its transparent cut-out (assets/model-images-cutout/....webp)."""
+    for pre in ("assets/model-images-photo/", "assets/model-images-studio/", "assets/model-images-cutout/"):
+        if path.startswith(pre):
+            return "assets/model-images-cutout/" + os.path.splitext(path[len(pre):])[0] + ".webp"
+    return None
 
-    The map's buildings data names each building's picture by its old path
-    (assets/model-images/...). The map looks that path up here and shows the studio
-    picture (the side shown first in the Object Finder) when there is one.
+
+def map_building_images():
+    """Picture paths the Patch Atlas map's buildings use (data/buildings/*_buildings.json), or None."""
+    folder = os.path.join("data", "buildings")
+    if not os.path.isdir(folder):
+        return None
+    used = set()
+    for f in os.listdir(folder):
+        if f.endswith("_buildings.json"):
+            try:
+                with open(os.path.join(folder, f), encoding="utf-8") as fh:
+                    for b in json.load(fh).get("buildings", []):
+                        if b.get("imagePath"):
+                            used.add(b["imagePath"].lower())
+            except (OSError, ValueError):
+                pass
+    return used
+
+
+def write_map_images(items, folder, exists=os.path.exists, used=None):
+    """Write map_images.json for the Patch Atlas map, keyed by the old picture path
+    (assets/model-images/...) that the map's buildings data uses:
+      images:  the transparent studio cut-out for the hover card (side shown first in the Finder)
+      objects: details for the building pop-up (name, class, size, materials, pictures...)
     """
-    images = {it["img"]: it["studioImgs"][0] for it in items if it.get("studioImgs")}
+    if used is None:
+        used = map_building_images()
+    images, objects = {}, {}
+    for it in items:
+        key = it["img"]
+        sides = it.get("studioImgs") or []
+        cuts = [c for c in (cutout_of(p) for p in sides) if c and exists(c)]
+        if cuts:
+            images[key] = cuts[0]
+        if used is not None and key.lower() not in used:
+            continue
+        o = {k: it[k] for k in ("name", "class", "model", "category", "set", "size", "sizeClass",
+                                "materials", "condition", "description", "maps") if it.get(k)}
+        o["tags"] = (it.get("tags") or [])[:12]
+        o["pictures"] = sides or [it["img"]]
+        objects[key] = o
     path = os.path.join(folder, "map_images.json")
     with open(path, "w", encoding="utf-8") as fh:
-        json.dump({"version": 1, "images": images}, fh, separators=(",", ":"), sort_keys=True)
-    print(f"Map pictures: {len(images)} objects use studio pictures ({path}).")
-
+        json.dump({"version": 2, "images": images, "objects": objects}, fh, separators=(",", ":"), sort_keys=True)
+    print(f"Map pictures: {len(images)} objects have studio cut-outs; {len(objects)} building details ({path}).")
 
 if __name__ == "__main__":
     main()
