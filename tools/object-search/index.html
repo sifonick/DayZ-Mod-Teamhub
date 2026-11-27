@@ -26,7 +26,7 @@ h1,h2{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;line-heig
 button,input,select{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .band{background:var(--band);color:var(--bandink);padding:clamp(22px,3.5vw,44px) max(5vw,16px) 22px}
-.wrap{max-width:1240px;margin:0 auto}
+.wrap{margin:0 auto}
 .top{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
 h1{font-size:clamp(32px,4.4vw,48px)}
 .status{font-size:14px;display:flex;align-items:center;gap:8px;opacity:.92}
@@ -55,6 +55,12 @@ main{padding:20px max(5vw,16px) 48px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;text-align:left;padding:0}
 .card:hover{border-color:var(--muted)}
 .card img{width:100%;aspect-ratio:1;object-fit:contain;background:var(--thumb);display:block}
+.thumb{position:relative;display:block}
+.pa-badge{position:absolute;left:6px;top:6px;display:inline-flex;align-items:center;gap:4px;padding:2px 7px 2px 5px;border-radius:999px;background:rgba(10,12,8,.72);color:#f1eee4;font-size:11px;font-weight:600;line-height:18px;letter-spacing:.02em;pointer-events:none}
+.pa-badge svg{width:12px;height:12px;flex:none}
+.srcline{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin-top:-6px}
+.srcline .pa-badge{position:static}
+.btn.warn{border-color:#c0563f;color:#e9876f}
 .card .meta{padding:9px 11px 11px;display:grid;gap:4px}
 .card .nm{font-weight:600;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
 .tags{display:flex;flex-wrap:wrap;gap:4px}
@@ -62,7 +68,7 @@ main{padding:20px max(5vw,16px) 48px}
 .tag.map{color:var(--ok);border-color:currentColor}
 .more{display:block;margin:28px auto 0;min-height:48px;padding:0 28px;border-radius:10px;border:1px solid var(--ink);background:transparent;cursor:pointer;font-weight:600}
 .empty{padding:48px 0;text-align:center;color:var(--muted)}
-.notice{max-width:1240px;margin:0 auto 16px;padding:12px 16px;border-radius:8px;background:var(--card);border:1px solid var(--line);font-size:15px}
+.notice{margin:0 auto 16px;padding:12px 16px;border-radius:8px;background:var(--card);border:1px solid var(--line);font-size:15px}
 .notice:empty{display:none}
 .sheet{position:fixed;inset:0;display:none;z-index:10}
 .sheet.open{display:block}
@@ -80,7 +86,7 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
 .btn:disabled{opacity:.45;cursor:default}
 .btn[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .foot{border-top:1px solid var(--line);padding:20px max(5vw,16px) 32px;font-size:13px;color:var(--muted)}
-.foot p{max-width:1240px;margin:0 auto}
+.foot p{margin:0 auto}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
 .toast.show{opacity:1}
 @media(max-width:600px){.facets{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}.facets label{display:grid;gap:2px;font-size:13px}.facets select,.reset{width:100%}.cats{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}.cat{flex:none}.examples{flex-wrap:nowrap;overflow-x:auto}.chip{flex:none}.searchrow input,.searchrow button{height:50px}.searchrow button{padding:0 16px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.count{width:100%;margin:0}dl{grid-template-columns:6em 1fr}}
@@ -130,6 +136,7 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
   <div class="panel" role="dialog" aria-modal="true" aria-labelledby="dTitle">
     <button class="close" id="close" aria-label="Close">✕</button>
     <img id="dImg" alt="">
+    <div class="srcline" id="dSrc"></div>
     <h2 id="dTitle"></h2>
     <dl id="dList"></dl>
     <div class="actions" id="dActions"></div>
@@ -360,20 +367,63 @@ function more(){
   const slice = results.slice(shown, shown + PAGE);
   $('grid').insertAdjacentHTML('beforeend', slice.map(it => `
     <button class="card" data-id="${it.id}">
-      <img loading="lazy" src="${esc(imgUrl(it.studioImg || it.img))}" alt="${esc(it.description || it.name)}">
+      <span class="thumb"><img loading="lazy" src="${esc(imgUrl(pic(it)))}" alt="${esc(it.description || it.name)}">${badge(it)}</span>
       <span class="meta"><span class="nm">${esc(it.name)}</span>${it.description ? `<span class="desc">${esc(it.description)}</span>` : ''}<span class="tags">${chips(it)}</span></span>
     </button>`).join(''));
   shown += slice.length;
   $('more').hidden = shown >= results.length;
 }
 
+// ---------- studio photos: badge, and admins can hide one (Patch Atlas page only) ----------
+// On Patch Atlas the page around us sets window.PA_OF = {admin, hidden: [picture paths]}.
+const CAM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+let HIDDEN = new Set(), ADMIN = false, ofSig = '';
+function readHost(){
+  let o = null;
+  try { o = window.parent !== window ? window.parent.PA_OF : null; } catch (e) {}
+  const sig = o ? JSON.stringify([o.admin, o.hidden]) : '';
+  if (sig === ofSig) return false;
+  ofSig = sig;
+  ADMIN = !!(o && o.admin === true);
+  HIDDEN = new Set((o && o.hidden) || []);
+  return true;
+}
+readHost();
+const studioOn = it => !!it.studioImg && !HIDDEN.has(it.img);
+const pic = it => studioOn(it) ? it.studioImg : it.img;
+const badge = it => studioOn(it) ? `<span class="pa-badge" title="Photographed in Patch Atlas Studio">${CAM}PA studio</span>` : '';
+function hostClick(action, img){
+  try {
+    const d = window.parent.document, el = d.getElementById('pa-of-img');
+    const i = el && (/^(INPUT|TEXTAREA)$/.test(el.tagName) ? el : el.querySelector('input,textarea'));
+    const b = d.getElementById(action === 'hide' ? 'pa-of-hide' : 'pa-of-unhide');
+    if (!i || !b) return false;
+    Object.getOwnPropertyDescriptor(Object.getPrototypeOf(i), 'value').set.call(i, img);
+    ['input', 'change', 'blur'].forEach(t => i.dispatchEvent(new Event(t, {bubbles: true})));
+    setTimeout(() => b.click(), 250);
+    return true;
+  } catch (e) { return false; }
+}
+function refreshPics(){
+  for (const c of $('grid').querySelectorAll('.card')){
+    const it = items[+c.dataset.id], img = c.querySelector('img'), want = imgUrl(pic(it));
+    if (img.getAttribute('src') !== want) img.setAttribute('src', want);
+    const t = c.querySelector('.thumb'), b = t.querySelector('.pa-badge');
+    if (b && !studioOn(it)) b.remove(); else if (!b && studioOn(it)) t.insertAdjacentHTML('beforeend', badge(it));
+  }
+  if ($('sheet').classList.contains('open')) openItem(+$('dActions').dataset.id, true);
+}
+setInterval(() => { if (readHost()) refreshPics(); }, 2000);
+
 // ---------- detail ----------
 function copy(text, what){
   navigator.clipboard.writeText(text).then(() => toast(`Copied ${what}`), () => toast('Copy failed: select the text instead'));
 }
-function openItem(id){
+function openItem(id, keepFocus){
   const it = items[id];
-  $('dImg').src = imgUrl(it.studioImg || it.img); $('dImg').alt = it.description || it.name;
+  $('dImg').src = imgUrl(pic(it)); $('dImg').alt = it.description || it.name;
+  $('dSrc').innerHTML = studioOn(it) ? `<span class="pa-badge">${CAM}PA studio</span> Photographed in Patch Atlas Studio`
+    : (it.studioImg ? 'Downloaded picture (the studio photo is hidden)' : 'Downloaded picture');
   $('dImg').dataset.id = id;
   $('dTitle').textContent = it.name;
   const src = { 'patch-atlas': ' (needs the PatchAtlas_Objects mod)', 'vanilla': ' (vanilla)' }[it.classSource] || '';
@@ -387,24 +437,27 @@ function openItem(id){
   if (it.condition && it.condition !== 'not applicable') rows.push(['Condition', it.condition]);
   if (it.mapType) rows.push(['Map legend', it.mapType]);
   rows.push(['Category', it.category], ['Placed on', it.maps.length ? it.maps.join(', ') : 'Not in the map data'], ['Asset set', it.set]);
-  if (it.studioImg) rows.push(['In-game view', it.img]);
+  if (studioOn(it)) rows.push(['In-game view', it.img]);
   $('dList').innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
   const acts = [];
   if (it.class) acts.push(`<button class="btn primary" data-copy="class">Copy class name</button>`);
   if (it.model) acts.push(`<button class="btn${it.class ? '' : ' primary'}" data-copy="model">Copy model path</button>`);
   acts.push(`<button class="btn" data-copy="img">Copy image link</button>`);
-  if (it.studioImgs?.length > 1) it.studioImgs.forEach((src, n) => {
+  if (studioOn(it) && it.studioImgs?.length > 1) it.studioImgs.forEach((src, n) => {
     const label = /_2\.(webp|jpg)$/.test(src) ? 'Side 2' : 'Side 1';
     acts.push(`<button class="btn" data-side="${n}" aria-pressed="${n === 0}">${label}</button>`);
   });
-  if (it.studioImg) acts.push(`<a class="btn" href="${esc(imgUrl(it.img))}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none;color:inherit">In-game view</a>`);
+  if (studioOn(it)) acts.push(`<a class="btn" href="${esc(imgUrl(it.img))}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none;color:inherit">In-game view</a>`);
+  if (ADMIN && it.studioImg) acts.push(studioOn(it)
+    ? `<button class="btn warn" data-hide title="Admins only: show the downloaded picture instead, for everyone">Don't show studio photo</button>`
+    : `<button class="btn" data-unhide title="Admins only">Show studio photo again</button>`);
   const canSimilar = ai.image.vecs || ai.text.vecs;
   acts.push(`<button class="btn" data-similar ${canSimilar ? '' : 'disabled title="Needs the AI search data"'}>Find similar</button>`);
   $('dActions').innerHTML = acts.join('');
   $('dActions').dataset.id = id;
   $('dTags').innerHTML = it.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('');
   $('sheet').classList.add('open'); $('sheet').setAttribute('aria-hidden', 'false');
-  $('close').focus();
+  if (!keepFocus) $('close').focus();
 }
 function closeSheet(){ $('sheet').classList.remove('open'); $('sheet').setAttribute('aria-hidden', 'true'); }
 
@@ -436,7 +489,14 @@ $('dActions').addEventListener('click', e => {
   const it = items[+$('dActions').dataset.id], b = e.target.closest('button'); if (!b) return;
   if (b.dataset.copy === 'class') copy(it.class, 'class name');
   else if (b.dataset.copy === 'model') copy(it.model, 'model path');
-  else if (b.dataset.copy === 'img') copy(imgUrl(it.studioImg || it.img), 'image link');
+  else if (b.dataset.copy === 'img') copy(imgUrl(pic(it)), 'image link');
+  else if ('hide' in b.dataset || 'unhide' in b.dataset){
+    const hide = 'hide' in b.dataset;
+    if (!hostClick(hide ? 'hide' : 'unhide', it.img)) { toast('Only works on the Patch Atlas page'); return; }
+    if (hide) HIDDEN.add(it.img); else HIDDEN.delete(it.img);  // show it straight away; Patch Atlas confirms within a moment
+    refreshPics();
+    toast(hide ? 'Studio photo hidden for everyone' : 'Studio photo shown again');
+  }
   else if ('side' in b.dataset){
     $('dImg').src = imgUrl(it.studioImgs[+b.dataset.side]);
     for (const x of $('dActions').querySelectorAll('[data-side]')) x.setAttribute('aria-pressed', x === b);
