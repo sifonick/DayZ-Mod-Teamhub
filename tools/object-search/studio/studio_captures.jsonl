@@ -5822,3 +5822,229 @@
 {"spawn": "StaticObj_Misc_Bench8", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench8.jpg"]}
 {"spawn": "StaticObj_Misc_Bench9", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench9.jpg"]}
 {"spawn": "StaticObj_Misc_Bench9", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench9.jpg"]}
+{"spawn": "StaticObj_Misc_GasMeterCabinet", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_gasmetercabinet.jpg"]}
+{"spawn": "StaticObj_Misc_GasMeterCabinet", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_gasmetercabinet.jpg"]}
+{"spawn": "StaticObj_Misc_MysteriousBell", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_mysteriousbell.jpg"]}
+{"spawn": "StaticObj_Misc_MysteriousBell", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_mysteriousbell.jpg"]}
+{"spawn": "StaticObj_Misc_SewerCover", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_sewercover.jpg"]}
+{"spawn": "StaticObj_Misc_SewerCover", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_sewercover.jpg"]}
+{"spawn": "StaticObj_Misc_Table_Large", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_table_large.jpg"]}
+{"spawn": "StaticObj_Misc_Table_Large", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_table_large.jpg"]}
+{"spawn": "StaticObj_Misc_Table_Market", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_table_market.jpg"]}
+{"spawn": "StaticObj_Misc_Table_Market", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_table_market.jpg"]}
+{"spawn": "StaticObj_Misc_WoodenCrate", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_woodencrate.jpg"]}
+{"spawn": "StaticObj_Misc_WoodenCrate", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_woodencrate.jpg"]}
+{"spawn": "StaticObj_Misc_WoodenCrate_3x", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_woodencrate_3x.jpg"]}
+{"spawn": "StaticObj_Misc_WoodenCrate_3x", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_woodencrate_3x.jpg"]}
+{"spawn": "StaticObj_Misc_WoodenCrate_5x", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_woodencrate_5x.jpg"]}
+{"spawn": "StaticObj_Misc_WoodenCrate_5x", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_woodencrate_5x.jpg"]}
+{"spawn": "Land_City_PoliceStation_Enoch", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/police/city_policestation_enoch.jpg", "assets/model-images/structures_bliss/residential/police/land_city_policestation_enoch.jpg"]}
+{"spawn": "Land_City_PoliceStation_Enoch", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/police/city_policestation_enoch.jpg", "assets/model-images/structures_bliss/residential/police/land_city_policestation_enoch.jpg"]}
+{"spawn": "Land_Village_PoliceStation_Enoch", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/police/land_village_policestation_enoch.jpg", "assets/model-images/structures_bliss/residential/police/village_policestation_enoch.jpg"]}
+{"spawn": "Land_Village_PoliceStation_Enoch", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/police/land_village_policestation_enoch.jpg", "assets/model-images/structures_bliss/residential/police/village_policestation_enoch.jpg"]}
+{"spawn": "Land_Slum_House1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house1.jpg"]}
+{"spawn": "Land_Slum_House1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house1.jpg"]}
+{"spawn": "Land_Slum_House2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house2.jpg"]}
+{"spawn": "Land_Slum_House2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house2.jpg"]}
+{"spawn": "Land_Slum_House3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house3.jpg"]}
+{"spawn": "Land_Slum_House3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house3.jpg"]}
+{"spawn": "Land_Slum_House4", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house4.jpg"]}
+{"spawn": "Land_Slum_House4", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house4.jpg"]}
+{"spawn": "Land_Slum_House5", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house5.jpg"]}
+{"spawn": "Land_Slum_House5", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house5.jpg"]}
+{"spawn": "Land_Slum_House6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house6.jpg"]}
+{"spawn": "Land_Slum_House6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house6.jpg"]}
+{"spawn": "Land_Slum_House7", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house7.jpg"]}
+{"spawn": "Land_Slum_House7", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/land_slum_house7.jpg"]}
+{"spawn": "StaticObj_Slum_Roof1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof1.jpg"]}
+{"spawn": "StaticObj_Slum_Roof1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof1.jpg"]}
+{"spawn": "StaticObj_Slum_Roof2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof2.jpg"]}
+{"spawn": "StaticObj_Slum_Roof2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof2.jpg"]}
+{"spawn": "StaticObj_Slum_Roof3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof3.jpg"]}
+{"spawn": "StaticObj_Slum_Roof3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof3.jpg"]}
+{"spawn": "StaticObj_Slum_Roof4", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof4.jpg"]}
+{"spawn": "StaticObj_Slum_Roof4", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof4.jpg"]}
+{"spawn": "StaticObj_Slum_Roof5", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof5.jpg"]}
+{"spawn": "StaticObj_Slum_Roof5", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof5.jpg"]}
+{"spawn": "StaticObj_Slum_Roof6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof6.jpg"]}
+{"spawn": "StaticObj_Slum_Roof6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/slums/staticobj_slum_roof6.jpg"]}
+{"spawn": "Land_Village_Store_Enoch", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/stores/land_village_store_enoch.jpg", "assets/model-images/structures_bliss/residential/stores/village_store_enoch.jpg"]}
+{"spawn": "Land_Village_Store_Enoch", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/stores/land_village_store_enoch.jpg", "assets/model-images/structures_bliss/residential/stores/village_store_enoch.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete1_25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete1_25/bridge_concrete1_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete1_25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete1_25/bridge_concrete1_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete1_left.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete1_left/bridge_concrete1_left.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete1_left.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete1_left/bridge_concrete1_left.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete1_right.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete1_right/bridge_concrete1_right.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete1_right.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete1_right/bridge_concrete1_right.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete2_25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete2_25/bridge_concrete2_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete2_25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete2_25/bridge_concrete2_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete2_left.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete2_left/bridge_concrete2_left.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete2_left.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete2_left/bridge_concrete2_left.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete2_right.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete2_right/bridge_concrete2_right.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\bridges\\bridge_concrete2_right.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/bridges/bridge_concrete2_right/bridge_concrete2_right.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\decals\\decal_asphalt_patch_modular_01_end1.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/decal_asphalt_patch_modular_01_end1/decal_asphalt_patch_modular_01_end1.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\decals\\decal_asphalt_patch_modular_01_end1.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/decal_asphalt_patch_modular_01_end1/decal_asphalt_patch_modular_01_end1.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\decals\\decal_asphalt_patch_modular_01_straight.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/decal_asphalt_patch_modular_01_straight/decal_asphalt_patch_modular_01_straight.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\decals\\decal_asphalt_patch_modular_01_straight.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/decal_asphalt_patch_modular_01_straight/decal_asphalt_patch_modular_01_straight.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\decals\\decal_asphalt_patch_modular_01_turn.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/decal_asphalt_patch_modular_01_turn/decal_asphalt_patch_modular_01_turn.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\decals\\decal_asphalt_patch_modular_01_turn.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/decal_asphalt_patch_modular_01_turn/decal_asphalt_patch_modular_01_turn.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix1/staticobj_decal_asphalt_fix1.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix1/staticobj_decal_asphalt_fix1.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix2/staticobj_decal_asphalt_fix2.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix2/staticobj_decal_asphalt_fix2.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix4", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix4/staticobj_decal_asphalt_fix4.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix4", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix4/staticobj_decal_asphalt_fix4.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix5", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix5/staticobj_decal_asphalt_fix5.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix5", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix5/staticobj_decal_asphalt_fix5.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix6/staticobj_decal_asphalt_fix6.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_fix6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_fix6/staticobj_decal_asphalt_fix6.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch01", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch01/staticobj_decal_asphalt_patch01.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch01", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch01/staticobj_decal_asphalt_patch01.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch02", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch02/staticobj_decal_asphalt_patch02.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch02", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch02/staticobj_decal_asphalt_patch02.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch03", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch03/staticobj_decal_asphalt_patch03.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch03", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch03/staticobj_decal_asphalt_patch03.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch04", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch04/staticobj_decal_asphalt_patch04.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch04", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch04/staticobj_decal_asphalt_patch04.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch05", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch05/staticobj_decal_asphalt_patch05.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch05", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch05/staticobj_decal_asphalt_patch05.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch06", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch06/staticobj_decal_asphalt_patch06.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch06", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch06/staticobj_decal_asphalt_patch06.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch07", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch07/staticobj_decal_asphalt_patch07.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch07", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch07/staticobj_decal_asphalt_patch07.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch08", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch08/staticobj_decal_asphalt_patch08.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch08", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch08/staticobj_decal_asphalt_patch08.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch09", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch09/staticobj_decal_asphalt_patch09.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch09", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch09/staticobj_decal_asphalt_patch09.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch10", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch10/staticobj_decal_asphalt_patch10.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch10", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch10/staticobj_decal_asphalt_patch10.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch11", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch11/staticobj_decal_asphalt_patch11.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch11", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch11/staticobj_decal_asphalt_patch11.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch12", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch12/staticobj_decal_asphalt_patch12.jpg"]}
+{"spawn": "StaticObj_Decal_asphalt_patch12", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_asphalt_patch12/staticobj_decal_asphalt_patch12.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long6/staticobj_decal_damage_long6.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long6/staticobj_decal_damage_long6.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long7", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long7/staticobj_decal_damage_long7.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long7", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long7/staticobj_decal_damage_long7.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long8", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long8/staticobj_decal_damage_long8.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long8", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long8/staticobj_decal_damage_long8.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long9", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long9/staticobj_decal_damage_long9.jpg"]}
+{"spawn": "StaticObj_Decal_damage_long9", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_long9/staticobj_decal_damage_long9.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium10", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium10/staticobj_decal_damage_medium10.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium10", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium10/staticobj_decal_damage_medium10.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium4", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium4/staticobj_decal_damage_medium4.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium4", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium4/staticobj_decal_damage_medium4.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium5", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium5/staticobj_decal_damage_medium5.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium5", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium5/staticobj_decal_damage_medium5.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium6/staticobj_decal_damage_medium6.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium6/staticobj_decal_damage_medium6.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium7", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium7/staticobj_decal_damage_medium7.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium7", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium7/staticobj_decal_damage_medium7.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium8", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium8/staticobj_decal_damage_medium8.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium8", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium8/staticobj_decal_damage_medium8.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium9", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium9/staticobj_decal_damage_medium9.jpg"]}
+{"spawn": "StaticObj_Decal_damage_medium9", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_damage_medium9/staticobj_decal_damage_medium9.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_damage_long1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_damage_long1/staticobj_decal_dirt_damage_long1.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_damage_long1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_damage_long1/staticobj_decal_dirt_damage_long1.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_damage_long2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_damage_long2/staticobj_decal_dirt_damage_long2.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_damage_long2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_damage_long2/staticobj_decal_dirt_damage_long2.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_damage_long3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_damage_long3/staticobj_decal_dirt_damage_long3.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_damage_long3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_damage_long3/staticobj_decal_dirt_damage_long3.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_rocks1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_rocks1/staticobj_decal_dirt_rocks1.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_rocks1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_rocks1/staticobj_decal_dirt_rocks1.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_rocks2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_rocks2/staticobj_decal_dirt_rocks2.jpg"]}
+{"spawn": "StaticObj_Decal_dirt_rocks2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_dirt_rocks2/staticobj_decal_dirt_rocks2.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain1/staticobj_decal_oilstain1.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain1/staticobj_decal_oilstain1.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain2/staticobj_decal_oilstain2.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain2/staticobj_decal_oilstain2.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain2/staticobj_decal_oilstain2.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain3/staticobj_decal_oilstain3.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain3/staticobj_decal_oilstain3.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain4", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain4/staticobj_decal_oilstain4.jpg"]}
+{"spawn": "StaticObj_Decal_oilstain4", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/decals/staticobj_decal_oilstain4/staticobj_decal_oilstain4.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\misc\\misc_boundarystone_big.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/misc/misc_boundarystone_big/misc_boundarystone_big.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\misc\\misc_boundarystone_big.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/misc/misc_boundarystone_big/misc_boundarystone_big.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\misc\\misc_boundarystone_small.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/misc/misc_boundarystone_small/misc_boundarystone_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\misc\\misc_boundarystone_small.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/misc/misc_boundarystone_small/misc_boundarystone_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\concretepanels_02_four_f.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/panels/concretepanels_02_four_f/concretepanels_02_four_f.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\concretepanels_02_four_f.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/panels/concretepanels_02_four_f/concretepanels_02_four_f.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panel_concrete_small_1.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/panels/panel_concrete_small_1/panel_concrete_small_1.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panel_concrete_small_1.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/panels/panel_concrete_small_1/panel_concrete_small_1.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panel_concrete_small_2.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/panels/panel_concrete_small_2/panel_concrete_small_2.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panel_concrete_small_2.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/panels/panel_concrete_small_2/panel_concrete_small_2.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panel_concrete_small_dam.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/panels/panel_concrete_small_dam/panel_concrete_small_dam.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panel_concrete_small_dam.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/panels/panel_concrete_small_dam/panel_concrete_small_dam.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panels_concrete_small.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/panels/panels_concrete_small/panels_concrete_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\panels\\panels_concrete_small.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/panels/panels_concrete_small/panels_concrete_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_0 2000.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_0 2000/asf1enoch_0 2000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_0 2000.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_0 2000/asf1enoch_0 2000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_1 1000.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_1 1000/asf1enoch_1 1000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_1 1000.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_1 1000/asf1enoch_1 1000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 100.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 100/asf1enoch_10 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 100.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 100/asf1enoch_10 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 25/asf1enoch_10 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 25/asf1enoch_10 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 50.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 50/asf1enoch_10 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 50.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 50/asf1enoch_10 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 75.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 75/asf1enoch_10 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_10 75.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_10 75/asf1enoch_10 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_12.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_12/asf1enoch_12.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_12.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_12/asf1enoch_12.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_15 75.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_15 75/asf1enoch_15 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_15 75.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_15 75/asf1enoch_15 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_22 50.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_22 50/asf1enoch_22 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_22 50.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_22 50/asf1enoch_22 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_25/asf1enoch_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_25/asf1enoch_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_30 25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_30 25/asf1enoch_30 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_30 25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_30 25/asf1enoch_30 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_6.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_6/asf1enoch_6.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_6.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_6/asf1enoch_6.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_6.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_6/asf1enoch_6.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_6konec.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_6konec/asf1enoch_6konec.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_6konec.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_6konec/asf1enoch_6konec.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_7 100.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_7 100/asf1enoch_7 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf1enoch_7 100.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf1enoch_7 100/asf1enoch_7 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_0 2000.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_0 2000/asf2enoch_0 2000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_0 2000.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_0 2000/asf2enoch_0 2000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 100.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 100/asf2enoch_10 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 100.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 100/asf2enoch_10 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 25/asf2enoch_10 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 25/asf2enoch_10 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 50.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 50/asf2enoch_10 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 50.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 50/asf2enoch_10 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 75.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 75/asf2enoch_10 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_10 75.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_10 75/asf2enoch_10 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_12.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_12/asf2enoch_12.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_12.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_12/asf2enoch_12.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_15 75.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_15 75/asf2enoch_15 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_15 75.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_15 75/asf2enoch_15 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_22 50.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_22 50/asf2enoch_22 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_22 50.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_22 50/asf2enoch_22 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_25/asf2enoch_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_25/asf2enoch_25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_30 25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_30 25/asf2enoch_30 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_30 25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_30 25/asf2enoch_30 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_6.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_6/asf2enoch_6.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_6.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_6/asf2enoch_6.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_60 10.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_60 10/asf2enoch_60 10.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_60 10.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_60 10/asf2enoch_60 10.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_6konec.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_6konec/asf2enoch_6konec.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_6konec.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_6konec/asf2enoch_6konec.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_7 100.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_7 100/asf2enoch_7 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\asf2enoch_7 100.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/asf2enoch_7 100/asf2enoch_7 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_0 2000.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_0 2000/mudenoch_0 2000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_0 2000.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_0 2000/mudenoch_0 2000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_1 1000.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_1 1000/mudenoch_1 1000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_1 1000.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_1 1000/mudenoch_1 1000.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 100.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 100/mudenoch_10 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 100.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 100/mudenoch_10 100.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 25.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 25/mudenoch_10 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 25.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 25/mudenoch_10 25.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 50.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 50/mudenoch_10 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 50.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 50/mudenoch_10 50.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 75.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 75/mudenoch_10 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_10 75.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_10 75/mudenoch_10 75.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_12.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_12/mudenoch_12.jpg"]}
+{"spawn": "DZ\\structures_bliss\\roads\\parts\\mudenoch_12.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/roads/parts/mudenoch_12/mudenoch_12.jpg"]}
