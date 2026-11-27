@@ -200,7 +200,8 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
     </div>
     <p class="xnote" id="xNote" aria-live="polite"></p>
     <div class="actions">
-      <button class="btn primary" id="xDze" type="button">Download .dze (DayZ Editor)</button>
+      <button class="btn primary" id="xPlace" type="button" title="Open the main map and click to put each object where you want it">Place on the map…</button>
+      <button class="btn" id="xDze" type="button">Download .dze (DayZ Editor)</button>
       <button class="btn" id="xJson" type="button">Download Object Spawner JSON</button>
       <button class="btn" id="xCopy" type="button">Copy class names</button>
       <button class="btn warn" id="xClear" type="button">Clear list</button>
@@ -761,6 +762,15 @@ $('xDze').addEventListener('click', () => exportAs('dze'));
 $('xJson').addEventListener('click', () => exportAs('json'));
 $('xCopy').addEventListener('click', () => copy(listed().map(({it}) => it.class || it.model).join('\n'), 'class names'));
 $('xClear').addEventListener('click', () => { LIST = []; listChanged(); });
+// hand the list to the main Patch Atlas map, where each object is placed by clicking (map_view's "Place your objects" panel)
+$('xPlace').addEventListener('click', () => {
+  const L = listed(); if (!L.length){ xNote('Your list is empty.'); return; }
+  let P = null; try { if (window.parent !== window && window.parent.location.host === location.host) P = window.parent; } catch (e) {}
+  if (!P){ xNote('Placing on the map works when the Object Finder is opened on Patch Atlas.'); return; }
+  const items = L.map(({r, it}) => ({name: it.name, cls: it.class || '', model: it.model || '', size: it.size || null, cat: it.category, img: imgUrl(pic(it)), n: Math.min(200, Math.max(1, r.n | 0))}));
+  try { P.localStorage.setItem('pa-of-place-v1', JSON.stringify({items, map: $('xMap').value, t: Date.now()})); } catch (e) { xNote('Your browser would not save the list for the map.'); return; }
+  P.location.href = P.location.pathname.replace(/[^\/]*$/, 'map_view') + '?place=1';
+});
 window.__paList = {writeDze, writeSpawner, layout, terrain};
 
 // ---------- wiring ----------
