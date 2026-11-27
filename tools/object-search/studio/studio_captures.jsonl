@@ -5597,3 +5597,228 @@
 {"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_4m.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_4m/pipe_small2_4m.jpg"]}
 {"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_high_support.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_high_support/pipe_small2_high_support.jpg"]}
 {"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_high_support.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_high_support/pipe_small2_high_support.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_24m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_24m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_24m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_24m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m_MetalSup", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m_metalsup.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m_MetalSup", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m_metalsup.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m_NoSup", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m_nosup.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m_NoSup", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m_nosup.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m_NoSup_nolc", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m_nosup_nolc.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_8m_NoSup_nolc", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_8m_nosup_nolc.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Block", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_block.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Block", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_block.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Curve", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_curve.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Curve", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_curve.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Curve45", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_curve45.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Curve45", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_curve45.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Ground", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_ground.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_Ground", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_ground.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_24m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_24m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_24m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_24m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_8m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_8m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_8m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_8m.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_Curve", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_curve.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_Curve", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_curve.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_Ground", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_ground.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_Ground", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_ground.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_Ground2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_ground2.jpg"]}
+{"spawn": "StaticObj_Pipe_Small2_High_Ground2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/staticobj_pipe_small2_high_ground2.jpg"]}
+{"spawn": "Land_Power_VHV_Tower", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/land_power_vhv_tower.jpg", "assets/model-images/structures_bliss/industrial/power/power_vhv_tower.jpg"]}
+{"spawn": "Land_Power_VHV_Tower", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/land_power_vhv_tower.jpg", "assets/model-images/structures_bliss/industrial/power/power_vhv_tower.jpg"]}
+{"spawn": "Land_Power_VHV_Tower_Corner", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/land_power_vhv_tower_corner.jpg", "assets/model-images/structures_bliss/industrial/power/power_vhv_tower_corner.jpg"]}
+{"spawn": "Land_Power_VHV_Tower_Corner", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/land_power_vhv_tower_corner.jpg", "assets/model-images/structures_bliss/industrial/power/power_vhv_tower_corner.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_pole_wood4.jpg", "assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_pole_wood4.jpg", "assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_pole_wood4_a.jpg", "assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_pole_wood4_a.jpg", "assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_pole_wood4_lamp_only.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_pole_wood4_lamp_only.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_pole_wood4_lamp_only.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_pole_wood4_lamp_only.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_end.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_end.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_end.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_end.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_direct.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_direct.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_direct.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_direct.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_direct_short.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_direct_short.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_direct_short.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_direct_short.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_end.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_end.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_end.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_end.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_left.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_left.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_left.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_left.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_right.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_right.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\power\\power_vhv_wires_right.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/power_vhv_wires_right.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A_End", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A_End", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A_J", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a_j.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A_J", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a_j.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A_J_Nest", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a_j_nest.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_A_J_Nest", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_a_j_nest.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_End", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_End", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_Lamp", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_lamp.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood4_Lamp", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood4_lamp.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_End", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_End", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_End_rus", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_end_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_End_rus", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_end_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_J", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_j.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_J", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_j.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_J_Nest_rus", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_j_nest_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_J_Nest_rus", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_j_nest_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_J_rus", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_j_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_J_rus", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_j_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_rus", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood5_rus", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood5_rus.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_End", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_End", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_end.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_B", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_b.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_B", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_b.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_B", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_b.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_G", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_g.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_G", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_g.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_R", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_r.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_R", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_r.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_Y", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_y.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_H_Trail_Y", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_h_trail_y.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_J", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_j.jpg"]}
+{"spawn": "StaticObj_Power_Pole_Wood6_J", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_pole_wood6_j.jpg"]}
+{"spawn": "StaticObj_Power_Wire_50", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_wire_50.jpg"]}
+{"spawn": "StaticObj_Power_Wire_50", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_wire_50.jpg"]}
+{"spawn": "StaticObj_Power_Wire_50_Main", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_wire_50_main.jpg"]}
+{"spawn": "StaticObj_Power_Wire_50_Main", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_wire_50_main.jpg"]}
+{"spawn": "StaticObj_Power_WireTel_50_Main", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_wiretel_50_main.jpg"]}
+{"spawn": "StaticObj_Power_WireTel_50_Main", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/power/staticobj_power_wiretel_50_main.jpg"]}
+{"spawn": "Land_Shed_Closed2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/land_shed_closed2.jpg", "assets/model-images/structures_bliss/industrial/sheds/shed_closed2.jpg"]}
+{"spawn": "Land_Shed_Closed2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/land_shed_closed2.jpg", "assets/model-images/structures_bliss/industrial/sheds/shed_closed2.jpg"]}
+{"spawn": "Land_Shed_Closed_Small1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/land_shed_closed_small1.jpg", "assets/model-images/structures_bliss/industrial/sheds/shed_closed_small1.jpg"]}
+{"spawn": "Land_Shed_Closed_Small1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/land_shed_closed_small1.jpg", "assets/model-images/structures_bliss/industrial/sheds/shed_closed_small1.jpg"]}
+{"spawn": "Land_Shed_Closed_Small2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/land_shed_closed_small2.jpg", "assets/model-images/structures_bliss/industrial/sheds/shed_closed_small2.jpg"]}
+{"spawn": "Land_Shed_Closed_Small2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/land_shed_closed_small2.jpg", "assets/model-images/structures_bliss/industrial/sheds/shed_closed_small2.jpg"]}
+{"spawn": "StaticObj_Shed_Open_Big2_Complete", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/shed_open_big2_complete.jpg", "assets/model-images/structures_bliss/industrial/sheds/staticobj_shed_open_big2_complete.jpg"]}
+{"spawn": "StaticObj_Shed_Open_Big2_Complete", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/shed_open_big2_complete.jpg", "assets/model-images/structures_bliss/industrial/sheds/staticobj_shed_open_big2_complete.jpg"]}
+{"spawn": "StaticObj_Shed_Open_Big_Complete", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/shed_open_big_complete.jpg", "assets/model-images/structures_bliss/industrial/sheds/staticobj_shed_open_big_complete.jpg"]}
+{"spawn": "StaticObj_Shed_Open_Big_Complete", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/shed_open_big_complete.jpg", "assets/model-images/structures_bliss/industrial/sheds/staticobj_shed_open_big_complete.jpg"]}
+{"spawn": "StaticObj_Shed_Open_Small_Complete", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/shed_open_small_complete.jpg", "assets/model-images/structures_bliss/industrial/sheds/staticobj_shed_open_small_complete.jpg"]}
+{"spawn": "StaticObj_Shed_Open_Small_Complete", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/sheds/shed_open_small_complete.jpg", "assets/model-images/structures_bliss/industrial/sheds/staticobj_shed_open_small_complete.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Bottom", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_bottom.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Bottom", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_bottom.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Low", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_low.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Low", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_low.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Mid", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_mid.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Mid", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_mid.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Up", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_up.jpg"]}
+{"spawn": "StaticObj_Smokestack_Big_Ruin_Up", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/smokestacks/staticobj_smokestack_big_ruin_up.jpg"]}
+{"spawn": "Land_WindPowerPlant_Grey", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/windpowerplant/land_windpowerplant_grey.jpg", "assets/model-images/structures_bliss/industrial/windpowerplant/windpowerplant_grey.jpg"]}
+{"spawn": "Land_WindPowerPlant_Grey", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/windpowerplant/land_windpowerplant_grey.jpg", "assets/model-images/structures_bliss/industrial/windpowerplant/windpowerplant_grey.jpg"]}
+{"spawn": "Land_Bunker1_Left", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker1_left.jpg"]}
+{"spawn": "Land_Bunker1_Left", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker1_left.jpg"]}
+{"spawn": "Land_Bunker1_Right", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker1_right.jpg"]}
+{"spawn": "Land_Bunker1_Right", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker1_right.jpg"]}
+{"spawn": "Land_Bunker2_Double", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker2_double.jpg"]}
+{"spawn": "Land_Bunker2_Double", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker2_double.jpg"]}
+{"spawn": "Land_Bunker2_Left", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker2_left.jpg"]}
+{"spawn": "Land_Bunker2_Left", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker2_left.jpg"]}
+{"spawn": "Land_Bunker2_Right", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker2_right.jpg"]}
+{"spawn": "Land_Bunker2_Right", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/bunkers/land_bunker2_right.jpg"]}
+{"spawn": "Land_Mil_ControlTower", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_controltower.jpg"]}
+{"spawn": "Land_Mil_ControlTower", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_controltower.jpg"]}
+{"spawn": "Land_Mil_GuardBox_Brown", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardbox_brown.jpg"]}
+{"spawn": "Land_Mil_GuardBox_Brown", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardbox_brown.jpg"]}
+{"spawn": "Land_Mil_GuardBox_Green", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardbox_green.jpg"]}
+{"spawn": "Land_Mil_GuardBox_Green", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardbox_green.jpg"]}
+{"spawn": "Land_Mil_GuardBox_Smooth", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardbox_smooth.jpg"]}
+{"spawn": "Land_Mil_GuardBox_Smooth", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardbox_smooth.jpg"]}
+{"spawn": "Land_Mil_GuardHouse3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardhouse3.jpg"]}
+{"spawn": "Land_Mil_GuardHouse3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/houses/land_mil_guardhouse3.jpg"]}
+{"spawn": "StaticObj_Misc_DeconShower_Large", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_deconshower_large.jpg"]}
+{"spawn": "StaticObj_Misc_DeconShower_Large", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_deconshower_large.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Multiple", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_multiple.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Multiple", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_multiple.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Multiple_RedWhite", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_multiple_redwhite.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Multiple_RedWhite", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_multiple_redwhite.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Single", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_single.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Single", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_single.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Single_RedWhite", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_single_redwhite.jpg"]}
+{"spawn": "StaticObj_Misc_DragonTeeth_Single_RedWhite", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/misc/staticobj_misc_dragonteeth_single_redwhite.jpg"]}
+{"spawn": "DZ\\structures_bliss\\military\\training\\shellcrater2_debris_lc.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/shellcrater2_debris_lc.jpg"]}
+{"spawn": "DZ\\structures_bliss\\military\\training\\shellcrater2_debris_lc.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/shellcrater2_debris_lc.jpg"]}
+{"spawn": "StaticObj_ShellCrater1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater1.jpg"]}
+{"spawn": "StaticObj_ShellCrater1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater1.jpg"]}
+{"spawn": "StaticObj_ShellCrater1_Decal", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater1_decal.jpg"]}
+{"spawn": "StaticObj_ShellCrater1_Decal", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater1_decal.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Debris", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_debris.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Debris", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_debris.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Decal", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_decal.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Decal", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_decal.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Large", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_large.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Large", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_large.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Small", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_small.jpg"]}
+{"spawn": "StaticObj_ShellCrater2_Small", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_shellcrater2_small.jpg"]}
+{"spawn": "StaticObj_Target_Concrete1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_concrete1.jpg"]}
+{"spawn": "StaticObj_Target_Concrete1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_concrete1.jpg"]}
+{"spawn": "StaticObj_Target_Concrete_Block", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_concrete_block.jpg"]}
+{"spawn": "StaticObj_Target_Concrete_Block", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_concrete_block.jpg"]}
+{"spawn": "StaticObj_Target_Concrete_Ramp", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_concrete_ramp.jpg"]}
+{"spawn": "StaticObj_Target_Concrete_Ramp", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_concrete_ramp.jpg"]}
+{"spawn": "StaticObj_Target_Support", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_support.jpg"]}
+{"spawn": "StaticObj_Target_Support", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/military/training/staticobj_target_support.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\misc\\rail_crossing_block_small.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/misc/rail_crossing_block_small/rail_crossing_block_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\misc\\rail_crossing_block_small.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/misc/rail_crossing_block_small/rail_crossing_block_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\misc\\rail_linebreak_small.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/misc/rail_linebreak_small/rail_linebreak_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\misc\\rail_linebreak_small.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/misc/rail_linebreak_small/rail_linebreak_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\misc\\rail_tracksmall_switch.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/misc/rail_tracksmall_switch/rail_tracksmall_switch.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\misc\\rail_tracksmall_switch.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/misc/rail_tracksmall_switch/rail_tracksmall_switch.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_10m.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_10m/rail_tracksmall_10m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_10m.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_10m/rail_tracksmall_10m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_15deg.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_15deg/rail_tracksmall_15deg.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_15deg.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_15deg/rail_tracksmall_15deg.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_20m.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_20m/rail_tracksmall_20m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_20m.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_20m/rail_tracksmall_20m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_30deg.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_30deg/rail_tracksmall_30deg.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_30deg.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_30deg/rail_tracksmall_30deg.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_3m.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_3m/rail_tracksmall_3m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_3m.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_3m/rail_tracksmall_3m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_7deg.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_7deg/rail_tracksmall_7deg.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_7deg.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_7deg/rail_tracksmall_7deg.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_turnoutr.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_turnoutr/rail_tracksmall_turnoutr.jpg"]}
+{"spawn": "DZ\\structures_bliss\\rail\\tracks\\rail_tracksmall_turnoutr.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/rail/tracks/rail_tracksmall_turnoutr/rail_tracksmall_turnoutr.jpg"]}
+{"spawn": "Land_BusStop_Village2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/bus/busstop_village2.jpg", "assets/model-images/structures_bliss/residential/bus/land_busstop_village2.jpg"]}
+{"spawn": "Land_BusStop_Village2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/bus/busstop_village2.jpg", "assets/model-images/structures_bliss/residential/bus/land_busstop_village2.jpg"]}
+{"spawn": "DZ\\structures_bliss\\residential\\bus\\busstop_village2_sign.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/bus/busstop_village2_sign.jpg"]}
+{"spawn": "DZ\\structures_bliss\\residential\\bus\\busstop_village2_sign.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/bus/busstop_village2_sign.jpg"]}
+{"spawn": "Land_House_1W13_Dam", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/houses/house_1w13_dam.jpg", "assets/model-images/structures_bliss/residential/houses/land_house_1w13_dam.jpg"]}
+{"spawn": "Land_House_1W13_Dam", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/houses/house_1w13_dam.jpg", "assets/model-images/structures_bliss/residential/houses/land_house_1w13_dam.jpg"]}
+{"spawn": "Land_Village_HealthCare_Enoch", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/medical/land_village_healthcare_enoch.jpg", "assets/model-images/structures_bliss/residential/medical/village_healthcare_enoch.jpg"]}
+{"spawn": "Land_Village_HealthCare_Enoch", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/medical/land_village_healthcare_enoch.jpg", "assets/model-images/structures_bliss/residential/medical/village_healthcare_enoch.jpg"]}
+{"spawn": "Land_Misc_Table_Large_Spawn", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/land_misc_table_large_spawn.jpg"]}
+{"spawn": "Land_Misc_Table_Large_Spawn", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/land_misc_table_large_spawn.jpg"]}
+{"spawn": "Land_Misc_Table_Market_Spawn", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/land_misc_table_market_spawn.jpg"]}
+{"spawn": "Land_Misc_Table_Market_Spawn", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/land_misc_table_market_spawn.jpg"]}
+{"spawn": "StaticObj_Garbage_Bin2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_bin2.jpg"]}
+{"spawn": "StaticObj_Garbage_Bin2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_bin2.jpg"]}
+{"spawn": "StaticObj_Garbage_Container2_Closed", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_container2_closed.jpg"]}
+{"spawn": "StaticObj_Garbage_Container2_Closed", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_container2_closed.jpg"]}
+{"spawn": "StaticObj_Garbage_Container2_Open", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_container2_open.jpg"]}
+{"spawn": "StaticObj_Garbage_Container2_Open", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_container2_open.jpg"]}
+{"spawn": "StaticObj_Garbage_Pile7", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_pile7.jpg"]}
+{"spawn": "StaticObj_Garbage_Pile7", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_pile7.jpg"]}
+{"spawn": "StaticObj_Garbage_Pile8", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_pile8.jpg"]}
+{"spawn": "StaticObj_Garbage_Pile8", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_garbage_pile8.jpg"]}
+{"spawn": "StaticObj_Lamp_Decorative", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_lamp_decorative.jpg"]}
+{"spawn": "StaticObj_Lamp_Decorative", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_lamp_decorative.jpg"]}
+{"spawn": "StaticObj_Lamp_Harbour", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_lamp_harbour.jpg"]}
+{"spawn": "StaticObj_Lamp_Harbour", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_lamp_harbour.jpg"]}
+{"spawn": "StaticObj_Lamp_Stadium", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_lamp_stadium.jpg"]}
+{"spawn": "StaticObj_Lamp_Stadium", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_lamp_stadium.jpg"]}
+{"spawn": "StaticObj_Misc_Bench6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench6.jpg"]}
+{"spawn": "StaticObj_Misc_Bench6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench6.jpg"]}
+{"spawn": "StaticObj_Misc_Bench7", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench7.jpg"]}
+{"spawn": "StaticObj_Misc_Bench7", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench7.jpg"]}
+{"spawn": "StaticObj_Misc_Bench8", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench8.jpg"]}
+{"spawn": "StaticObj_Misc_Bench8", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench8.jpg"]}
+{"spawn": "StaticObj_Misc_Bench9", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench9.jpg"]}
+{"spawn": "StaticObj_Misc_Bench9", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/residential/misc/staticobj_misc_bench9.jpg"]}
