@@ -61,6 +61,15 @@ main{padding:20px max(5vw,16px) 48px}
 .srcline{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin-top:-6px}
 .srcline .pa-badge{position:static}
 .btn.warn{border-color:#c0563f;color:#e9876f}
+.vis-tree{display:grid;gap:2px;font-size:14px}
+.vis-row{display:flex;align-items:center;gap:8px;min-height:32px;padding:2px 6px;border-radius:6px}
+.vis-row:hover{background:var(--thumb)}
+.vis-row input{width:18px;height:18px;accent-color:var(--accent);flex:none}
+.vis-row .n{margin-inline-start:auto;color:var(--muted);font-size:12px}
+.vis-row.off span:not(.n){text-decoration:line-through;color:var(--muted)}
+.vis-kids{margin-left:22px;border-left:1px solid var(--line);padding-left:6px}
+.vis-tog{border:0;background:none;width:20px;cursor:pointer;color:var(--muted);flex:none;padding:0}
+.vis-h{font-family:"Barlow Condensed",Barlow,sans-serif;font-size:20px;margin:6px 0 2px}
 .card .meta{padding:9px 11px 11px;display:grid;gap:4px}
 .card .nm{font-weight:600;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
 .tags{display:flex;flex-wrap:wrap;gap:4px}
@@ -119,6 +128,7 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
     </select></label>
     <label>Condition <select id="condition"><option value="">Any condition</option></select></label>
     <button class="reset" id="reset" type="button">Clear filters</button>
+    <button class="reset" id="manage" type="button" hidden title="Owner only">What's shown…</button>
   </div>
   <span class="count" id="count"></span>
 </div>
@@ -141,6 +151,18 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
     <dl id="dList"></dl>
     <div class="actions" id="dActions"></div>
     <div class="tags" id="dTags"></div>
+  </div>
+</div>
+<div class="sheet" id="vsheet" aria-hidden="true">
+  <div class="shade" id="vshade"></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="vTitle">
+    <button class="close" id="vclose" aria-label="Close">✕</button>
+    <h2 id="vTitle">What's shown</h2>
+    <p class="why">Untick a category or folder to hide it from everyone using the Object Finder. Only you (the Patch Atlas owner) can see this panel. Changes apply straight away.</p>
+    <div class="vis-h">Categories</div>
+    <div class="vis-tree" id="vCats"></div>
+    <div class="vis-h">Folders</div>
+    <div class="vis-tree" id="vDirs"></div>
   </div>
 </div>
 <div class="toast" id="toast"></div>
@@ -290,6 +312,7 @@ function keywordScore(it, ws){
   return ws.length ? s / ws.length : 0;
 }
 function passes(it){
+  if (blocked(it)) return false;
   if (cat !== 'All' && it.category !== cat) return false;
   const m = $('map').value;
   if (m && !ANY_MAP.includes(it.category) && !it.maps.includes(m) && !(it.maps.length === 0 && (it.set === m || (m === 'Chernarus' && it.set === 'Base')))) return false;
@@ -377,15 +400,17 @@ function more(){
 // ---------- studio photos: badge, and admins can hide one (Patch Atlas page only) ----------
 // On Patch Atlas the page around us sets window.PA_OF = {admin, hidden: [picture paths]}.
 const CAM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
-let HIDDEN = new Set(), ADMIN = false, ofSig = '';
+let HIDDEN = new Set(), ADMIN = false, OWNER = false, RULES = new Set(), ofSig = '';
 function readHost(){
   let o = null;
   try { o = window.parent !== window ? window.parent.PA_OF : null; } catch (e) {}
-  const sig = o ? JSON.stringify([o.admin, o.hidden]) : '';
+  const sig = o ? JSON.stringify([o.admin, o.owner, o.hidden, o.rules]) : '';
   if (sig === ofSig) return false;
   ofSig = sig;
   ADMIN = !!(o && o.admin === true);
+  OWNER = !!(o && o.owner === true);
   HIDDEN = new Set((o && o.hidden) || []);
+  RULES = new Set((o && o.rules) || []);
   return true;
 }
 readHost();
@@ -394,9 +419,9 @@ const pic = it => studioOn(it) ? it.studioImg : it.img;
 const badge = it => studioOn(it) ? `<span class="pa-badge" title="Photographed in Patch Atlas Studio">${CAM}PA studio</span>` : '';
 function hostClick(action, img){
   try {
-    const d = window.parent.document, el = d.getElementById('pa-of-img');
+    const d = window.parent.document, el = d.getElementById(/^rule/.test(action) ? 'pa-of-rule' : 'pa-of-img');
     const i = el && (/^(INPUT|TEXTAREA)$/.test(el.tagName) ? el : el.querySelector('input,textarea'));
-    const b = d.getElementById(action === 'hide' ? 'pa-of-hide' : 'pa-of-unhide');
+    const b = d.getElementById({hide: 'pa-of-hide', unhide: 'pa-of-unhide', ruleAdd: 'pa-of-rule-add', ruleDel: 'pa-of-rule-del'}[action]);
     if (!i || !b) return false;
     Object.getOwnPropertyDescriptor(Object.getPrototypeOf(i), 'value').set.call(i, img);
     ['input', 'change', 'blur'].forEach(t => i.dispatchEvent(new Event(t, {bubbles: true})));
@@ -413,7 +438,58 @@ function refreshPics(){
   }
   if ($('sheet').classList.contains('open')) openItem(+$('dActions').dataset.id, true);
 }
-setInterval(() => { if (readHost()) refreshPics(); }, 2000);
+// ---------- what's shown: categories and folders the owner has hidden ----------
+// Rules are "cat:<Category>" or "dir:<folder path under assets/model-images>".
+const folderOf = it => it.img.replace(/^assets\/model-images\//, '').split('/').slice(0, -1);
+function blocked(it){
+  if (RULES.has('cat:' + it.category)) return true;
+  const f = folderOf(it);
+  for (let k = 1; k <= f.length; k++) if (RULES.has('dir:' + f.slice(0, k).join('/'))) return true;
+  return false;
+}
+function applyRules(){
+  for (const b of $('cats').children) b.hidden = b.dataset.cat !== 'All' && RULES.has('cat:' + b.dataset.cat);
+  if (cat !== 'All' && RULES.has('cat:' + cat)){ cat = 'All'; for (const x of $('cats').children) x.setAttribute('aria-pressed', x.dataset.cat === 'All'); }
+  $('manage').hidden = !OWNER;
+  if (items.length) run();
+  if ($('vsheet').classList.contains('open')) drawVis();
+}
+function setRule(key, hide){
+  if (!hostClick(hide ? 'ruleAdd' : 'ruleDel', key)) { toast('Only works on the Patch Atlas page'); return; }
+  if (hide) RULES.add(key); else RULES.delete(key);  // show it straight away; Patch Atlas confirms within a moment
+  applyRules();
+}
+const visOpen = new Set();
+function drawVis(){
+  const byCat = {};
+  for (const it of items) byCat[it.category] = (byCat[it.category] || 0) + 1;
+  $('vCats').innerHTML = CATS.filter(c => c !== 'All' && byCat[c]).map(c => {
+    const on = !RULES.has('cat:' + c);
+    return `<label class="vis-row${on ? '' : ' off'}"><input type="checkbox" data-rule="cat:${esc(c)}" ${on ? 'checked' : ''}><span>${esc(c)}</span><span class="n">${byCat[c].toLocaleString()}</span></label>`;
+  }).join('');
+  // folder tree, three levels deep
+  const root = {kids: {}, n: 0};
+  for (const it of items){
+    let node = root;
+    for (const part of folderOf(it).slice(0, 3)){ node = node.kids[part] || (node.kids[part] = {kids: {}, n: 0}); node.n++; }
+  }
+  const tree = (node, path, parentOff) => Object.keys(node.kids).sort().map(name => {
+    const kid = node.kids[name], p = path ? path + '/' + name : name, own = RULES.has('dir:' + p), off = parentOff || own;
+    const has = Object.keys(kid.kids).length, op = visOpen.has(p);
+    const tog = has ? `<button class="vis-tog" type="button" data-tog="${esc(p)}" aria-expanded="${op}" aria-label="Show folders inside ${esc(name)}">${op ? '▾' : '▸'}</button>` : '<span class="vis-tog"></span>';
+    const row = `<div class="vis-row${off ? ' off' : ''}">${tog}<label style="display:flex;align-items:center;gap:8px;flex:1;cursor:pointer"><input type="checkbox" data-rule="dir:${esc(p)}" ${own ? '' : 'checked'} ${parentOff ? 'disabled title="A folder above this one is hidden"' : ''}><span>${esc(name)}</span></label><span class="n">${kid.n.toLocaleString()}</span></div>`;
+    return has && op ? row + `<div class="vis-kids">${tree(kid, p, off)}</div>` : row;
+  }).join('');
+  $('vDirs').innerHTML = tree(root, '', false);
+}
+function openVis(){ drawVis(); $('vsheet').classList.add('open'); $('vsheet').setAttribute('aria-hidden', 'false'); $('vclose').focus(); }
+function closeVis(){ $('vsheet').classList.remove('open'); $('vsheet').setAttribute('aria-hidden', 'true'); }
+$('manage').addEventListener('click', openVis);
+$('vshade').addEventListener('click', closeVis);
+$('vclose').addEventListener('click', closeVis);
+$('vsheet').addEventListener('change', e => { const c = e.target.closest('[data-rule]'); if (c) setRule(c.dataset.rule, !c.checked); });
+$('vsheet').addEventListener('click', e => { const t = e.target.closest('[data-tog]'); if (!t) return; const p = t.dataset.tog; visOpen.has(p) ? visOpen.delete(p) : visOpen.add(p); drawVis(); });
+setInterval(() => { if (readHost()){ refreshPics(); applyRules(); } }, 2000);
 
 // ---------- detail ----------
 function copy(text, what){
@@ -484,7 +560,7 @@ $('more').addEventListener('click', more);
 $('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) openItem(+c.dataset.id); });
 $('shade').addEventListener('click', closeSheet);
 $('close').addEventListener('click', closeSheet);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape'){ closeSheet(); closeVis(); } });
 $('dActions').addEventListener('click', e => {
   const it = items[+$('dActions').dataset.id], b = e.target.closest('button'); if (!b) return;
   if (b.dataset.copy === 'class') copy(it.class, 'class name');
