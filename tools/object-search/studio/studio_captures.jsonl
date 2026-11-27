@@ -5370,3 +5370,230 @@
 {"spawn": "StaticObj_Train_Wagon_Flat_Industrial_Barrels_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_train_wagon_flat_industrial_barrels_de.jpg"]}
 {"spawn": "StaticObj_Train_Wagon_Flat_Industrial_Planks_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_train_wagon_flat_industrial_planks_de.jpg"]}
 {"spawn": "StaticObj_Train_Wagon_Flat_Industrial_Planks_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_train_wagon_flat_industrial_planks_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Blue_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_blue_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Blue_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_blue_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Blue_Mil_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_blue_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Blue_Mil_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_blue_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Red_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_red_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Red_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_red_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Red_Mil_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_red_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_742_Red_Mil_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_742_red_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Flat_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_flat_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Flat_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_flat_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Flat_Mil_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_flat_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Flat_Mil_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_flat_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Tanker_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_tanker_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Tanker_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_tanker_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Tanker_Mil_DE", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_tanker_mil_de.jpg"]}
+{"spawn": "StaticObj_Wreck_Train_Wagon_Tanker_Mil_DE", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/trains/staticobj_wreck_train_wagon_tanker_mil_de.jpg"]}
+{"spawn": "Land_Wreck_Caravan_MGreen", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_mgreen/land_wreck_caravan_mgreen.jpg"]}
+{"spawn": "Land_Wreck_Caravan_MGreen", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_mgreen/land_wreck_caravan_mgreen.jpg"]}
+{"spawn": "Land_Wreck_Caravan_MRust", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_mrust/land_wreck_caravan_mrust.jpg"]}
+{"spawn": "Land_Wreck_Caravan_MRust", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_mrust/land_wreck_caravan_mrust.jpg"]}
+{"spawn": "Land_Wreck_Caravan_WBrown", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_wbrown/land_wreck_caravan_wbrown.jpg"]}
+{"spawn": "Land_Wreck_Caravan_WBrown", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_wbrown/land_wreck_caravan_wbrown.jpg"]}
+{"spawn": "Land_Wreck_Caravan_WGreen", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_wgreen/land_wreck_caravan_wgreen.jpg"]}
+{"spawn": "Land_Wreck_Caravan_WGreen", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_caravan_wgreen/land_wreck_caravan_wgreen.jpg"]}
+{"spawn": "Land_Wreck_Harverster", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_harverster/land_wreck_harverster.jpg"]}
+{"spawn": "Land_Wreck_Harverster", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_harverster/land_wreck_harverster.jpg"]}
+{"spawn": "Land_Wreck_Harvester_head_trailer", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_harvester_head_trailer/land_wreck_harvester_head_trailer.jpg"]}
+{"spawn": "Land_Wreck_Harvester_head_trailer", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_harvester_head_trailer/land_wreck_harvester_head_trailer.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_blue/land_wreck_hb01_aban1_blue.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_blue/land_wreck_hb01_aban1_blue.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_blue/land_wreck_hb01_aban1_blue.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_green", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_green/land_wreck_hb01_aban1_green.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_green", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_green/land_wreck_hb01_aban1_green.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_police", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_police/land_wreck_hb01_aban1_police.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_police", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_police/land_wreck_hb01_aban1_police.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_white", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_white/land_wreck_hb01_aban1_white.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban1_white", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban1_white/land_wreck_hb01_aban1_white.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_blue/land_wreck_hb01_aban2_blue.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_blue/land_wreck_hb01_aban2_blue.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_green", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_green/land_wreck_hb01_aban2_green.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_green", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_green/land_wreck_hb01_aban2_green.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_police", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_police/land_wreck_hb01_aban2_police.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_police", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_police/land_wreck_hb01_aban2_police.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_white", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_white/land_wreck_hb01_aban2_white.jpg"]}
+{"spawn": "Land_Wreck_hb01_aban2_white", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb01_aban2_white/land_wreck_hb01_aban2_white.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban1_black", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban1_black/land_wreck_hb02_aban1_black.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban1_black", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban1_black/land_wreck_hb02_aban1_black.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban1_blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban1_blue/land_wreck_hb02_aban1_blue.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban1_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban1_blue/land_wreck_hb02_aban1_blue.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban1_red", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban1_red/land_wreck_hb02_aban1_red.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban1_red", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban1_red/land_wreck_hb02_aban1_red.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban2_black", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban2_black/land_wreck_hb02_aban2_black.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban2_black", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban2_black/land_wreck_hb02_aban2_black.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban2_blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban2_blue/land_wreck_hb02_aban2_blue.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban2_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban2_blue/land_wreck_hb02_aban2_blue.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban2_red", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban2_red/land_wreck_hb02_aban2_red.jpg"]}
+{"spawn": "Land_Wreck_hb02_aban2_red", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_hb02_aban2_red/land_wreck_hb02_aban2_red.jpg"]}
+{"spawn": "Land_Wreck_Ikarus", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_ikarus/land_wreck_ikarus.jpg"]}
+{"spawn": "Land_Wreck_Ikarus", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_ikarus/land_wreck_ikarus.jpg"]}
+{"spawn": "Land_Wreck_Ikarus", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_ikarus/land_wreck_ikarus.jpg"]}
+{"spawn": "Land_Wreck_Lada_Green", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_lada_green/land_wreck_lada_green.jpg"]}
+{"spawn": "Land_Wreck_Lada_Green", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_lada_green/land_wreck_lada_green.jpg"]}
+{"spawn": "Land_Wreck_Lada_Red", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_lada_red/land_wreck_lada_red.jpg"]}
+{"spawn": "Land_Wreck_Lada_Red", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_lada_red/land_wreck_lada_red.jpg"]}
+{"spawn": "Land_Wreck_offroad02_aban1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban1/land_wreck_offroad02_aban1.jpg"]}
+{"spawn": "Land_Wreck_offroad02_aban1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban1/land_wreck_offroad02_aban1.jpg"]}
+{"spawn": "Land_Wreck_Offroad02_Aban1_TK", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban1_tk/land_wreck_offroad02_aban1_tk.jpg"]}
+{"spawn": "Land_Wreck_Offroad02_Aban1_TK", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban1_tk/land_wreck_offroad02_aban1_tk.jpg"]}
+{"spawn": "Land_Wreck_offroad02_aban2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban2/land_wreck_offroad02_aban2.jpg"]}
+{"spawn": "Land_Wreck_offroad02_aban2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban2/land_wreck_offroad02_aban2.jpg"]}
+{"spawn": "Land_Wreck_Offroad02_Aban2_TK", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban2_tk/land_wreck_offroad02_aban2_tk.jpg"]}
+{"spawn": "Land_Wreck_Offroad02_Aban2_TK", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_aban2_tk/land_wreck_offroad02_aban2_tk.jpg"]}
+{"spawn": "Land_Wreck_Offroad02_Medic_TK", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_medic_tk/land_wreck_offroad02_medic_tk.jpg"]}
+{"spawn": "Land_Wreck_Offroad02_Medic_TK", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_offroad02_medic_tk/land_wreck_offroad02_medic_tk.jpg"]}
+{"spawn": "Land_Wreck_S1023_Beige", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_s1023_beige/land_wreck_s1023_beige.jpg"]}
+{"spawn": "Land_Wreck_S1023_Beige", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_s1023_beige/land_wreck_s1023_beige.jpg"]}
+{"spawn": "Land_Wreck_S1023_Blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_s1023_blue/land_wreck_s1023_blue.jpg"]}
+{"spawn": "Land_Wreck_S1023_Blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_s1023_blue/land_wreck_s1023_blue.jpg"]}
+{"spawn": "Land_Wreck_S1023_Medic_Beige", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_s1023_medic_beige/land_wreck_s1023_medic_beige.jpg"]}
+{"spawn": "Land_Wreck_S1023_Medic_Beige", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_s1023_medic_beige/land_wreck_s1023_medic_beige.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_black", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_black/land_wreck_sed01_aban1_black.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_black", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_black/land_wreck_sed01_aban1_black.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_police", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_police/land_wreck_sed01_aban1_police.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_police", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_police/land_wreck_sed01_aban1_police.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_white", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_white/land_wreck_sed01_aban1_white.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_white", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_white/land_wreck_sed01_aban1_white.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_wine", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_wine/land_wreck_sed01_aban1_wine.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban1_wine", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban1_wine/land_wreck_sed01_aban1_wine.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_black", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_black/land_wreck_sed01_aban2_black.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_black", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_black/land_wreck_sed01_aban2_black.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_police", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_police/land_wreck_sed01_aban2_police.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_police", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_police/land_wreck_sed01_aban2_police.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_white", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_white/land_wreck_sed01_aban2_white.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_white", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_white/land_wreck_sed01_aban2_white.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_wine", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_wine/land_wreck_sed01_aban2_wine.jpg"]}
+{"spawn": "Land_Wreck_sed01_aban2_wine", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed01_aban2_wine/land_wreck_sed01_aban2_wine.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban1_grey", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban1_grey/land_wreck_sed02_aban1_grey.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban1_grey", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban1_grey/land_wreck_sed02_aban1_grey.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban1_red", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban1_red/land_wreck_sed02_aban1_red.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban1_red", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban1_red/land_wreck_sed02_aban1_red.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban1_yellow", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban1_yellow/land_wreck_sed02_aban1_yellow.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban1_yellow", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban1_yellow/land_wreck_sed02_aban1_yellow.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban2_grey", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban2_grey/land_wreck_sed02_aban2_grey.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban2_grey", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban2_grey/land_wreck_sed02_aban2_grey.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban2_red", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban2_red/land_wreck_sed02_aban2_red.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban2_red", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban2_red/land_wreck_sed02_aban2_red.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban2_yellow", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban2_yellow/land_wreck_sed02_aban2_yellow.jpg"]}
+{"spawn": "Land_Wreck_sed02_aban2_yellow", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_sed02_aban2_yellow/land_wreck_sed02_aban2_yellow.jpg"]}
+{"spawn": "Land_Wreck_Trailer_Closed", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_trailer_closed/land_wreck_trailer_closed.jpg"]}
+{"spawn": "Land_Wreck_Trailer_Closed", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_trailer_closed/land_wreck_trailer_closed.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_blue/land_wreck_truck01_aban1_blue.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_blue/land_wreck_truck01_aban1_blue.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_firetruck", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_firetruck/land_wreck_truck01_aban1_firetruck.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_firetruck", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_firetruck/land_wreck_truck01_aban1_firetruck.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_green", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_green/land_wreck_truck01_aban1_green.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_green", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_green/land_wreck_truck01_aban1_green.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_orange", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_orange/land_wreck_truck01_aban1_orange.jpg"]}
+{"spawn": "Land_wreck_truck01_aban1_orange", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban1_orange/land_wreck_truck01_aban1_orange.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_blue/land_wreck_truck01_aban2_blue.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_blue/land_wreck_truck01_aban2_blue.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_firetruck", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_firetruck/land_wreck_truck01_aban2_firetruck.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_firetruck", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_firetruck/land_wreck_truck01_aban2_firetruck.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_green", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_green/land_wreck_truck01_aban2_green.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_green", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_green/land_wreck_truck01_aban2_green.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_orange", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_orange/land_wreck_truck01_aban2_orange.jpg"]}
+{"spawn": "Land_wreck_truck01_aban2_orange", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_truck01_aban2_orange/land_wreck_truck01_aban2_orange.jpg"]}
+{"spawn": "Land_Wreck_Uaz", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_uaz/land_wreck_uaz.jpg"]}
+{"spawn": "Land_Wreck_Uaz", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_uaz/land_wreck_uaz.jpg"]}
+{"spawn": "Land_Wreck_V3S", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_v3s/land_wreck_v3s.jpg"]}
+{"spawn": "Land_Wreck_V3S", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_v3s/land_wreck_v3s.jpg"]}
+{"spawn": "Land_Wreck_Volha_Blue", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_volha_blue/land_wreck_volha_blue.jpg"]}
+{"spawn": "Land_Wreck_Volha_Blue", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_volha_blue/land_wreck_volha_blue.jpg"]}
+{"spawn": "Land_Wreck_Volha_Grey", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_volha_grey/land_wreck_volha_grey.jpg"]}
+{"spawn": "Land_Wreck_Volha_Grey", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_volha_grey/land_wreck_volha_grey.jpg"]}
+{"spawn": "Land_Wreck_Volha_Police", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_volha_police/land_wreck_volha_police.jpg"]}
+{"spawn": "Land_Wreck_Volha_Police", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/land_wreck_volha_police/land_wreck_volha_police.jpg"]}
+{"spawn": "StaticObj_Wreck_BMP1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bmp1/staticobj_wreck_bmp1.jpg"]}
+{"spawn": "StaticObj_Wreck_BMP1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bmp1/staticobj_wreck_bmp1.jpg"]}
+{"spawn": "StaticObj_Wreck_BMP1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bmp1/staticobj_wreck_bmp1.jpg"]}
+{"spawn": "StaticObj_Wreck_BMP2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bmp2/staticobj_wreck_bmp2.jpg"]}
+{"spawn": "StaticObj_Wreck_BMP2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bmp2/staticobj_wreck_bmp2.jpg"]}
+{"spawn": "StaticObj_Wreck_BRDM", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_brdm/staticobj_wreck_brdm.jpg"]}
+{"spawn": "StaticObj_Wreck_BRDM", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_brdm/staticobj_wreck_brdm.jpg"]}
+{"spawn": "StaticObj_Wreck_Bulldozer", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bulldozer/staticobj_wreck_bulldozer.jpg"]}
+{"spawn": "StaticObj_Wreck_Bulldozer", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_bulldozer/staticobj_wreck_bulldozer.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Big", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_big/staticobj_wreck_decal_big.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Big", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_big/staticobj_wreck_decal_big.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Big_NoLC", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_big_nolc/staticobj_wreck_decal_big_nolc.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Big_NoLC", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_big_nolc/staticobj_wreck_decal_big_nolc.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Small1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_small1/staticobj_wreck_decal_small1.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Small1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_small1/staticobj_wreck_decal_small1.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Small2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_small2/staticobj_wreck_decal_small2.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Small2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_small2/staticobj_wreck_decal_small2.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Small2_NoLC", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_small2_nolc/staticobj_wreck_decal_small2_nolc.jpg"]}
+{"spawn": "StaticObj_Wreck_Decal_Small2_NoLC", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_decal_small2_nolc/staticobj_wreck_decal_small2_nolc.jpg"]}
+{"spawn": "StaticObj_Wreck_Digger", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_digger/staticobj_wreck_digger.jpg"]}
+{"spawn": "StaticObj_Wreck_Digger", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_digger/staticobj_wreck_digger.jpg"]}
+{"spawn": "StaticObj_Wreck_HMMWV", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_hmmwv/staticobj_wreck_hmmwv.jpg"]}
+{"spawn": "StaticObj_Wreck_HMMWV", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_hmmwv/staticobj_wreck_hmmwv.jpg"]}
+{"spawn": "StaticObj_Wreck_MTVR_Cargo", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_mtvr_cargo/staticobj_wreck_mtvr_cargo.jpg"]}
+{"spawn": "StaticObj_Wreck_MTVR_Cargo", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_mtvr_cargo/staticobj_wreck_mtvr_cargo.jpg"]}
+{"spawn": "StaticObj_Wreck_PowGen", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_powgen/staticobj_wreck_powgen.jpg"]}
+{"spawn": "StaticObj_Wreck_PowGen", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_powgen/staticobj_wreck_powgen.jpg"]}
+{"spawn": "StaticObj_Wreck_Stryker", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_stryker/staticobj_wreck_stryker.jpg"]}
+{"spawn": "StaticObj_Wreck_Stryker", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_stryker/staticobj_wreck_stryker.jpg"]}
+{"spawn": "StaticObj_Wreck_T72_Chassis", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_t72_chassis/staticobj_wreck_t72_chassis.jpg"]}
+{"spawn": "StaticObj_Wreck_T72_Chassis", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_t72_chassis/staticobj_wreck_t72_chassis.jpg"]}
+{"spawn": "StaticObj_Wreck_T72_Turret", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_t72_turret/staticobj_wreck_t72_turret.jpg"]}
+{"spawn": "StaticObj_Wreck_T72_Turret", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_t72_turret/staticobj_wreck_t72_turret.jpg"]}
+{"spawn": "StaticObj_Wreck_Trailer_Cistern", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_trailer_cistern/staticobj_wreck_trailer_cistern.jpg"]}
+{"spawn": "StaticObj_Wreck_Trailer_Cistern", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_trailer_cistern/staticobj_wreck_trailer_cistern.jpg"]}
+{"spawn": "StaticObj_Wreck_Trailer_Flat", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_trailer_flat/staticobj_wreck_trailer_flat.jpg"]}
+{"spawn": "StaticObj_Wreck_Trailer_Flat", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_trailer_flat/staticobj_wreck_trailer_flat.jpg"]}
+{"spawn": "StaticObj_Wreck_Ural", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_ural/staticobj_wreck_ural.jpg"]}
+{"spawn": "StaticObj_Wreck_Ural", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/staticobj_wreck_ural/staticobj_wreck_ural.jpg"]}
+{"spawn": "DZ\\structures\\wrecks\\vehicles\\wreck_s120_red.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/wrecks/vehicles/wreck_s120_red/wreck_s120_red.jpg"]}
+{"spawn": "DZ\\structures\\wrecks\\vehicles\\wreck_s120_red.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/wrecks/vehicles/wreck_s120_red/wreck_s120_red.jpg"]}
+{"spawn": "StaticObj_Construction_Hopper", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/construction/construction_hopper.jpg", "assets/model-images/structures_bliss/industrial/construction/staticobj_construction_hopper.jpg"]}
+{"spawn": "StaticObj_Construction_Hopper", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/construction/construction_hopper.jpg", "assets/model-images/structures_bliss/industrial/construction/staticobj_construction_hopper.jpg"]}
+{"spawn": "Land_DieselPowerPlant_Building", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_building.jpg", "assets/model-images/structures_bliss/industrial/dieselpowerplant/land_dieselpowerplant_building.jpg"]}
+{"spawn": "Land_DieselPowerPlant_Building", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_building.jpg", "assets/model-images/structures_bliss/industrial/dieselpowerplant/land_dieselpowerplant_building.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\dieselpowerplant\\dieselpowerplant_cooling.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_cooling.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\dieselpowerplant\\dieselpowerplant_cooling.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_cooling.jpg"]}
+{"spawn": "Land_DieselPowerPlant_Tank_Big", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_tank_big.jpg", "assets/model-images/structures_bliss/industrial/dieselpowerplant/land_dieselpowerplant_tank_big.jpg"]}
+{"spawn": "Land_DieselPowerPlant_Tank_Big", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_tank_big.jpg", "assets/model-images/structures_bliss/industrial/dieselpowerplant/land_dieselpowerplant_tank_big.jpg"]}
+{"spawn": "Land_DieselPowerPlant_Tank_Small", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_tank_small.jpg", "assets/model-images/structures_bliss/industrial/dieselpowerplant/land_dieselpowerplant_tank_small.jpg"]}
+{"spawn": "Land_DieselPowerPlant_Tank_Small", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_tank_small.jpg", "assets/model-images/structures_bliss/industrial/dieselpowerplant/land_dieselpowerplant_tank_small.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\dieselpowerplant\\dieselpowerplant_transformer.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_transformer.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\dieselpowerplant\\dieselpowerplant_transformer.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/dieselpowerplant/dieselpowerplant_transformer.jpg"]}
+{"spawn": "Land_Farm_Hopper2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/farms/farm_hopper2.jpg", "assets/model-images/structures_bliss/industrial/farms/land_farm_hopper2.jpg"]}
+{"spawn": "Land_Farm_Hopper2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/farms/farm_hopper2.jpg", "assets/model-images/structures_bliss/industrial/farms/land_farm_hopper2.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\farms\\farm_manurepile.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/farms/farm_manurepile.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\farms\\farm_manurepile.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/farms/farm_manurepile.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\farms\\farm_silagestorage.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/farms/farm_silagestorage.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\farms\\farm_silagestorage.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/farms/farm_silagestorage.jpg"]}
+{"spawn": "Land_Garage_Medium", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/garages/garage_medium.jpg", "assets/model-images/structures_bliss/industrial/garages/land_garage_medium.jpg"]}
+{"spawn": "Land_Garage_Medium", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/garages/garage_medium.jpg", "assets/model-images/structures_bliss/industrial/garages/land_garage_medium.jpg"]}
+{"spawn": "Land_Garage_Tall", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/garages/garage_tall.jpg", "assets/model-images/structures_bliss/industrial/garages/land_garage_tall.jpg"]}
+{"spawn": "Land_Garage_Tall", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/garages/garage_tall.jpg", "assets/model-images/structures_bliss/industrial/garages/land_garage_tall.jpg"]}
+{"spawn": "StaticObj_Pier_Wooden2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/harbour/pier_wooden2.jpg", "assets/model-images/structures_bliss/industrial/harbour/staticobj_pier_wooden2.jpg"]}
+{"spawn": "StaticObj_Pier_Wooden2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/harbour/pier_wooden2.jpg", "assets/model-images/structures_bliss/industrial/harbour/staticobj_pier_wooden2.jpg"]}
+{"spawn": "Land_Workshop_FuelStation", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/houses/land_workshop_fuelstation.jpg", "assets/model-images/structures_bliss/industrial/houses/workshop_fuelstation.jpg"]}
+{"spawn": "Land_Workshop_FuelStation", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/houses/land_workshop_fuelstation.jpg", "assets/model-images/structures_bliss/industrial/houses/workshop_fuelstation.jpg"]}
+{"spawn": "StaticObj_Misc_CinderBlock", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_cinderblock.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_cinderblock.jpg"]}
+{"spawn": "StaticObj_Misc_CinderBlock", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_cinderblock.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_cinderblock.jpg"]}
+{"spawn": "StaticObj_Misc_CinderBlocks", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_cinderblocks.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_cinderblocks.jpg"]}
+{"spawn": "StaticObj_Misc_CinderBlocks", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_cinderblocks.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_cinderblocks.jpg"]}
+{"spawn": "StaticObj_Misc_HayBale_Packed", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_haybale_packed.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_haybale_packed.jpg"]}
+{"spawn": "StaticObj_Misc_HayBale_Packed", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_haybale_packed.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_haybale_packed.jpg"]}
+{"spawn": "StaticObj_Misc_HayBale_Packed_Stack", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_haybale_packed_stack.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_haybale_packed_stack.jpg"]}
+{"spawn": "StaticObj_Misc_HayBale_Packed_Stack", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_haybale_packed_stack.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_haybale_packed_stack.jpg"]}
+{"spawn": "StaticObj_Misc_SurveyMarker_Cover", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_surveymarker_cover.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_surveymarker_cover.jpg"]}
+{"spawn": "StaticObj_Misc_SurveyMarker_Cover", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_surveymarker_cover.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_surveymarker_cover.jpg"]}
+{"spawn": "StaticObj_Misc_SurveyMarker_Post", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_surveymarker_post.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_surveymarker_post.jpg"]}
+{"spawn": "StaticObj_Misc_SurveyMarker_Post", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_surveymarker_post.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_surveymarker_post.jpg"]}
+{"spawn": "StaticObj_Misc_SurveyMarker_Rod", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_surveymarker_rod.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_surveymarker_rod.jpg"]}
+{"spawn": "StaticObj_Misc_SurveyMarker_Rod", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_surveymarker_rod.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_surveymarker_rod.jpg"]}
+{"spawn": "StaticObj_Misc_Tire", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_tire.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_tire.jpg"]}
+{"spawn": "StaticObj_Misc_Tire", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_tire.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_tire.jpg"]}
+{"spawn": "StaticObj_Misc_TirePile_Large", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_tirepile_large.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_tirepile_large.jpg"]}
+{"spawn": "StaticObj_Misc_TirePile_Large", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_tirepile_large.jpg", "assets/model-images/structures_bliss/industrial/misc/staticobj_misc_tirepile_large.jpg"]}
+{"spawn": "StaticObj_Misc_Transformer", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_transformer.jpg"]}
+{"spawn": "StaticObj_Misc_Transformer", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/misc/misc_transformer.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_4m.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_4m/pipe_small2_4m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_4m.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_4m/pipe_small2_4m.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_high_support.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_high_support/pipe_small2_high_support.jpg"]}
+{"spawn": "DZ\\structures_bliss\\industrial\\pipes\\pipe_small2_high_support.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures_bliss/industrial/pipes/pipe_small2_high_support/pipe_small2_high_support.jpg"]}
