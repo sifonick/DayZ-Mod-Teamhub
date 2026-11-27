@@ -190,7 +190,7 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
     <div class="vis-h">Lay them out</div>
     <div class="xf">
       <label>Map <select id="xMap"><option value="chernarus">Chernarus</option><option value="livonia">Livonia</option><option value="sakhal">Sakhal</option><option value="nasdara">Nasdara</option></select></label>
-      <label class="wide">Start position (X, Z) <input id="xPos" inputmode="decimal" placeholder="e.g. 4519, 10122 (paste from the map's Copy X, Z)"></label>
+      <label class="wide">Start position (X, Z) <input id="xPos" inputmode="decimal" placeholder="e.g. 4519, 10122 (or paste X / Z from the map's Ctrl+C)"></label>
       <label>Layout <select id="xLayout"><option value="grid">Grid</option><option value="line">Single line</option></select></label>
       <label>Per row (grid) <input id="xPer" type="number" min="1" max="100" value="5"></label>
       <label>Gap between objects (m) <input id="xGap" type="number" min="0" max="100" step="0.5" value="2"></label>
@@ -663,8 +663,8 @@ async function terrain(map){
 // where each object goes: a line running east, or rows of N running east then stepping south
 async function layout(){
   const L = listed(); if (!L.length) throw new Error('Your list is empty.');
-  const m = /(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/.exec($('xPos').value);
-  if (!m) throw new Error('Type the start position as X, Z (for example 4519, 10122).');
+  const m = /(-?\d+(?:\.\d+)?)\s*(?:[,;\/]|\s)\s*(-?\d+(?:\.\d+)?)/.exec($('xPos').value);
+  if (!m) throw new Error('Type the start position as X, Z (for example 4519, 10122 or 4519 / 10122).');
   const X0 = +m[1], Z0 = +m[2], gap = Math.max(0, +$('xGap').value || 0), yaw = +$('xYaw').value || 0;
   const per = $('xLayout').value === 'line' ? Infinity : Math.max(1, Math.round(+$('xPer').value || 5));
   const turned = yaw === 90 || yaw === 270;
