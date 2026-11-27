@@ -3199,3 +3199,251 @@
 {"spawn": "StaticObj_Roads_Partkr_x_city_city", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/kr_x_city_city.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partkr_x_city_city.jpg"]}
 {"spawn": "StaticObj_Roads_Partkr_x_city_city_asf3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/kr_x_city_city_asf3.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partkr_x_city_city_asf3.jpg"]}
 {"spawn": "StaticObj_Roads_Partkr_x_city_city_asf3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/kr_x_city_city_asf3.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partkr_x_city_city_asf3.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_0_2000", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_0 2000.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_0_2000.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_0_2000", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_0 2000.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_0_2000.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_1_1000", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_1 1000.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_1_1000.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_1_1000", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_1 1000.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_1_1000.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_100", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_10 100.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_100.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_100", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_10 100.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_100.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_25", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_10 25.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_25.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_25", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_10 25.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_25.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_50", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_10 50.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_50.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_50", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_10 50.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_50.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_75", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_10 75.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_75.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_10_75", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_10 75.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_10_75.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_12", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_12.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_12.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_12", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_12.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_12.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_15_75", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_15 75.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_15_75.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_15_75", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_15 75.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_15_75.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_22_50", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_22 50.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_22_50.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_22_50", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_22 50.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_22_50.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_25", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_25.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_25.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_25", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_25.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_25.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_30_25", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_30 25.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_30_25.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_30_25", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_30 25.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_30_25.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_6.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_6.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_6.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_6.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_60_10", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_60 10.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_60_10.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_60_10", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_60 10.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_60_10.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_7_100", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/mud_7 100.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_7_100.jpg"]}
+{"spawn": "StaticObj_Roads_Partmud_7_100", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/mud_7 100.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partmud_7_100.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_dirt_10", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/path_dirt_10.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_dirt_10.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_dirt_10", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/path_dirt_10.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_dirt_10.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_dirt_30", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/path_dirt_30.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_dirt_30.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_dirt_30", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/path_dirt_30.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_dirt_30.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_dirt_curve", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/path_dirt_curve.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_dirt_curve.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_dirt_curve", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/path_dirt_curve.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_dirt_curve.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_rock_10", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/path_rock_10.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_rock_10.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_rock_10", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/path_rock_10.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_rock_10.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_rock_30", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/path_rock_30.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_rock_30.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_rock_30", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/path_rock_30.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_rock_30.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_rock_curve", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/path_rock_curve.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_rock_curve.jpg"]}
+{"spawn": "StaticObj_Roads_Partpath_rock_curve", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/path_rock_curve.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partpath_rock_curve.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_beton", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_beton.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_beton.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_beton", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_beton.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_beton.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_beton_end1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_beton_end1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_beton_end1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_beton_end1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_beton_end1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_beton_end1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_beton_end2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_beton_end2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_beton_end2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_beton_end2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_beton_end2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_beton_end2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_dirt_1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_dirt_1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_dirt_1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_dirt_1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_dirt_1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_dirt_1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_dirt_2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_dirt_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_dirt_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_dirt_2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_dirt_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_dirt_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_dirt_3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_dirt_3.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_dirt_3.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_dirt_3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_dirt_3.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_dirt_3.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_end15", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_end15.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_end15.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_end15", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_end15.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_end15.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_end33", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_end33.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_end33.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_end33", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_end33.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_end33.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_main", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_main.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_main.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_main", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_main.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_main.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_main_40", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_main_40.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_main_40.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_main_40", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_main_40.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_main_40.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_draha", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_draha.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_draha.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_draha", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_draha.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_draha.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_1_end", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_1_end.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_1_end.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_1_end", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_1_end.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_1_end.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_2_end", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_2_end.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_2_end.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_L_2_end", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_l_2_end.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_l_2_end.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_spoj", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_spoj.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_spoj.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_spoj", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_spoj.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_spoj.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_spoj_2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_spoj_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_spoj_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_spoj_2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_spoj_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_spoj_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_T_1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_t_1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_t_1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_T_1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_t_1.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_t_1.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_T_2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_t_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_t_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunway_poj_T_2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runway_poj_t_2.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunway_poj_t_2.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunwayold_40_main", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/parts/runwayold_40_main.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunwayold_40_main.jpg"]}
+{"spawn": "StaticObj_Roads_Partrunwayold_40_main", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/parts/runwayold_40_main.p3d.jpg", "assets/model-images/structures/roads/parts/staticobj_roads_partrunwayold_40_main.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_1m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_1m.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_1m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_1m.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_5m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_5m.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_5m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_5m.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Corner", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_corner.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Corner", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_corner.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_End", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_end.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_End", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_end.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_TCross", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_tcross.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_TCross", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_tcross.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Turn_10deg", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_turn_10deg.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Turn_10deg", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_turn_10deg.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Turn_30deg", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_turn_30deg.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Turn_30deg", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_turn_30deg.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Turn_5deg", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_turn_5deg.jpg"]}
+{"spawn": "StaticObj_Sidewalk1_Turn_5deg", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk1_turn_5deg.jpg"]}
+{"spawn": "StaticObj_Sidewalk2_1m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk2_1m.jpg"]}
+{"spawn": "StaticObj_Sidewalk2_1m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk2_1m.jpg"]}
+{"spawn": "StaticObj_Sidewalk2_5m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk2_5m.jpg"]}
+{"spawn": "StaticObj_Sidewalk2_5m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk2_5m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Border", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_border.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Border", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_border.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Border_nolc", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_border_nolc.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Border_nolc", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_border_nolc.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Narrow_12m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_narrow_12m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Narrow_12m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_narrow_12m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Narrow_4m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_narrow_4m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Narrow_4m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_narrow_4m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Narrow_Corner", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_narrow_corner.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Narrow_Corner", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_narrow_corner.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Wide_12m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wide_12m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Wide_12m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wide_12m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Wide_4m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wide_4m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Wide_4m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wide_4m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Wide_Corner", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wide_corner.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_Wide_Corner", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wide_corner.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_WideB_4m", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wideb_4m.jpg"]}
+{"spawn": "StaticObj_Sidewalk3_WideB_4m", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_sidewalk3_wideb_4m.jpg"]}
+{"spawn": "StaticObj_Taxiway_0_2000", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_0_2000.jpg"]}
+{"spawn": "StaticObj_Taxiway_0_2000", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_0_2000.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_100", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_100.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_100", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_100.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_25", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_25.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_25", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_25.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_50", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_50.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_50", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_50.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_75", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_75.jpg"]}
+{"spawn": "StaticObj_Taxiway_10_75", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_10_75.jpg"]}
+{"spawn": "StaticObj_Taxiway_12", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_12.jpg"]}
+{"spawn": "StaticObj_Taxiway_12", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_12.jpg"]}
+{"spawn": "StaticObj_Taxiway_15_75", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_15_75.jpg"]}
+{"spawn": "StaticObj_Taxiway_15_75", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_15_75.jpg"]}
+{"spawn": "StaticObj_Taxiway_1_1000", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_1_1000.jpg"]}
+{"spawn": "StaticObj_Taxiway_1_1000", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_1_1000.jpg"]}
+{"spawn": "StaticObj_Taxiway_22_50", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_22_50.jpg"]}
+{"spawn": "StaticObj_Taxiway_22_50", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_22_50.jpg"]}
+{"spawn": "StaticObj_Taxiway_25", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_25.jpg"]}
+{"spawn": "StaticObj_Taxiway_25", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_25.jpg"]}
+{"spawn": "StaticObj_Taxiway_30_25", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_30_25.jpg"]}
+{"spawn": "StaticObj_Taxiway_30_25", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_30_25.jpg"]}
+{"spawn": "StaticObj_Taxiway_6", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_6.jpg"]}
+{"spawn": "StaticObj_Taxiway_6", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_6.jpg"]}
+{"spawn": "StaticObj_Taxiway_60_10", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_60_10.jpg"]}
+{"spawn": "StaticObj_Taxiway_60_10", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_60_10.jpg"]}
+{"spawn": "StaticObj_Taxiway_6konec", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_6konec.jpg"]}
+{"spawn": "StaticObj_Taxiway_6konec", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_6konec.jpg"]}
+{"spawn": "StaticObj_Taxiway_7_100", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_7_100.jpg"]}
+{"spawn": "StaticObj_Taxiway_7_100", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/sidewalks/staticobj_taxiway_7_100.jpg"]}
+{"spawn": "Land_Tunnel_Biathlon_Left", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/land_tunnel_biathlon_left.jpg"]}
+{"spawn": "Land_Tunnel_Biathlon_Left", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/land_tunnel_biathlon_left.jpg"]}
+{"spawn": "Land_Tunnel_Biathlon_Right", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/land_tunnel_biathlon_right.jpg"]}
+{"spawn": "Land_Tunnel_Biathlon_Right", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/land_tunnel_biathlon_right.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Left", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_left.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Left", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_left.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Left_anthoxanthum", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_left_anthoxanthum.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Left_anthoxanthum", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_left_anthoxanthum.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Left_elytrigia", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_left_elytrigia.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Left_elytrigia", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_left_elytrigia.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Right_anthoxanthum", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_right_anthoxanthum.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Right_anthoxanthum", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_right_anthoxanthum.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Right_elytrigia", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_right_elytrigia.jpg"]}
+{"spawn": "StaticObj_Tunnel_Biathlon_Right_elytrigia", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/roads/tunnels/staticobj_tunnel_biathlon_right_elytrigia.jpg"]}
+{"spawn": "DZ\\structures\\ruins\\craterlong_02.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/craterlong_02.p3d.jpg"]}
+{"spawn": "DZ\\structures\\ruins\\craterlong_02.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/craterlong_02.p3d.jpg"]}
+{"spawn": "Land_Ruin_Chimney", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/land_ruin_chimney.jpg"]}
+{"spawn": "Land_Ruin_Chimney", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/land_ruin_chimney.jpg"]}
+{"spawn": "DZ\\structures\\ruins\\rubble_dirtpile_small.p3d", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/rubble_dirtpile_small.p3d.jpg"]}
+{"spawn": "DZ\\structures\\ruins\\rubble_dirtpile_small.p3d", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/rubble_dirtpile_small.p3d.jpg"]}
+{"spawn": "StaticObj_Rubble_Bricks1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_bricks1.jpg"]}
+{"spawn": "StaticObj_Rubble_Bricks1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_bricks1.jpg"]}
+{"spawn": "StaticObj_Rubble_Bricks2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_bricks2.jpg"]}
+{"spawn": "StaticObj_Rubble_Bricks2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_bricks2.jpg"]}
+{"spawn": "StaticObj_Rubble_Bricks3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_bricks3.jpg"]}
+{"spawn": "StaticObj_Rubble_Bricks3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_bricks3.jpg"]}
+{"spawn": "StaticObj_Rubble_Concrete1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_concrete1.jpg"]}
+{"spawn": "StaticObj_Rubble_Concrete1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_concrete1.jpg"]}
+{"spawn": "StaticObj_Rubble_Concrete2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_concrete2.jpg"]}
+{"spawn": "StaticObj_Rubble_Concrete2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_concrete2.jpg"]}
+{"spawn": "StaticObj_Rubble_Concrete3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_concrete3.jpg"]}
+{"spawn": "StaticObj_Rubble_Concrete3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_concrete3.jpg"]}
+{"spawn": "StaticObj_Rubble_DirtPile_Large", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_dirtpile_large.jpg"]}
+{"spawn": "StaticObj_Rubble_DirtPile_Large", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_dirtpile_large.jpg"]}
+{"spawn": "StaticObj_Rubble_DirtPile_Medium1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_dirtpile_medium1.jpg"]}
+{"spawn": "StaticObj_Rubble_DirtPile_Medium1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_dirtpile_medium1.jpg"]}
+{"spawn": "StaticObj_Rubble_DirtPile_Medium2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_dirtpile_medium2.jpg"]}
+{"spawn": "StaticObj_Rubble_DirtPile_Medium2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_dirtpile_medium2.jpg"]}
+{"spawn": "StaticObj_Rubble_Glass", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_glass.jpg"]}
+{"spawn": "StaticObj_Rubble_Glass", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_glass.jpg"]}
+{"spawn": "StaticObj_Rubble_Metal1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_metal1.jpg"]}
+{"spawn": "StaticObj_Rubble_Metal1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_metal1.jpg"]}
+{"spawn": "StaticObj_Rubble_Metal2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_metal2.jpg"]}
+{"spawn": "StaticObj_Rubble_Metal2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_metal2.jpg"]}
+{"spawn": "StaticObj_Rubble_Metal3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_metal3.jpg"]}
+{"spawn": "StaticObj_Rubble_Metal3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_metal3.jpg"]}
+{"spawn": "StaticObj_Rubble_Rocks1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_rocks1.jpg"]}
+{"spawn": "StaticObj_Rubble_Rocks1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_rocks1.jpg"]}
+{"spawn": "StaticObj_Rubble_Rocks2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_rocks2.jpg"]}
+{"spawn": "StaticObj_Rubble_Rocks2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_rocks2.jpg"]}
+{"spawn": "StaticObj_Rubble_Wood1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_wood1.jpg"]}
+{"spawn": "StaticObj_Rubble_Wood1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_wood1.jpg"]}
+{"spawn": "StaticObj_Rubble_Wood2", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_wood2.jpg"]}
+{"spawn": "StaticObj_Rubble_Wood2", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_wood2.jpg"]}
+{"spawn": "StaticObj_Rubble_Wood3", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_wood3.jpg"]}
+{"spawn": "StaticObj_Rubble_Wood3", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_rubble_wood3.jpg"]}
+{"spawn": "StaticObj_Ruin_Church", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_church.jpg"]}
+{"spawn": "StaticObj_Ruin_Church", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_church.jpg"]}
+{"spawn": "StaticObj_Ruin_Corner1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_corner1.jpg"]}
+{"spawn": "StaticObj_Ruin_Corner1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_corner1.jpg"]}
+{"spawn": "StaticObj_Ruin_DoorWall", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_doorwall.jpg"]}
+{"spawn": "StaticObj_Ruin_DoorWall", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_doorwall.jpg"]}
+{"spawn": "StaticObj_Ruin_House_Total", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_house_total.jpg"]}
+{"spawn": "StaticObj_Ruin_House_Total", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_house_total.jpg"]}
+{"spawn": "StaticObj_Ruin_HouseBlock_Corner_Total", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_houseblock_corner_total.jpg"]}
+{"spawn": "StaticObj_Ruin_HouseBlock_Corner_Total", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_houseblock_corner_total.jpg"]}
+{"spawn": "StaticObj_Ruin_HouseBlock_Half", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_houseblock_half.jpg"]}
+{"spawn": "StaticObj_Ruin_HouseBlock_Half", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_houseblock_half.jpg"]}
+{"spawn": "StaticObj_Ruin_HouseBlock_Total", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_houseblock_total.jpg"]}
+{"spawn": "StaticObj_Ruin_HouseBlock_Total", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_houseblock_total.jpg"]}
+{"spawn": "StaticObj_Ruin_Rubble", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_rubble.jpg"]}
+{"spawn": "StaticObj_Ruin_Rubble", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_rubble.jpg"]}
+{"spawn": "StaticObj_Ruin_Wall", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_wall.jpg"]}
+{"spawn": "StaticObj_Ruin_Wall", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/ruins/staticobj_ruin_wall.jpg"]}
+{"spawn": "StaticObj_10thAnniversaryBanner_Big", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/10thanniversarybanner_big.jpg", "assets/model-images/structures/signs/billboards/staticobj_10thanniversarybanner_big.jpg"]}
+{"spawn": "StaticObj_10thAnniversaryBanner_Big", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/10thanniversarybanner_big.jpg", "assets/model-images/structures/signs/billboards/staticobj_10thanniversarybanner_big.jpg"]}
+{"spawn": "StaticObj_10thAnniversaryBanner_Small", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/10thanniversarybanner_small.jpg", "assets/model-images/structures/signs/billboards/staticobj_10thanniversarybanner_small.jpg"]}
+{"spawn": "StaticObj_10thAnniversaryBanner_Small", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/10thanniversarybanner_small.jpg", "assets/model-images/structures/signs/billboards/staticobj_10thanniversarybanner_small.jpg"]}
+{"spawn": "Land_Bilboard_alkohol", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_alkohol.jpg"]}
+{"spawn": "Land_Bilboard_alkohol", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_alkohol.jpg"]}
+{"spawn": "Land_Bilboard_Beach", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_beach.jpg"]}
+{"spawn": "Land_Bilboard_Beach", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_beach.jpg"]}
+{"spawn": "Land_Bilboard_Bienvenudo", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_bienvenudo.jpg"]}
+{"spawn": "Land_Bilboard_Bienvenudo", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_bienvenudo.jpg"]}
+{"spawn": "Land_Bilboard_cibulka", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_cibulka.jpg"]}
+{"spawn": "Land_Bilboard_cibulka", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_cibulka.jpg"]}
+{"spawn": "Land_Bilboard_cigara_chernomorky", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_cigara_chernomorky.jpg"]}
+{"spawn": "Land_Bilboard_cigara_chernomorky", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_cigara_chernomorky.jpg"]}
+{"spawn": "Land_Bilboard_Escape", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_escape.jpg"]}
+{"spawn": "Land_Bilboard_Escape", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_escape.jpg"]}
+{"spawn": "Land_Bilboard_Everon", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_everon.jpg"]}
+{"spawn": "Land_Bilboard_Everon", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_everon.jpg"]}
+{"spawn": "Land_Bilboard_hey_buddy", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_hey_buddy.jpg"]}
+{"spawn": "Land_Bilboard_hey_buddy", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_hey_buddy.jpg"]}
+{"spawn": "Land_Bilboard_likery_bardak", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_likery_bardak.jpg"]}
+{"spawn": "Land_Bilboard_likery_bardak", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_likery_bardak.jpg"]}
+{"spawn": "Land_Bilboard_Livonia_1", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_livonia_1.jpg"]}
+{"spawn": "Land_Bilboard_Livonia_1", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_livonia_1.jpg"]}
+{"spawn": "Land_Bilboard_Nogova", "empty": true, "view": 0, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_nogova.jpg"]}
+{"spawn": "Land_Bilboard_Nogova", "empty": true, "view": 1, "imgs": ["assets/model-images/structures/signs/billboards/land_bilboard_nogova.jpg"]}
