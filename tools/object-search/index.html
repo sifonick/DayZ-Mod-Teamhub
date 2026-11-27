@@ -61,6 +61,20 @@ main{padding:20px max(5vw,16px) 48px}
 .srcline{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);margin-top:-6px}
 .srcline .pa-badge{position:static}
 .btn.warn{border-color:#c0563f;color:#e9876f}
+.cw{position:relative;display:flex}.cw>.card{flex:1;min-width:0}
+.add{position:absolute;right:6px;top:6px;z-index:2;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:rgba(10,12,8,.72);color:#f1eee4;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.add[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-size:17px}
+.listbtn{position:fixed;right:18px;bottom:18px;z-index:9;min-height:48px;padding:0 18px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.lrow{display:grid;grid-template-columns:52px 1fr auto auto;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.lrow img{width:52px;height:52px;object-fit:contain;background:var(--thumb);border-radius:6px}
+.lrow .nm{font-weight:600;font-size:14px;overflow-wrap:anywhere}.lrow .sub{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.lrow input{width:62px;min-height:40px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:inherit;padding:0 8px;font:inherit}
+.lrow .x{min-height:40px;min-width:40px;border:1px solid var(--line);border-radius:6px;background:none;color:inherit;cursor:pointer;font-size:16px}
+.xf{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:10px 0}
+.xf label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.xf input,.xf select{min-height:44px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);padding:0 10px;font:inherit;font-size:15px}
+.xf .wide{grid-column:1/-1}
+.xnote{font-size:13px;color:var(--muted);margin:6px 0}
 .vis-tree{display:grid;gap:2px;font-size:14px}
 .vis-row{display:flex;align-items:center;gap:8px;min-height:32px;padding:2px 6px;border-radius:6px}
 .vis-row:hover{background:var(--thumb)}
@@ -163,6 +177,35 @@ dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}
     <div class="vis-tree" id="vCats"></div>
     <div class="vis-h">Folders</div>
     <div class="vis-tree" id="vDirs"></div>
+  </div>
+</div>
+<button class="listbtn" id="listbtn" type="button" hidden>My list (0)</button>
+<div class="sheet" id="lsheet" aria-hidden="true">
+  <div class="shade" id="lshade"></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="lTitle">
+    <button class="close" id="lclose" aria-label="Close">✕</button>
+    <h2 id="lTitle">My list</h2>
+    <p class="why">Pick objects with the + on each picture, then download them laid out in a line or grid, ready to open in DayZ Editor.</p>
+    <div id="lRows"></div>
+    <div class="vis-h">Lay them out</div>
+    <div class="xf">
+      <label>Map <select id="xMap"><option value="chernarus">Chernarus</option><option value="livonia">Livonia</option><option value="sakhal">Sakhal</option><option value="nasdara">Nasdara</option></select></label>
+      <label class="wide">Start position (X, Z) <input id="xPos" inputmode="decimal" placeholder="e.g. 4519, 10122 (paste from the map's Copy X, Z)"></label>
+      <label>Layout <select id="xLayout"><option value="grid">Grid</option><option value="line">Single line</option></select></label>
+      <label>Per row (grid) <input id="xPer" type="number" min="1" max="100" value="5"></label>
+      <label>Gap between objects (m) <input id="xGap" type="number" min="0" max="100" step="0.5" value="2"></label>
+      <label>Turn all objects (°) <select id="xYaw"><option>0</option><option>90</option><option>180</option><option>270</option></select></label>
+      <label class="wide">Height <select id="xH"><option value="ground">Sit on the ground (uses the map's terrain)</option><option value="fixed">All at one height (Y) …</option></select></label>
+      <label id="xYWrap" hidden>Height Y (metres above sea level) <input id="xY" type="number" step="0.1" placeholder="e.g. 339"></label>
+    </div>
+    <p class="xnote" id="xNote" aria-live="polite"></p>
+    <div class="actions">
+      <button class="btn primary" id="xDze" type="button">Download .dze (DayZ Editor)</button>
+      <button class="btn" id="xJson" type="button">Download Object Spawner JSON</button>
+      <button class="btn" id="xCopy" type="button">Copy class names</button>
+      <button class="btn warn" id="xClear" type="button">Clear list</button>
+    </div>
+    <p class="xnote">Open the .dze in DayZ Editor with File, Open (put it in your Editor folder, usually Documents\DayZ\Editor). The Object Spawner JSON goes in a server's cfggameplay.json objectSpawnersArr. Heights come from the map's terrain and each object's size, so a few may sit a little high or low: nudge them in the editor.</p>
   </div>
 </div>
 <div class="toast" id="toast"></div>
@@ -389,10 +432,10 @@ function chips(it){
 function more(){
   const slice = results.slice(shown, shown + PAGE);
   $('grid').insertAdjacentHTML('beforeend', slice.map(it => `
-    <button class="card" data-id="${it.id}">
+    <div class="cw"><button class="card" data-id="${it.id}">
       <span class="thumb"><img loading="lazy" src="${esc(imgUrl(pic(it)))}" alt="${esc(it.description || it.name)}">${badge(it)}</span>
       <span class="meta"><span class="nm">${esc(it.name)}</span>${it.description ? `<span class="desc">${esc(it.description)}</span>` : ''}<span class="tags">${chips(it)}</span></span>
-    </button>`).join(''));
+    </button>${addBtn(it)}</div>`).join(''));
   shown += slice.length;
   $('more').hidden = shown >= results.length;
 }
@@ -453,6 +496,7 @@ function applyRules(){
   $('manage').hidden = !OWNER;
   if (items.length) run();
   if ($('vsheet').classList.contains('open')) drawVis();
+  listChanged();
 }
 function setRule(key, hide){
   if (!hostClick(hide ? 'ruleAdd' : 'ruleDel', key)) { toast('Only works on the Patch Atlas page'); return; }
@@ -516,6 +560,7 @@ function openItem(id, keepFocus){
   if (studioOn(it)) rows.push(['In-game view', it.img]);
   $('dList').innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
   const acts = [];
+  acts.push(`<button class="btn" data-list aria-pressed="${inList(it)}">${inList(it) ? 'In my list ✓' : 'Add to my list'}</button>`);
   if (it.class) acts.push(`<button class="btn primary" data-copy="class">Copy class name</button>`);
   if (it.model) acts.push(`<button class="btn${it.class ? '' : ' primary'}" data-copy="model">Copy model path</button>`);
   acts.push(`<button class="btn" data-copy="img">Copy image link</button>`);
@@ -537,6 +582,187 @@ function openItem(id, keepFocus){
 }
 function closeSheet(){ $('sheet').classList.remove('open'); $('sheet').setAttribute('aria-hidden', 'true'); }
 
+// ---------- my list: pick objects and download them for DayZ Editor ----------
+// Saved in this browser by model + class, so it survives catalogue rebuilds.
+const LKEY = 'pa-of-list-v1';
+let LIST = [], listReady = false;  // [{k, n}]  k = model|class, n = how many
+const keyOf = it => (it.model || '') + '|' + (it.class || '');
+let BYKEY = null;
+const byKey = k => { if (!items.length) return undefined; if (!BYKEY){ BYKEY = new Map(); for (const it of items) if (!BYKEY.has(keyOf(it))) BYKEY.set(keyOf(it), it); } return BYKEY.get(k); };
+const inList = it => LIST.some(r => r.k === keyOf(it));
+const addBtn = it => `<button class="add" type="button" data-add="${it.id}" aria-pressed="${inList(it)}" aria-label="${inList(it) ? 'Remove from' : 'Add to'} my list: ${esc(it.name)}">${inList(it) ? '✓' : '+'}</button>`;
+function saveList(){ if (!listReady) return; try { localStorage.setItem(LKEY, JSON.stringify(LIST)); } catch (e) {} }
+function loadList(){
+  try { LIST = JSON.parse(localStorage.getItem(LKEY) || '[]').filter(r => r && r.k); } catch (e) { LIST = []; }
+  listReady = true;
+  try { const x = JSON.parse(localStorage.getItem(LKEY + '-opts') || '{}'); for (const [id, v] of Object.entries(x)) if ($(id)) $(id).value = v; } catch (e) {}
+  $('xYWrap').hidden = $('xH').value !== 'fixed';
+  listChanged();
+}
+const listed = () => LIST.map(r => ({r, it: byKey(r.k)})).filter(x => x.it && !blocked(x.it));
+function listChanged(){
+  if (!listReady) return;
+  saveList();
+  const n = listed().reduce((a, x) => a + x.r.n, 0);
+  $('listbtn').textContent = `My list (${n})`;
+  $('listbtn').hidden = !LIST.length;
+  for (const b of $('grid').querySelectorAll('[data-add]')){
+    const it = items[+b.dataset.add], on = inList(it);
+    b.setAttribute('aria-pressed', on); b.textContent = on ? '✓' : '+';
+    b.setAttribute('aria-label', (on ? 'Remove from' : 'Add to') + ' my list: ' + it.name);
+  }
+  if ($('lsheet').classList.contains('open')) drawList();
+}
+function toggleList(it){
+  const k = keyOf(it), i = LIST.findIndex(r => r.k === k);
+  if (i >= 0) LIST.splice(i, 1); else LIST.push({k, n: 1});
+  toast(i >= 0 ? 'Removed from your list' : 'Added to your list');
+  listChanged();
+}
+function drawList(){
+  const L = listed();
+  $('lRows').innerHTML = L.length ? L.map(({r, it}) => `<div class="lrow">
+      <img src="${esc(imgUrl(pic(it)))}" alt="">
+      <div><div class="nm">${esc(it.name)}</div><div class="sub">${esc(it.class || it.model)}${it.size ? ` · ${it.size[0]} × ${it.size[2]} m` : ' · size not known'}</div></div>
+      <label class="sub">How many <input type="number" min="1" max="200" value="${r.n}" data-n="${esc(r.k)}" aria-label="How many ${esc(it.name)}"></label>
+      <button class="x" type="button" data-del="${esc(r.k)}" aria-label="Remove ${esc(it.name)}">✕</button></div>`).join('')
+    : '<p class="why">Your list is empty. Use the + on any picture to add it.</p>';
+  xNote('');
+}
+function openList(){ drawList(); $('lsheet').classList.add('open'); $('lsheet').setAttribute('aria-hidden', 'false'); $('lclose').focus(); }
+function closeList(){ $('lsheet').classList.remove('open'); $('lsheet').setAttribute('aria-hidden', 'true'); }
+const xNote = t => { $('xNote').textContent = t; };
+
+// map terrain: terrarium tiles in the repo (maps/<map>/elevation), sampled at the most detailed zoom
+const XMAPS = {chernarus: 'ChernarusPlus', livonia: 'Enoch', sakhal: 'Sakhal', nasdara: 'Nasdara'};
+const TERR = {};
+async function terrain(map){
+  if (TERR[map]) return TERR[map];
+  const ts = await (await fetch(RAW + `maps/${map}/elevation/tile-settings.json`)).json();
+  const W = ts.dayzBoundsMetres[2], z = ts.maxzoom, n = 2 ** z, tiles = new Map();
+  const tile = (tx, ty) => {
+    const k = tx + ',' + ty;
+    if (!tiles.has(k)) tiles.set(k, new Promise(ok => {
+      const im = new Image(); im.crossOrigin = 'anonymous';
+      im.onload = () => { const c = document.createElement('canvas'); c.width = c.height = 256; const g = c.getContext('2d'); g.drawImage(im, 0, 0); ok(g.getImageData(0, 0, 256, 256).data); };
+      im.onerror = () => ok(null);
+      im.src = RAW + `maps/${map}/elevation/terrain/${z}/${tx}/${ty}.png`;
+    }));
+    return tiles.get(k);
+  };
+  const at = async (x, zz) => {
+    const px = x / W * 256 * n, py = (W - zz) / W * 256 * n, tx = Math.floor(px / 256), ty = Math.floor(py / 256);
+    if (tx < 0 || ty < 0 || tx >= n || ty >= n) return null;
+    const d = await tile(tx, ty); if (!d) return null;
+    const i = (Math.min(255, Math.floor(py % 256)) * 256 + Math.min(255, Math.floor(px % 256))) * 4;
+    return d[i] * 256 + d[i + 1] + d[i + 2] / 256 - 32768;
+  };
+  return TERR[map] = {W, at};
+}
+
+// where each object goes: a line running east, or rows of N running east then stepping south
+async function layout(){
+  const L = listed(); if (!L.length) throw new Error('Your list is empty.');
+  const m = /(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)/.exec($('xPos').value);
+  if (!m) throw new Error('Type the start position as X, Z (for example 4519, 10122).');
+  const X0 = +m[1], Z0 = +m[2], gap = Math.max(0, +$('xGap').value || 0), yaw = +$('xYaw').value || 0;
+  const per = $('xLayout').value === 'line' ? Infinity : Math.max(1, Math.round(+$('xPer').value || 5));
+  const turned = yaw === 90 || yaw === 270;
+  const objs = [];
+  for (const {r, it} of L) for (let c = 0; c < Math.min(200, Math.max(1, r.n | 0)); c++){
+    const s = it.size || [2, 2, 2];
+    objs.push({it, w: turned ? s[2] : s[0], d: turned ? s[0] : s[2], h: s[1]});
+  }
+  let x = X0, z = Z0, rowD = 0, col = 0;
+  for (const o of objs){
+    if (col === per){ z -= rowD + gap; x = X0; rowD = 0; col = 0; }
+    o.x = x + o.w / 2; o.z = z - o.d / 2;
+    x += o.w + gap; rowD = Math.max(rowD, o.d); col++;
+  }
+  const map = $('xMap').value;
+  if ($('xH').value === 'fixed'){
+    const Y = parseFloat($('xY').value);
+    if (!isFinite(Y)) throw new Error('Type the height (Y) to use.');
+    for (const o of objs) o.y = Y;
+  } else {
+    xNote('Reading the ground height…');
+    const T = await terrain(map);
+    for (const o of objs){
+      if (o.x < 0 || o.z < 0 || o.x > T.W || o.z > T.W) throw new Error('Some objects land outside the map. Move the start position or use fewer per row.');
+      // lowest ground under the middle and corners, so nothing floats; then lift by half its height (most models sit centred on their middle)
+      const hs = await Promise.all([[0, 0], [-1, -1], [1, -1], [-1, 1], [1, 1]].map(([a, b]) => T.at(o.x + a * o.w / 2, o.z + b * o.d / 2)));
+      const g = hs.filter(v => v != null);
+      if (!g.length) throw new Error('Could not read the ground height there. Choose "All at one height" instead.');
+      // buildings' boxes include their foundations, which the game sinks about a metre into the ground
+      o.y = Math.min(...g) + o.h / 2 - (o.it.category === 'Structures' && o.h > 3 ? Math.min(1.5, o.h * 0.15) : 0);
+    }
+  }
+  for (const o of objs) o.yaw = yaw;
+  return {map, objs, X0, Z0};
+}
+
+// DayZ Editor save (.dze, "EditorBinned" version 8: the format DayZ Editor writes when Binarized is ticked)
+function writeDze(lay){
+  const enc = new TextEncoder(), parts = [];
+  const i32 = v => { const b = new DataView(new ArrayBuffer(4)); b.setInt32(0, v, true); parts.push(new Uint8Array(b.buffer)); };
+  const f32 = v => { const b = new DataView(new ArrayBuffer(4)); b.setFloat32(0, v, true); parts.push(new Uint8Array(b.buffer)); };
+  const str = t => { const u = enc.encode(t); i32(u.length); parts.push(u); };
+  const vec = a => { i32(a.length); a.forEach(f32); };
+  const xs = lay.objs.map(o => o.x), zs = lay.objs.map(o => o.z), ys = lay.objs.map(o => o.y);
+  const cx = (Math.min(...xs) + Math.max(...xs)) / 2, span = Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...zs) - Math.min(...zs));
+  const now = Math.floor(Date.now() / 1000), author = 'Patch Atlas Object Finder';
+  str('EditorBinned'); i32(8); str(XMAPS[lay.map]);
+  vec([cx, Math.max(...ys) + Math.max(15, span * 0.6), Math.min(...zs) - Math.max(10, span * 0.4)]);  // camera: south of the layout, looking at it
+  str(author); i32(1); str(author); i32(now); i32(now);
+  i32(lay.objs.length);
+  for (const o of lay.objs){
+    const model = (o.it.model || '').replace(/\//g, '\\');
+    const type = o.it.class || model;
+    str(type); str(type); vec([o.x, o.y, o.z]); vec([o.yaw, 0, 0]); f32(1);
+    [30, 0, 0, 0, 1, 0].forEach(i32);  // flags and settings exactly as DayZ Editor saves a plain placed object
+    str(model); i32(0);
+  }
+  i32(0); i32(0);  // no deleted map objects
+  return new Blob(parts, {type: 'application/octet-stream'});
+}
+function writeSpawner(lay){
+  const r = v => Math.round(v * 1000) / 1000;
+  return new Blob([JSON.stringify({Objects: lay.objs.map(o => ({
+    name: o.it.class || (o.it.model || '').replace(/\//g, '\\'), pos: [r(o.x), r(o.y), r(o.z)], ypr: [o.yaw, 0, 0], scale: 1, enableCEPersistency: 0
+  }))}, null, 2)], {type: 'application/json'});
+}
+function download(blob, name){
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+async function exportAs(kind){
+  try {
+    const lay = await layout();
+    const name = `PatchAtlas_${XMAPS[lay.map]}_${Math.round(lay.X0)}_${Math.round(lay.Z0)}`;
+    download(kind === 'dze' ? writeDze(lay) : writeSpawner(lay), name + (kind === 'dze' ? '.dze' : '.json'));
+    const loose = lay.objs.filter(o => !o.it.class).length, nosize = lay.objs.filter(o => !o.it.size).length;
+    xNote(`Downloaded ${lay.objs.length} objects.` + (loose ? ` ${loose} have no class name, so they're placed as plain models.` : '') + (nosize ? ` ${nosize} have no known size, so they were spaced as 2 m.` : ''));
+  } catch (e) { xNote(e.message || String(e)); }
+}
+$('listbtn').addEventListener('click', openList);
+$('lshade').addEventListener('click', closeList);
+$('lclose').addEventListener('click', closeList);
+$('lsheet').addEventListener('click', e => {
+  const d = e.target.closest('[data-del]');
+  if (d){ LIST = LIST.filter(r => r.k !== d.dataset.del); listChanged(); }
+});
+$('lsheet').addEventListener('change', e => {
+  const n = e.target.closest('[data-n]');
+  if (n){ const r = LIST.find(x => x.k === n.dataset.n); if (r){ r.n = Math.min(200, Math.max(1, Math.round(+n.value || 1))); n.value = r.n; listChanged(); } return; }
+  if (e.target.id === 'xH') $('xYWrap').hidden = e.target.value !== 'fixed';
+  try { const o = {}; for (const id of ['xMap', 'xPos', 'xLayout', 'xPer', 'xGap', 'xYaw', 'xH', 'xY']) o[id] = $(id).value; localStorage.setItem(LKEY + '-opts', JSON.stringify(o)); } catch (err) {}
+});
+$('xDze').addEventListener('click', () => exportAs('dze'));
+$('xJson').addEventListener('click', () => exportAs('json'));
+$('xCopy').addEventListener('click', () => copy(listed().map(({it}) => it.class || it.model).join('\n'), 'class names'));
+$('xClear').addEventListener('click', () => { LIST = []; listChanged(); });
+window.__paList = {writeDze, writeSpawner, layout, terrain};
+
 // ---------- wiring ----------
 $('cats').innerHTML = CATS.map(c => `<button class="cat" aria-pressed="${c === 'All'}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
 $('examples').insertAdjacentHTML('beforeend', EXAMPLES.map(e => `<button class="chip" data-ex="${esc(e)}">${esc(e)}</button>`).join(''));
@@ -557,10 +783,14 @@ $('reset').addEventListener('click', () => {
   run();
 });
 $('more').addEventListener('click', more);
-$('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) openItem(+c.dataset.id); });
+$('grid').addEventListener('click', e => {
+  const a = e.target.closest('[data-add]');
+  if (a){ toggleList(items[+a.dataset.add]); return; }
+  const c = e.target.closest('.card'); if (c) openItem(+c.dataset.id);
+});
 $('shade').addEventListener('click', closeSheet);
 $('close').addEventListener('click', closeSheet);
-document.addEventListener('keydown', e => { if (e.key === 'Escape'){ closeSheet(); closeVis(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape'){ closeSheet(); closeVis(); closeList(); } });
 $('dActions').addEventListener('click', e => {
   const it = items[+$('dActions').dataset.id], b = e.target.closest('button'); if (!b) return;
   if (b.dataset.copy === 'class') copy(it.class, 'class name');
@@ -577,10 +807,12 @@ $('dActions').addEventListener('click', e => {
     $('dImg').src = imgUrl(it.studioImgs[+b.dataset.side]);
     for (const x of $('dActions').querySelectorAll('[data-side]')) x.setAttribute('aria-pressed', x === b);
   }
+  else if ('list' in b.dataset){ toggleList(it); b.setAttribute('aria-pressed', inList(it)); b.textContent = inList(it) ? 'In my list ✓' : 'Add to my list'; }
   else if ('similar' in b.dataset){ similarTo = it.id; $('q').value = ''; closeSheet(); run(); window.scrollTo({ top: 0 }); }
 });
 
 loadData().then(() => {
+  loadList();
   status();
   run();
   if (ai.text.vecs || ai.image.vecs){
