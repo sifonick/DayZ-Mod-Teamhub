@@ -229,6 +229,10 @@ const MATERIAL_WORDS = ['metal','corrugated metal','wood','concrete','brick','mu
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// The Patch Atlas objects now also live in the default DayZ Editor, so their "PA_" class
+// prefix is no longer needed when placing them: show and copy the name without it. The
+// underlying data (it.class) keeps its real "PA_..." value for identity/lookups (keyOf).
+const dispClass = c => c ? c.replace(/^PA_/, '') : c;
 const imgUrl = p => IMG_BASE + p.split('/').map(encodeURIComponent).join('/');
 
 let items = [];
@@ -548,10 +552,10 @@ function openItem(id, keepFocus){
     : (it.studioImg ? 'Downloaded picture (the studio photo is hidden)' : 'Downloaded picture');
   $('dImg').dataset.id = id;
   $('dTitle').textContent = it.name;
-  const src = { 'patch-atlas': ' (needs the PatchAtlas_Objects mod)', 'vanilla': ' (vanilla)' }[it.classSource] || '';
+  const src = { 'vanilla': ' (vanilla)' }[it.classSource] || '';
   const rows = [];
   if (it.description) rows.push(['About', it.description]);
-  rows.push(['Class', it.class ? it.class + src : 'Not known'], ['Model', it.model || 'Not known']);
+  rows.push(['Class', it.class ? dispClass(it.class) + src : 'Not known'], ['Model', it.model || 'Not known']);
   if (it.objectType) rows.push(['Type', it.objectType]);
   if (it.materials.length) rows.push(['Made of', it.materials.join(', ') + (it.rusty ? ' (rusty)' : '')]);
   if (it.size){ const [w, h, d] = it.size; rows.push(['Size', `${w} × ${d} m, ${h} m tall (${it.sizeClass})`]); }
@@ -625,7 +629,7 @@ function drawList(){
   const L = listed();
   $('lRows').innerHTML = L.length ? L.map(({r, it}) => `<div class="lrow">
       <img src="${esc(imgUrl(pic(it)))}" alt="">
-      <div><div class="nm">${esc(it.name)}</div><div class="sub">${esc(it.class || it.model)}${it.size ? ` · ${it.size[0]} × ${it.size[2]} m` : ' · size not known'}</div></div>
+      <div><div class="nm">${esc(it.name)}</div><div class="sub">${esc(dispClass(it.class) || it.model)}${it.size ? ` · ${it.size[0]} × ${it.size[2]} m` : ' · size not known'}</div></div>
       <label class="sub">How many <input type="number" min="1" max="200" value="${r.n}" data-n="${esc(r.k)}" aria-label="How many ${esc(it.name)}"></label>
       <button class="x" type="button" data-del="${esc(r.k)}" aria-label="Remove ${esc(it.name)}">✕</button></div>`).join('')
     : '<p class="why">Your list is empty. Use the + on any picture to add it.</p>';
@@ -719,7 +723,7 @@ function writeDze(lay){
   i32(lay.objs.length);
   for (const o of lay.objs){
     const model = (o.it.model || '').replace(/\//g, '\\');
-    const type = o.it.class || model;
+    const type = dispClass(o.it.class) || model;
     str(type); str(type); vec([o.x, o.y, o.z]); vec([o.yaw, 0, 0]); f32(1);
     [30, 0, 0, 0, 1, 0].forEach(i32);  // flags and settings exactly as DayZ Editor saves a plain placed object
     str(model); i32(0);
@@ -730,7 +734,7 @@ function writeDze(lay){
 function writeSpawner(lay){
   const r = v => Math.round(v * 1000) / 1000;
   return new Blob([JSON.stringify({Objects: lay.objs.map(o => ({
-    name: o.it.class || (o.it.model || '').replace(/\//g, '\\'), pos: [r(o.x), r(o.y), r(o.z)], ypr: [o.yaw, 0, 0], scale: 1, enableCEPersistency: 0
+    name: dispClass(o.it.class) || (o.it.model || '').replace(/\//g, '\\'), pos: [r(o.x), r(o.y), r(o.z)], ypr: [o.yaw, 0, 0], scale: 1, enableCEPersistency: 0
   }))}, null, 2)], {type: 'application/json'});
 }
 function download(blob, name){
@@ -761,7 +765,7 @@ $('lsheet').addEventListener('change', e => {
 });
 $('xDze').addEventListener('click', () => exportAs('dze'));
 $('xJson').addEventListener('click', () => exportAs('json'));
-$('xCopy').addEventListener('click', () => copy(listed().map(({it}) => it.class || it.model).join('\n'), 'class names'));
+$('xCopy').addEventListener('click', () => copy(listed().map(({it}) => dispClass(it.class) || it.model).join('\n'), 'class names'));
 $('xClear').addEventListener('click', () => { LIST = []; listChanged(); });
 // hand the list to the main Patch Atlas map, where each object is placed by clicking (map_view's "Place your objects" panel)
 $('xPlace').addEventListener('click', () => {
@@ -769,7 +773,7 @@ $('xPlace').addEventListener('click', () => {
   /* the finder runs in a blank frame inside the Patch Atlas page: use that page if we are allowed to reach it */
   let P = null; try { if (window.parent !== window && window.parent.location.href && window.parent.document) P = window.parent; } catch (e) {}
   if (!P){ xNote('Placing on the map works when the Object Finder is opened on Patch Atlas.'); return; }
-  const items = L.map(({r, it}) => ({name: it.name, cls: it.class || '', model: it.model || '', size: it.size || null, cat: it.category, img: imgUrl(pic(it)), n: Math.min(200, Math.max(1, r.n | 0))}));
+  const items = L.map(({r, it}) => ({name: it.name, cls: dispClass(it.class) || '', model: it.model || '', size: it.size || null, cat: it.category, img: imgUrl(pic(it)), n: Math.min(200, Math.max(1, r.n | 0))}));
   try { P.localStorage.setItem('pa-of-place-v1', JSON.stringify({items, map: $('xMap').value, t: Date.now()})); } catch (e) { xNote('Your browser would not save the list for the map.'); return; }
   P.location.href = P.location.pathname.replace(/[^\/]*$/, 'map_view') + '?place=1';
 });
@@ -805,7 +809,7 @@ $('close').addEventListener('click', closeSheet);
 document.addEventListener('keydown', e => { if (e.key === 'Escape'){ closeSheet(); closeVis(); closeList(); } });
 $('dActions').addEventListener('click', e => {
   const it = items[+$('dActions').dataset.id], b = e.target.closest('button'); if (!b) return;
-  if (b.dataset.copy === 'class') copy(it.class, 'class name');
+  if (b.dataset.copy === 'class') copy(dispClass(it.class), 'class name');
   else if (b.dataset.copy === 'model') copy(it.model, 'model path');
   else if (b.dataset.copy === 'img') copy(imgUrl(pic(it)), 'image link');
   else if ('hide' in b.dataset || 'unhide' in b.dataset){
