@@ -1,0 +1,3 @@
+python -m http.server 8000
+
+Then refresh http://localhost:8000/tools/object-search/?debug

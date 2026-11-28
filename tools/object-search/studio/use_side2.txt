@@ -2,3 +2,4 @@
 # One per line: class name, model file name or picture name. Text after # is ignored.
 # Example:
 # PA_sign_20a
+rock_wallh7_tall_painting1

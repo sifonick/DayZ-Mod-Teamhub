@@ -1,0 +1,94 @@
+{
+  "Objects": [
+    {
+      "name": "Land_Pier_Floating_Bridge",
+      "pos": [
+        4524.02,
+        340.235,
+        10105.13
+      ],
+      "ypr": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1,
+      "enableCEPersistency": 0
+    },
+    {
+      "name": "Land_Garage_Big",
+      "pos": [
+        4547.5,
+        343.09,
+        10109.835
+      ],
+      "ypr": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1,
+      "enableCEPersistency": 0
+    },
+    {
+      "name": "StaticObj_Wall_Barricade1_4",
+      "pos": [
+        4567.97,
+        339.927,
+        10120.485
+      ],
+      "ypr": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1,
+      "enableCEPersistency": 0
+    },
+    {
+      "name": "StaticObj_Wall_MilCncBarrier",
+      "pos": [
+        4574.985,
+        339.509,
+        10121.755
+      ],
+      "ypr": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1,
+      "enableCEPersistency": 0
+    },
+    {
+      "name": "StaticObj_Wall_MilCncBarrier",
+      "pos": [
+        4521.005,
+        339.427,
+        10085.015
+      ],
+      "ypr": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1,
+      "enableCEPersistency": 0
+    },
+    {
+      "name": "StaticObj_Wall_MilCncBarrier",
+      "pos": [
+        4528.015,
+        339.404,
+        10085.015
+      ],
+      "ypr": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1,
+      "enableCEPersistency": 0
+    }
+  ]
+}

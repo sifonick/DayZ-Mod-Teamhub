@@ -1,0 +1,8 @@
+# One classname per line. Lines starting with # are ignored.
+AKM
+M4A1
+Mosin9130
+FirstAidKit
+Apple
+CanOpener
+MountainBag_Red
